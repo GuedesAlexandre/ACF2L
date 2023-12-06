@@ -13,7 +13,7 @@ class Database {
         $this->database = $database;
     }
 
-    public function connect() {
+    public  function connect() {
         try {
             $dsn = "mysql:host={$this->host};dbname={$this->database}";
             $this->connection = new PDO($dsn, $this->username, $this->password);
@@ -40,7 +40,75 @@ class Database {
             echo "Error retrieving data: " . $e->getMessage();
         }
     }
-
+    public function displayTableContentFromId($tableName, $sqlQuery, $id) {
+        try {
+            $query = "SELECT * FROM {$tableName} WHERE ID=:id";
+            $statement = $this->connection->prepare($query);
+            $statement->bindParam(':id', $id);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($result as $row) {
+                foreach ($row as $key => $value) {
+                    echo "{$key}: {$value}<br>";
+                }
+                echo "<br>";
+            }
+            $statement = $this->connection->prepare($query);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($result as $row) {
+                foreach ($row as $key => $value) {
+                    echo "{$key}: {$value}<br>";
+                }
+                echo "<br>";
+            }
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des données : " . $e->getMessage();
+        }
+    }
+    public function displayAllTable($table){
+        try{
+            $query = "SELECT * FROM {$table}";
+            $prepare = $this->connection->prepare($query);
+            $prepare->execute();
+            $resultat = $prepare->fetchAll(PDO::FETCH_ASSOC);
+            foreach($resultat as $result){
+                foreach($result as $key => $value){
+                    echo "{$key} : {$value}<br>";
+                }
+                echo "<br>";
+            }
+        } catch (PDOException $e) {
+            echo "Erreur lors de l'affichage des données de la table : " . $e->getMessage();
+        }
+    }
+    public function deleteRowById($tableName, $id) {
+        try {
+            $query = "DELETE FROM {$tableName} WHERE ID=:id";
+            $statement = $this->connection->prepare($query);
+            $statement->bindParam(':id', $id);
+            $statement->execute();
+            echo "La ligne a été supprimée avec succès.";
+        } catch (PDOException $e) {
+            echo "Erreur lors de la suppression de la ligne: " . $e->getMessage();
+        }
+    }
+    function updateValueById($pdo, $tableName, $id, $columnName, $newValue) {
+        // Préparer la requête SQL
+        $sql = "UPDATE $tableName SET $columnName = :newValue WHERE id = :id";
+        $stmt = $pdo->prepare($sql);
+    
+        // Lier les paramètres à la requête
+        $stmt->bindParam(':newValue', $newValue);
+        $stmt->bindParam(':id', $id);
+    
+        // Exécuter la requête
+        try {
+            $stmt->execute();
+        } catch (PDOException $e) {
+            echo "Erreur lors de la mise à jour de la valeur : " . $e->getMessage();
+        }
+    }
     public function insertData($tableName, $data) {
         try {
             $columns = implode(", ", array_keys($data));
