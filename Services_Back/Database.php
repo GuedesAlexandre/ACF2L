@@ -93,6 +93,7 @@ class Database {
             echo "Erreur lors de la suppression de la ligne: " . $e->getMessage();
         }
     }
+    //modif ici de value
     public function updateValueById($tableName, $id, $columnName, $newValue) {
         try {
             $sql = "UPDATE {$tableName} SET {$columnName} = :newValue WHERE id = :id";
