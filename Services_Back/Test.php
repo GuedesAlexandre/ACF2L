@@ -36,22 +36,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <button id="showIp">Afficher mon adresse IP</button>
 <p id="ip"></p>
 <script>
-document.getElementById('storeIp').addEventListener('click', function() {
-    fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => {
-            document.cookie = "ip=" + data.ip;
-        });
-});
-document.getElementById('showIp').addEventListener('click', function() {
-    var ip = document.cookie.replace(/(?:(?:^|.*;\s*)ip\s*\=\s*([^;]*).*$)|^.*$/, "$1");//expression régulière pour récup la valeur dans le cookie
-    document.getElementById('ip').textContent = "Votre adresse IP est : " + ip;
-});
-function checkCookie(name) {
-    return document.cookie.includes(name + "=");
-}
+const testForm = {
+    storeIp: function() {
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.cookie = "ip=" + data.ip;
+            });
+    },
+    showIp: function() {
+        var ip = document.cookie.replace(/(?:(?:^|.*;\s*)ip\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        document.getElementById('ip').textContent = "Votre adresse IP est : " + ip;
+    },
+    checkCookie: function(name) {
+        return document.cookie.includes(name + "=");
+    }
+};
 
-var cookieExists = checkCookie("ip");
+document.getElementById('storeIp').addEventListener('click', testForm.storeIp);
+document.getElementById('showIp').addEventListener('click', testForm.showIp);
+
+var cookieExists = testForm.checkCookie("ip");
+if (cookieExists) {
+    testForm.showIp();
+}
 </script>
 
 </body>
