@@ -35,48 +35,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </form>
 <button id="showIp">Afficher mon adresse IP</button>
 <p id="ip"></p>
-
-<?php
-function storeIp() {
-    $response = file_get_contents('https://api.ipify.org?format=json');
-    $data = json_decode($response, true);
-    $ip = $data['ip'];
-    setcookie('ip', $ip);
-}
-
-function showIp() {
-    $ip = $_COOKIE['ip'] ?? '';
-    echo "Votre adresse IP est : " . $ip;
-}
-
-function checkCookie($name) {
-    return isset($_COOKIE[$name]);
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['storeIp'])) {
-        storeIp();
+<script>
+const testForm = {
+    storeIp: function() {
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.cookie = "ip=" + data.ip;
+            });
+    },
+    showIp: function() {
+        var ip = document.cookie.replace(/(?:(?:^|.*;\s*)ip\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        document.getElementById('ip').textContent = "Votre adresse IP est : " + ip;
+    },
+    checkCookie: function(name) {
+        return document.cookie.includes(name + "=");
     }
+};
+
+document.getElementById('storeIp').addEventListener('click', testForm.storeIp);
+document.getElementById('showIp').addEventListener('click', testForm.showIp);
+
+var cookieExists = testForm.checkCookie("ip");
+if (cookieExists) {
+    testForm.showIp();
 }
-
-?>
-
-
-<h2>Test Form</h2>
-
-<form action="Test.php" method="post">
-    Column1: <input type="text" name="column1"><br>
-    Column2: <input type="text" name="column2"><br>
-    <input type="submit">
-    <button name="storeIp">Stockez mon adresse IP</button>
-    <input type="hidden" name="showIp" value="true">
-</form>
-
-<?php
-if (isset($_POST['showIp'])) {
-    showIp();
-}
-?>
+</script>
 
 </body>
 </html>
