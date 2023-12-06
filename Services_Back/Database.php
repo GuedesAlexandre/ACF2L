@@ -93,18 +93,14 @@ class Database {
             echo "Erreur lors de la suppression de la ligne: " . $e->getMessage();
         }
     }
-    function updateValueById($pdo, $tableName, $id, $columnName, $newValue) {
-        // Préparer la requête SQL
-        $sql = "UPDATE $tableName SET $columnName = :newValue WHERE id = :id";
-        $stmt = $pdo->prepare($sql);
-    
-        // Lier les paramètres à la requête
-        $stmt->bindParam(':newValue', $newValue);
-        $stmt->bindParam(':id', $id);
-    
-        // Exécuter la requête
+    public function updateValueById($tableName, $id, $columnName, $newValue) {
         try {
-            $stmt->execute();
+            $sql = "UPDATE {$tableName} SET {$columnName} = :newValue WHERE id = :id";
+            $statement = $this->connection->prepare($sql);
+            $statement->bindParam(':newValue', $newValue);
+            $statement->bindParam(':id', $id);
+            $statement->execute();
+            echo "La valeur a été mise à jour avec succès.";
         } catch (PDOException $e) {
             echo "Erreur lors de la mise à jour de la valeur : " . $e->getMessage();
         }
