@@ -2,15 +2,14 @@
   box-sizing: border-box;
 }
 .services-div {
-  background-color: #ECEDE7;
+  background-color: #ecede7;
   border-radius: 105px;
-  
 }
 
 .nos-services-section {
   padding: 10px;
   margin-bottom: 20px;
-  border-radius: 30px;  
+  border-radius: 30px;
 }
 
 #services .card-services {
@@ -18,7 +17,6 @@
   border: 2.361px solid #d6d9cb;
   background: #ecede7;
   margin: 0 20px;
- 
 }
 
 #services a {
@@ -37,36 +35,34 @@ a:hover {
   transform: translateY(-5px);
 }
 
-.card-title{
+.card-title {
   font-family: Inter;
-font-size: 33px;
-font-style: normal;
-font-weight: 400;
-min-width: 332px; 
-min-height: 129px;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  min-width: 332px;
+  min-height: 129px;
 }
-.card-text{
+.card-text {
   font-family: Inter;
-font-size: 17px;
-font-style: normal;
-font-weight: 400;
-max-width: 348px; 
-min-height: 239px;
-
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 348px;
+  min-height: 239px;
 }
 
-
-.nos-services-section .text-left{
+.nos-services-section .text-left {
   font-family: Plus Jakarta Sans;
-font-size: 65px;
-font-style: normal;
-font-weight: 600;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
 }
-.card-services{
-  max-width: 420px; 
+.card-services {
+  max-width: 420px;
   min-height: 511px;
 }
-.container{
+.container {
   max-width: 1400px;
   margin: 0 auto;
 }
