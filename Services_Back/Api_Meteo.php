@@ -50,11 +50,16 @@ class ApiMeteo {
     
         foreach ($forecasts as $forecast) {
             $timestamp = $forecast['dt'];
+            
             $date = date('Y-m-d', $timestamp);
             $temperature = round($forecast['main']['temp']);
     
+<<<<<<< HEAD
             $day = date('l', $timestamp);
             
+=======
+            $day = date('l',$timestamp);
+>>>>>>> 4fe3cdf6b76634eab62f63544467a951677af0a5
             $day_fr = $this->convertDayToFrench($day);
     
             if (!isset($days[$day_fr])) {

@@ -117,10 +117,13 @@ backdrop-filter: blur(6.5px);
 .navbar-collapse{
   transition: all 0.2s ease-in-out;
 }
+<<<<<<< HEAD
 
 .sun{
   fill: #FFDA16;
 }
+=======
+>>>>>>> 4fe3cdf6b76634eab62f63544467a951677af0a5
 /* !home  */
 .txt-home {
   margin-top: 150px;
