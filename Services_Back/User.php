@@ -33,20 +33,7 @@ class User{
         $db->connect(); 
         $connection = $db->connection; 
         $hashedPassword = password_hash($this->PASSWORD, PASSWORD_DEFAULT); 
-        $query = "INSERT INTO $tableName (USER_ID,NOM, PRENOM, EMAIL, PASSWORD, BIRTHDATE,  role) VALUES (?,?, ?, ?, ?, ?, ?, ?)";
-        $statement = $connection->prepare($query);
-        $statement->execute([$this->USER_ID,$this->NOM, $this->PRENOM, $this->EMAIL, $hashedPassword, $this->BIRTHDATE, $this->ADRESSE, $this->role]); 
-    }
-    public function displayUserData($userId){
-        $host = "localhost";
-        $username = "root";
-        $password = "root";
-        $database = "test_db";
-        $db = new Database($host, $username, $password, $database);
-        $db->connect(); 
-        $connection = $db->connection; 
-
-        $query = "SELECT USER_ID, NOM, PRENOM, EMAIL, BIRTHDATE, ADRESSE, role FROM users WHERE USER_ID = ?";
+        $query = "INSERT INTO $tableName (NOM, PRENOM, EMAIL, PASSWORD, BIRTHDATE, ADRESSE, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $statement = $connection->prepare($query);
         $statement->execute([$userId]); 
         $result = $statement->fetch(PDO::FETCH_ASSOC);
