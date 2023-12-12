@@ -35,34 +35,33 @@ a:hover {
   transform: translateY(-5px);
 }
 
-.card-title {
-  font-family: Inter;
+.titre-card {
+  font-family: 'Inter', sans-serif;
   font-size: 33px;
   font-style: normal;
   font-weight: 400;
   min-width: 332px;
   min-height: 129px;
 }
-.card-text {
-  font-family: Inter;
+.texte-card {
+  font-family: 'Inter', sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
-  max-width: 348px;
   min-height: 239px;
 }
 
 .nos-services-section .text-left {
-  font-family: Plus Jakarta Sans;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 65px;
   font-style: normal;
   font-weight: 600;
 }
 .card-services {
-  max-width: 420px;
+  max-width: 420px !important; 
   min-height: 511px;
 }
-.container {
-  max-width: 1400px;
+.section-div {
+  max-width: 1668px;
   margin: 0 auto;
 }
