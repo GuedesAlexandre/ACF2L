@@ -4,8 +4,7 @@ class Database {
     private $username;
     private $password;
     private $database;
-    public $connection;
-  
+    private $connection;
 
     public function __construct($host, $username, $password, $database) {
         $this->host = $host;
@@ -119,7 +118,6 @@ class Database {
             echo "ptn batard tu sais pas coder " . $e->getMessage();
         }
     }
-    
 }
 
 
