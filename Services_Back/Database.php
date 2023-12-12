@@ -118,6 +118,7 @@ class Database {
             echo "ptn batard tu sais pas coder " . $e->getMessage();
         }
     }
+    
 }
 
 
