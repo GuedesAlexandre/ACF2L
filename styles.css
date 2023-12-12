@@ -117,6 +117,10 @@ backdrop-filter: blur(6.5px);
 .navbar-collapse{
   transition: all 0.2s ease-in-out;
 }
+
+.sun{
+  fill: #FFDA16;
+}
 /* !home  */
 .txt-home {
   margin-top: 150px;

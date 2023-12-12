@@ -6,7 +6,7 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 
         <link rel="stylesheet" href="styles.css" />
         <title>Document</title>
@@ -16,7 +16,7 @@
             <div class="home-img">
                 <div class="nav">
                     <header class="container-fluid">
-                        <nav class="row navbar navbar-expand-lg navbar-light">
+                        <nav  class="row navbar navbar-expand-lg navbar-light">
                             <div class="container-fluid col-0 col-lg-11 ">
                                 <a class="nav-link logo px-0" href="#"><img src="ressources/logo.svg" alt="" /></a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,9 +65,13 @@
                 </div>
             </div>
 
-            <div class="metteo row justify-content-center">
+<?php 
+    require_once 'Services_Back/Api_Meteo.php';
+?>
+
+          <!--  <div class="metteo row justify-content-center">
                 <div class="col-xxl-7 col-lg-9 exter">
-                    <div class="inter ">
+                    <div class="inter">
                     <div class="row justify-content-center gap">
                         <div class="col flex-column d-flex align-items-center justify-content-center">
                             <h6>Lun</h6>
@@ -107,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+            </div>-->
         </section>
 
         <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
