@@ -36,6 +36,7 @@ class User{
         $statement = $connection->prepare($query);
         $statement->execute([$this->NOM, $this->PRENOM, $this->EMAIL, $hashedPassword, $this->BIRTHDATE, $this->ADRESSE, $this->role]); 
     }
+    
 
 }  
 
