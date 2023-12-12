@@ -36,6 +36,28 @@ class User{
         $statement = $connection->prepare($query);
         $statement->execute([$this->NOM, $this->PRENOM, $this->EMAIL, $hashedPassword, $this->BIRTHDATE, $this->ADRESSE, $this->role]); 
     }
+    public function displayUserData($userId){
+        $host = "localhost";
+        $username = "root";
+        $password = "root";
+        $database = "test_db";
+        $db = new Database($host, $username, $password, $database);
+        $db->connect(); 
+        $connection = $db->connection; 
+
+        $query = "SELECT USER_ID, NOM, PRENOM, EMAIL, BIRTHDATE, ADRESSE, role FROM users WHERE USER_ID = ?";
+        $statement = $connection->prepare($query);
+        $statement->execute([$userId]); 
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if($result){
+            foreach($result as $key => $value){
+                echo "{$key} : {$value}<br>";
+            }
+        } else {
+            echo "Aucun utilisateur trouvé avec l'ID : {$userId}";
+        }
+    }
     
 
 }  

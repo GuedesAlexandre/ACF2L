@@ -4,7 +4,8 @@ class Database {
     private $username;
     private $password;
     private $database;
-    private $connection;
+    public $connection;
+  
 
     public function __construct($host, $username, $password, $database) {
         $this->host = $host;
