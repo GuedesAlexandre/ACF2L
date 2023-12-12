@@ -21,6 +21,7 @@ class ApiMeteo {
     public function getMeteoData() {
         $url = "http://api.openweathermap.org/data/2.5/forecast?q={$this->city}&appid={$this->api_key}&units=metric"; // Ajout de l'unité de mesure en Celsius
         $response = @file_get_contents($url);
+        
 
         if ($response === false) {
             die('Erreur lors de la récupération des données météo.');
@@ -38,8 +39,11 @@ class ApiMeteo {
     public function afficherDonnees() {
         $forecasts = $this->getMeteoData();
     
-        echo "<table>";
-        echo "<tr><th>Jour</th><th>Température moyenne (°C)</th></tr>";
+        echo '<div class="metteo row justify-content-center">
+        <div class="col-xxl-7 col-lg-9 exter">
+            <div class="inter">
+            <div class="row justify-content-center gap">';
+      
     
         $days = array();
         $temperatures = array();
@@ -50,7 +54,12 @@ class ApiMeteo {
             $date = date('Y-m-d', $timestamp);
             $temperature = round($forecast['main']['temp']);
     
+<<<<<<< HEAD
+            $day = date('l', $timestamp);
+            
+=======
             $day = date('l',$timestamp);
+>>>>>>> 4fe3cdf6b76634eab62f63544467a951677af0a5
             $day_fr = $this->convertDayToFrench($day);
     
             if (!isset($days[$day_fr])) {
@@ -61,21 +70,39 @@ class ApiMeteo {
                 $temperatures[$day_fr] += $temperature;
             }
         }   
-    
+        // src='ressources/sunny-outline.svg'>
+        // src='ressources/partly-sunny-outline.svg'
+        // src='ressources/rainy-outline.svg'>
+        // src='ressources/cloudy-outline.svg'>
+        
         foreach ($days as $day => $count) {
             $averageTemperature = round($temperatures[$day] / $count);
-            $weather = $averageTemperature > 15 ? "<i class='fas fa-sun'></i>" : "<i class='fas fa-cloud'></i>";
-            echo "<tr><td>{$day}</td><td>{$averageTemperature} {$weather}</td></tr>";
+            $weather = $averageTemperature > 15 ? "<i class='fas fa-sun'></i>" : "<img style='width: 39px;' src='ressources/icons-wether/cloudy-outline.svg'>";
+            echo "<div class='col flex-column d-flex align-items-center justify-content-center'>
+            <h6>{$day}</h6>
+            <div>{$weather}</div>
+            <h6>{$averageTemperature}°</h6>
+        </div>"       ;    
+       
         }
     
-        echo "</table>";
+        echo "       </div>
+        </div>
+    </div>
+    </div>";
     }
 
     private function convertDayToFrench($day) {
         $englishDays = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
         $frenchDays = array('Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche');
-
-        return str_replace($englishDays, $frenchDays, $day);
+    
+        $key = array_search($day, $englishDays);
+    
+        if ($key !== false) {
+            return $frenchDays[$key];
+        }
+    
+        return null;
     }
 }
 
