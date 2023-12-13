@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 
         <link rel="stylesheet" href="styles.css" />
-        <title>Document</title>
+        <title>ACF2L</title>
     </head>
     <body>
         <section>
