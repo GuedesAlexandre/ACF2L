@@ -1,67 +1,84 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 .services-div {
-  background-color: #ecede7;
-  border-radius: 105px;
+    background-color: #ecede7;
+    border-radius: 105px;
 }
 
 .nos-services-section {
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
 }
 
 #services .card-services {
-  border-radius: 34.753px;
-  border: 2.361px solid #d6d9cb;
-  background: #ecede7;
-  margin: 0 20px;
+    border-radius: 34.753px;
+    border: 2.361px solid #d6d9cb;
+    background: #ecede7;
+    margin: 0 20px;
 }
 
 #services a {
-  border-radius: 1511px;
-  background: rgba(255, 255, 255, 0);
-  box-shadow: 0px 0px 0px 1.574px #141722 inset;
-  padding: 15px 28px;
-  max-width: 77px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
+    border-radius: 1511px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 0px 1.574px #141722 inset;
+    padding: 15px 28px;
+    max-width: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 a:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .titre-card {
-  font-family: 'Inter', sans-serif;
-  font-size: 33px;
-  font-style: normal;
-  font-weight: 400;
-  min-width: 332px;
-  min-height: 129px;
+    font-family: 'Inter', sans-serif;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    min-width: 332px;
+    line-height: 48.38px
 }
+
 .texte-card {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 400;
-  min-height: 239px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px
 }
 
 .nos-services-section .text-left {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 65px;
-  font-style: normal;
-  font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 600;
 }
+
 .card-services {
-  max-width: 420px !important; 
-  min-height: 511px;
+    max-width: 420px !important;
+    min-height: 511px;
 }
+
 .section-div {
-  max-width: 1668px;
-  margin: 0 auto;
+    max-width: 1668px;
+    margin: 0 auto;
+}
+
+.services-div {
+    padding: 126px 0px 132px 0px;
+}
+
+@media (max-width: 991px) {
+    .card-div-flex {
+        gap: 40px;
+    }
+    #services .card-services {
+        padding: 52px 20px 52px 20px !important;
+    }
 }
