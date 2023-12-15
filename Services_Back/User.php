@@ -1,18 +1,18 @@
 <?php
-require_once '/Services_Back/Database.php';
+require_once 'Database.php';
 
 class User{
-    protected $USER_ID = rand(1,892998987);
-    private $NOM;
-    private $PRENOM;
-    private $EMAIL;
-    private $PASSWORD;
-    private $BIRTHDATE;
-    private $ADRESSE;
-    private $role;
+public $USER_ID ;
+protected $NOM;
+protected $PRENOM;
+protected $EMAIL;
+protected $PASSWORD;
+protected $BIRTHDATE;
+protected $ADRESSE;
+protected $role;
 
-    public function __construct($USER_ID,$NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role){
-       $this->USER_ID = $USER_ID;
+public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role){
+       $this->USER_ID = rand(1,70000);
        $this->NOM = $NOM;
         $this->PRENOM = $PRENOM;
         $this->EMAIL = $EMAIL;
@@ -35,8 +35,17 @@ class User{
         $statement = $connection->prepare($query);
         $statement->execute([$this->NOM, $this->PRENOM, $this->EMAIL, $this->PASSWORD, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use execute with an array instead of bind_param
     }
+    public function displayAttributes(){
+        echo "USER_ID: " . $this->USER_ID . "<br>";
+        echo "NOM: " . $this->NOM . "<br>";
+        echo "PRENOM: " . $this->PRENOM . "<br>";
+        echo "EMAIL: " . $this->EMAIL . "<br>";
+        echo "PASSWORD: " . $this->PASSWORD . "<br>";
+        echo "BIRTHDATE: " . $this->BIRTHDATE . "<br>";
+        echo "ADRESSE: " . $this->ADRESSE . "<br>";
+        echo "role: " . $this->role . "<br>";
     
 
-}  
 
-?>
+    }
+}

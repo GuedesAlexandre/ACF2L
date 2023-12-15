@@ -1,9 +1,9 @@
 <?php
-require_once "/Services_Back/User.php";
 session_start();
-$USER_ID = rand(1,907289799);
+require_once "User.php";
 
+$USER_ID = 123; // Replace with the actual user ID
 
-
-
+$USER = new User($USER_ID, "Guedes", "Alexandre", "alexandreguedes77600@gmail.com", "BOOM11872892", "17/11/2003", "1 allée Georges Mélies", 0);
+$USER->displayAttributes();
 ?>
