@@ -12,8 +12,8 @@ class User{
     private $role;
 
     public function __construct($USER_ID,$NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role){
-       $this->USER_ID = $USER_ID;
-       $this->NOM = $NOM;
+        $this->USER_ID = $USER_ID;
+        $this->NOM = $NOM;
         $this->PRENOM = $PRENOM;
         $this->EMAIL = $EMAIL;
         $this->PASSWORD = $PASSWORD;
@@ -36,7 +36,18 @@ class User{
         $statement->execute([$this->NOM, $this->PRENOM, $this->EMAIL, $this->PASSWORD, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use execute with an array instead of bind_param
     }
     
+    puclic function getNom() { return $this -> NOM; }
 
+    puclic function getPrenom() { return $this -> PRENOM; }
+
+    puclic function getEmail() { return $this -> EMAIL; }
+
+    puclic function getPassword() { return $this -> PASSWORD; }
+
+    puclic function getBirthdate() { return $this -> BIRTHDATE; }
+
+    puclic function getAdresse() { return $this -> ADRESSE; }
+    
 }  
 
 ?>
