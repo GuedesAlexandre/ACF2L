@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ html {
 a {
   text-decoration: none;
 }
+
 .home-img {
   background-image: url("ressources/bg.png");
   background-repeat: no-repeat;
@@ -34,12 +36,12 @@ a {
   opacity: 1;
   margin: 0;
 }
-.drop-hr{
+.drop-hr {
   border: none;
   height: 2px;
   background-color: #fff;
   opacity: 1;
-  margin:  14px ;
+  margin: 14px;
 }
 
 .logo {
@@ -54,7 +56,6 @@ a {
   font-weight: 500;
   line-height: normal;
 }
-
 
 /* hover  */
 .nav-link:hover {
@@ -80,26 +81,30 @@ a {
 .example07 a:hover::after {
   transform: scale(0.5, 0.5);
 }
-.navbar-toggler{
+.navbar-toggler {
   border: none;
 }
-button:focus:not(:focus-visible){
+button:focus:not(:focus-visible) {
   box-shadow: none;
 }
-.dropdown-menu{
+.dropdown-menu {
   border-radius: 7px;
-background: linear-gradient(108deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.07) 100%);
-backdrop-filter: blur(6.5px);
+  background: linear-gradient(
+    108deg,
+    rgba(255, 255, 255, 0.26) 0%,
+    rgba(255, 255, 255, 0.07) 100%
+  );
+  backdrop-filter: blur(6.5px);
 }
-.nav-link:focus{
+.nav-link:focus {
   color: #fff;
 }
 
-.menu-connect{
+.menu-connect {
   right: -70px;
 }
 
-.menu-connect a{
+.menu-connect a {
   color: #ffffff;
   font-family: "Rubik", sans-serif;
   font-size: 13px;
@@ -108,18 +113,17 @@ backdrop-filter: blur(6.5px);
   line-height: normal;
 }
 
-.menu-connect a:hover{
+.menu-connect a:hover {
   background: none;
   color: #fff;
 }
 
-
-.navbar-collapse{
+.navbar-collapse {
   transition: all 0.2s ease-in-out;
 }
 
-.sun{
-  fill: #FFDA16;
+.sun {
+  fill: #ffda16;
 }
 /* !home  */
 .txt-home {
@@ -192,6 +196,259 @@ backdrop-filter: blur(6.5px);
   margin: 30px 0px;
 }
 
+#section-services {
+  margin-top: 119px !important;
+}
+
+#ulm{
+  margin-top: 160px !important;
+
+}
+
+.services-div {
+  background-color: #ecede7;
+  border-radius: 105px;
+}
+
+.nos-services-section {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+#services .card-services {
+  border-radius: 34.753px;
+  border: 2.361px solid #d6d9cb;
+  background: #ecede7;
+  margin: 0 20px;
+}
+
+#services a {
+  border-radius: 1511px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px 1.574px #141722 inset;
+  padding: 15px 28px;
+  max-width: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+#services a:hover {
+  transform: translateY(-5px);
+}
+
+.titre-card {
+  font-family: "Inter", sans-serif;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  min-width: 332px;
+  line-height: 48.38px;
+}
+
+.texte-card {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.nos-services-section .text-left {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  margin-left: 106px;
+}
+
+.card-services {
+  max-width: 420px !important;
+  min-height: 511px;
+}
+
+.section-div {
+  max-width: 1668px;
+  margin: 0 auto;
+}
+
+.services-div {
+  padding: 126px 0px 132px 0px;
+}
+
+
+.ulm-card1 {
+  background-image: url("ressources/card1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 25px;
+
+  &:hover {
+    background-image: url("ressources/card1sombre.png");
+  }
+}
+.ulm-card2 {
+  background-image: url("ressources/card2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 25px;
+
+  &:hover {
+    background-image: url("ressources/card2sombre.png");
+  }
+}
+.ulm-card3 {
+  background-image: url("ressources/card3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 25px;
+
+  &:hover {
+    background-image: url("ressources/card3sombre.png");
+  }
+}
+
+.ri-arrow-right-up-line {
+  color: #fff;
+  font-size: 35px;
+  padding: 5px;
+  transition: all 0.2s ease;
+  border-radius: 100%;
+}
+
+.title-ulm {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 25.28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.prix-ulm {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 33.204px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24.903px;
+  letter-spacing: 0.066px;
+}
+
+#ulm .card:hover .ri-arrow-right-up-line {
+  color: #000000;
+  transform: translateY(0px);
+  background-color: white;
+}
+
+.para-ulm {
+  max-width: 80%;
+  margin: 37px 0px 91px 0px;
+}
+
+.title-section {
+  color: #000;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.para-ulm p {
+  color: #141722;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 43.2px */
+  letter-spacing: 0.48px;
+}
+
+#ulm a{
+  transition: all 0.4s ease-in-out;
+}
+#ulm a:hover {
+  transform: translateY(-5px);
+}
+
+/* TEAM  */
+#team{
+  margin-top: 161px;
+}
+
+#team  .card1,
+.card2,
+.card3,
+.card4 {
+  background-image: url("ressources/card.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 28px;
+  background-position: center;
+}
+
+#team  .card-body {
+  background-color: #fff;
+  border-radius: 22px;
+  margin: 0 11px 11px 11px;
+  padding: 19px 19px 29px 19px !important;
+}
+
+#team  .card-title {
+  color: #141722;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 104.5%; /* 20.9px */
+  margin-bottom: 13px !important;
+}
+
+#team  .card-text {
+  color: #141722;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 104.5%; /* 20.9px */
+}
+#team .section-title {
+  color: #000;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 180%; /* 117px */
+}
+
+#team  .para-text{
+  color: #141722;
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 43.2px */
+  letter-spacing: 0.48px;
+}
+#team .text-title{
+    margin-bottom: 107px;
+}
+
+
 
 
 @media only screen and (max-width: 1500px) {
@@ -251,7 +508,7 @@ backdrop-filter: blur(6.5px);
     font-size: 22px;
     font-weight: bold;
   }
-  .glass{
+  .glass {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -259,11 +516,34 @@ backdrop-filter: blur(6.5px);
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
-  .dropdown{
+  .dropdown {
     flex-direction: column;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-div-flex {
+    gap: 40px;
+  }
+  #services .card-services {
+    padding: 52px 20px 52px 20px !important;
+  }
+  .nos-services-section .text-left {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-glob {
+    max-width: 305px !important;
+  }
+
+  .div-team-card {
+    justify-content: center;
   }
 }
 
@@ -292,7 +572,7 @@ backdrop-filter: blur(6.5px);
 }
 
 @media only screen and (max-width: 299px) {
-.metteo{
-  margin-top: 40px;
-}
+  .metteo {
+    margin-top: 40px;
+  }
 }
