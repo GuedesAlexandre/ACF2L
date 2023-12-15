@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-img {
+  background-image: url("ressources/bg.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 120vh;
+  background-size: cover;
+  background-position: center;
+}
+.nav {
+  padding-top: 17px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav .underline hr {
+  border: none;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  opacity: 1;
+  margin: 0;
+}
+.drop-hr {
+  border: none;
+  height: 2px;
+  background-color: #fff;
+  opacity: 1;
+  margin: 14px;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+.nav-link {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* hover  */
+.nav-link:hover {
+  color: #fff;
+}
+.example07 a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.example07 a::after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #e30a17;
+  bottom: -4px;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+  transform-origin: center top;
+}
+.example07 a:hover::after {
+  transform: scale(0.5, 0.5);
+}
+.navbar-toggler {
+  border: none;
+}
+button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+.dropdown-menu {
+  border-radius: 7px;
+  background: linear-gradient(
+    108deg,
+    rgba(255, 255, 255, 0.26) 0%,
+    rgba(255, 255, 255, 0.07) 100%
+  );
+  backdrop-filter: blur(6.5px);
+}
+.nav-link:focus {
+  color: #fff;
+}
+
+.menu-connect {
+  right: -70px;
+}
+
+.menu-connect a {
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.menu-connect a:hover {
+  background: none;
+  color: #fff;
+}
+
+.navbar-collapse {
+  transition: all 0.2s ease-in-out;
+}
+
+.sun {
+  fill: #ffda16;
+}
+/* !home  */
+.txt-home {
+  margin-top: 150px;
+  box-shadow: none;
+}
+
+.titre-home {
+  margin-bottom: 30px;
+  max-width: 751px;
+}
+
+.titre-home h1 {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 85.333px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 104.5%; /* 70.224px */
+}
+.para-home {
+  margin-bottom: 50px;
+  max-width: 703px;
+}
+.para-home P {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-home a {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: #e30a17;
+  padding: 14px 27px;
+}
+.metteo {
+  margin-top: -120px;
+}
+.exter {
+  border-radius: 55px;
+  background: rgba(236, 237, 231, 0.62);
+  padding: 15px 26px;
+}
+.inter {
+  border-radius: 43.5px;
+  background: #2f2f2f;
+  padding: 26px;
+}
+
+.metteo h6 {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0px;
+}
+
+.metteo img {
+  margin: 30px 0px;
+}
+
+#section-services {
+  margin-top: 119px !important;
+}
+
+#ulm{
+  margin-top: 160px !important;
+
+}
+
+.services-div {
+  background-color: #ecede7;
+  border-radius: 105px;
+}
+
+.nos-services-section {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+#services .card-services {
+  border-radius: 34.753px;
+  border: 2.361px solid #d6d9cb;
+  background: #ecede7;
+  margin: 0 20px;
+}
+
+#services a {
+  border-radius: 1511px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 0px 1.574px #141722 inset;
+  padding: 15px 28px;
+  max-width: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+#services a:hover {
+  transform: translateY(-5px);
+}
+
+.titre-card {
+  font-family: "Inter", sans-serif;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  min-width: 332px;
+  line-height: 48.38px;
+}
+
+.texte-card {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.nos-services-section .text-left {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  margin-left: 106px;
+}
+
+.card-services {
+  max-width: 420px !important;
+  min-height: 511px;
+}
+
+.section-div {
+  max-width: 1668px;
+  margin: 0 auto;
+}
+
+.services-div {
+  padding: 126px 0px 132px 0px;
+}
+
+
+.ulm-card1 {
+  background-image: url("ressources/card1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 25px;
+
+  &:hover {
+    background-image: url("ressources/card1sombre.png");
+  }
+}
+.ulm-card2 {
+  background-image: url("ressources/card2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 25px;
+
+  &:hover {
+    background-image: url("ressources/card2sombre.png");
+  }
+}
+.ulm-card3 {
+  background-image: url("ressources/card3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 25px;
+
+  &:hover {
+    background-image: url("ressources/card3sombre.png");
+  }
+}
+
+.ri-arrow-right-up-line {
+  color: #fff;
+  font-size: 35px;
+  padding: 5px;
+  transition: all 0.2s ease;
+  border-radius: 100%;
+}
+
+.title-ulm {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 25.28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.prix-ulm {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 33.204px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24.903px;
+  letter-spacing: 0.066px;
+}
+
+#ulm .card:hover .ri-arrow-right-up-line {
+  color: #000000;
+  transform: translateY(0px);
+  background-color: white;
+}
+
+.para-ulm {
+  max-width: 80%;
+  margin: 37px 0px 91px 0px;
+}
+
+.title-section {
+  color: #000;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.para-ulm p {
+  color: #141722;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 43.2px */
+  letter-spacing: 0.48px;
+}
+
+#ulm a{
+  transition: all 0.4s ease-in-out;
+}
+#ulm a:hover {
+  transform: translateY(-5px);
+}
+
+/* TEAM  */
+#team{
+  margin-top: 161px;
+}
+
+#team  .card1,
+.card2,
+.card3,
+.card4 {
+  background-image: url("ressources/card.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 28px;
+  background-position: center;
+}
+
+#team  .card-body {
+  background-color: #fff;
+  border-radius: 22px;
+  margin: 0 11px 11px 11px;
+  padding: 19px 19px 29px 19px !important;
+}
+
+#team  .card-title {
+  color: #141722;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 104.5%; /* 20.9px */
+  margin-bottom: 13px !important;
+}
+
+#team  .card-text {
+  color: #141722;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 104.5%; /* 20.9px */
+}
+#team .section-title {
+  color: #000;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 180%; /* 117px */
+}
+
+#team  .para-text{
+  color: #141722;
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 43.2px */
+  letter-spacing: 0.48px;
+}
+#team .text-title{
+    margin-bottom: 107px;
+}
+
+
+
+
+@media only screen and (max-width: 1500px) {
+  .titre-home {
+    margin-bottom: 30px;
+    max-width: 591px;
+  }
+
+  .titre-home h1 {
+    font-size: 67.2px;
+  }
+  .para-home {
+    margin-bottom: 40px;
+    max-width: 553px;
+  }
+  .para-home P {
+    font-size: 25.2px;
+  }
+
+  .btn-home a {
+    font-size: 18.9px;
+    padding: 11px 21px;
+  }
+}
+
+@media only screen and (max-width: 1365px) {
+  .logo {
+    margin-right: 20px;
+  }
+  .nav-link {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 1171px) {
+  .logo {
+    margin-right: 18px;
+  }
+  .nav-link {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .nav {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ri-menu-3-line {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .dropdown {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-div-flex {
+    gap: 40px;
+  }
+  #services .card-services {
+    padding: 52px 20px 52px 20px !important;
+  }
+  .nos-services-section .text-left {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-glob {
+    max-width: 305px !important;
+  }
+
+  .div-team-card {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 698px) {
+  .txt-home {
+    margin-top: 80px;
+  }
+
+  .titre-home {
+    margin-bottom: 30px;
+    max-width: 500px;
+  }
+
+  .titre-home h1 {
+    font-size: 50px;
+  }
+  .para-home {
+    margin-bottom: 40px;
+  }
+  .para-home P {
+    font-size: 25.2px;
+  }
+  .metteo .gap {
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 299px) {
+  .metteo {
+    margin-top: 40px;
+  }
+}
