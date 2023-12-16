@@ -51,35 +51,39 @@
                             <h5 class="text-center titre-login-register" style="margin-bottom: 30px;">
                                 Bienvenue ! <br /> Crée un compte
                             </h5>
-                            <form class="d-flex justify-content-center flex-column">
+                            <form class="d-flex justify-content-center flex-column" method="POST" action="../Services_Back/Crea_User.php">
                                 <div class="nom-prenom d-flex justify-content-between">
                                     <!-- Nom  -->
                                     <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
-                                        <input type="texte" class="form-control-mo" id="nom" placeholder="Nom" required />
+                                        <input type="texte" class="form-control-mo" id="nom" name="nom" placeholder="Nom" required />
                                     </div>
                                     <!-- Prenom  -->
                                     <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
-                                        <input type="texte" class="form-control-mo" id="prenom" placeholder="Prenom" required />
+                                        <input type="texte" class="form-control-mo" id="prenom" name="prenom"placeholder="Prenom" required />
                                     </div>
                                 </div>
 
                                 <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
-                                    <input type="date" class="form-control-mo date" id="date" " required />
+                                    <input type="date" class="form-control-mo date" name="date" id="date" " required />
                                 </div>
 
                                 <div class="d-flex align-items-center input-control " style="margin-bottom: 21px ">
-                                    <input type="email" class="form-control-mo " id="email2"
+                                    <input type="email" class="form-control-mo " name="email" id="email2"
                                         placeholder="Entrez votre adresse e-mail " required />
                                     <i class="clear-email ri-close-circle-line " id="clear-email2"></i>
                                 </div>
-
+                                    
                                 <div class="input-control password-container d-flex align-items-center " style="margin-bottom: 21px ">
-                                    <input type="password" class="form-control-mo " id="password-register1" placeholder="Entrez votre mot de passe " required />
+                                    <input type="text" class="form-control-mo " name="Adresse" id="adresse" placeholder="Entrez votre adresse" required />
+                                </div>
+                                
+                                <div class="input-control password-container d-flex align-items-center " style="margin-bottom: 21px ">
+                                    <input type="password" class="form-control-mo " name="password" id="password-register1" placeholder="Entrez votre mot de passe " required />
                                     <i class="toggle-password ri-eye-line " id="toggle-password-register1"></i>
                                 </div>
                                 
                                 <div class="input-control password-container d-flex align-items-center " style="margin-bottom: 50px ">
-                                    <input type="password" class="form-control-mo " id="password-register2" placeholder="Confirmer votre mot de passe " required />
+                                    <input type="password" class="form-control-mo " name="passwordverifie" id="password-register2" placeholder="Confirmer votre mot de passe " required />
                                     <i class="toggle-password ri-eye-line " id="toggle-password-register2"></i>
                                 </div>
                                  
