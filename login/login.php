@@ -62,7 +62,11 @@
                                 <button type="submit" class="btn btn-primary text-center btn-submit">
                                     Se connecter
                                 </button>
+<<<<<<< HEAD
                                 <a class="text-center a-switch " href="../register/Register.php">Vous n’avez pas de compte ? <span style=" font-weight: 700; ">Crée un compte ! </span> </a>
+=======
+                                <a class="text-center a-switch " href="../register/index.php">Vous n’avez pas de compte ? <span style=" font-weight: 700; ">Crée un compte ! </span> </a>
+>>>>>>> parent of a5b6a79 (fusion des css , reajustement des chemin des balise a pour le login et le register)
 
                             </form>
                         </div>
