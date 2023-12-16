@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles.css" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
@@ -91,7 +91,7 @@
                                 <button type="submit " class="btn btn-primary text-center btn-submit ">
                                     Se connecter
                         </button>
-                                <a class="text-center a-switch " href=" ../login/login.php">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
+                                <a class="text-center a-switch " href="../login/index.php ">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
                             </form>
                         </div>
                     </div>
