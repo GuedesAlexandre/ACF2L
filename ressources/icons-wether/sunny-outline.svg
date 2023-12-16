@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="ionicon">
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m256,48l0,48m0,320l0,48m147.08,-355.08l-33.94,33.94m-226.28,226.28l-33.94,33.94m355.08,-147.08l-48,0m-320,0l-48,0m355.08,147.08l-33.94,-33.94m-226.28,-226.28l-33.94,-33.94" fill="#FFFFFF" id="svg_1" stroke="#ffda16" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/>
+  <circle cx="256" cy="256" fill="#ffda16" id="svg_2" r="80" stroke="#ffda16" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/>
+ </g>
+</svg>
