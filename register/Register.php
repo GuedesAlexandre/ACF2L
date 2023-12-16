@@ -91,7 +91,7 @@
                                 <button type="submit " class="btn btn-primary text-center btn-submit ">
                                     Se connecter
                         </button>
-                                <a class="text-center a-switch " href="../login/index.php ">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
+                                <a class="text-center a-switch " href="../login/login.php ">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
                             </form>
                         </div>
                     </div>
