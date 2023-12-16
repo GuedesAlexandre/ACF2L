@@ -22,20 +22,24 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         $this->role = $role;
 
     }
-
+    
     public function insertIntoTable($tableName){
         $host = "localhost";
         $username = "root";
-        $password = "root";
-        $database = "test_db";
+        $password = "";
+        $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
         $connection = $db->connection; // Obtenir la connexion PDO
         $query = "INSERT INTO $tableName (USER_ID, NOM, PRENOM, EMAIL, PASSWORD, BIRTHDATE, ADRESSE, role) VALUES (?,?, ?, ?, ?, ?, ?, ?)";
         $statement = $connection->prepare($query);
-        $statement->execute([$this->USER_ID,$this->NOM, $this->PRENOM, $this->EMAIL, $this->PASSWORD, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use execute with an array instead of bind_param
+        $success = $statement->execute([$this->USER_ID,$this->NOM, $this->PRENOM, $this->EMAIL, $this->PASSWORD, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use execute with an array instead of bind_param
+        if ($success) {
+            echo "La valeur est là khoya";
+        } else {
+            echo "Bah non frérot";
+        }
     }
-
     public function displayAttributes(){
         echo "USER_ID: " . $this->USER_ID . "<br>";
         echo "NOM: " . $this->NOM . "<br>";
