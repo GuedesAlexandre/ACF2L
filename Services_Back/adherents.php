@@ -13,7 +13,7 @@ class Adherents extends User {
     protected $NB_PERSONNE;
     protected $ACTIVITES;
 
-    public function __construct($CIVI, $ADDR, $SITU, $SITUDATE, $TELEPHONE, $NB_PERS, $ACTI, $USER_ID,$NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role) {
+    public function __construct($CIVI, $ADDR, $SITU, $SITUDATE, $TELEPHONE, $NB_PERS, $ACTI, $USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role) {
         parents::__construct($USER_ID,$NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role);
         $this -> CIVILITE = $CIVI;
         $this -> ADRESSE = $ADDR;
@@ -37,6 +37,10 @@ class Adherents extends User {
     puclic function getNbPersonne() { return $this -> NB_PERSONNE; }
 
     puclic function getActivite() { return $this -> ACTIVITES; }
+
+    public function affiche() {
+        echo "Votre nom est " . $this -> NOM;
+    }
 
 
 
