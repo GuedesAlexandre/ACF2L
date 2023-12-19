@@ -7,6 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <link rel="stylesheet" href="styles.css" />
         <title>ACF2L</title>
@@ -317,6 +318,89 @@
     </div>
   </div>
 </div>
+
+
+<section  id="formulaire">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 text-white infos">
+          <h2 class="infos-titre">Informations<br />de contact</h2>
+          <h3 class="adresse">
+            Adresse : 62, Avenue de la République, 70200 Lure
+          </h3>
+          <h3>Appelez-nous : +33 01 60 56 60 60</h3>
+          <h3 class="email">Notre adresse e-mail : acf2l@gmail.com</h3>
+          <h2 class="infos-follow">Suivez-nous</h2>
+          <div>
+            <a class="reseau mr-3" href="#">Facebook</a>
+            <a class="reseau" href="#">Instagram</a>
+            <a class="reseau ml-3" href="#">Vimeo</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 contact">
+          <div class="container mt-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <h2 class="text-left mb-4 infos-titre">Contactez-nous</h2>
+                <p class="text-left present">
+                  Vous avez des questions ? N'hésitez pas à nous écrire.
+                </p>
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input class="input-form" type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom" required/>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input class="input-form" type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prénom" required/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input class="input-sujet" type="email" class="form-control" id="email" name="email" placeholder="Entrez votre mail" required/>
+                  </div>
+                  <div class="form-group">
+                    <input class="input-sujet" type="text" class="form-control" id="sujet" name="sujet" placeholder="Quel est le sujet de votre message ?" required/>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="input-message" id="message" name="message" rows="4" placeholder="Allez, écrivez votre message"></textarea>
+                  </div>
+                </form>
+                <button type="submit" class="btn-block" onclick="sendMail();">Envoyer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function sendMail() {
+        (function() {
+            emailjs.init("e6FlcKhB09eh89q1U");
+        })();
+
+    var params = {
+        prenom: document.querySelector("#prenom").value,
+        nom: document.querySelector("#nom").value,
+        sujet: document.querySelector("#sujet").value,
+        mail: document.querySelector("#email").value,
+        message: document.querySelector("#message").value
+    };
+
+    var serviceID = "service_x150wjp";
+    var templateID = "template_19tkneu";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res => {
+        alert("Email sent success !");
+    })
+
+    .catch(error => {
+        alert("Erreur d'envoi...");
+    });
+    }
+</script>
 
 </section>
         <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
