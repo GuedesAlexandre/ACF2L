@@ -11,7 +11,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         $_SESSION["password"] = $password2;
         header("Location: ../index.php");
     }else{
-        header("Location: ../login/login.php");
+        header("Location: ../login-register/login/login.php");
     }
 }
 ?>
