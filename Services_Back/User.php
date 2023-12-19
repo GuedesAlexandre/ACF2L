@@ -1,5 +1,5 @@
 <?php
-require_once 'Database.php';
+require_once '../Services_Back/Database.php';
 
 class User{
 public $USER_ID ;
@@ -26,22 +26,22 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
     public function insertIntoTable($tableName){
         $host = "localhost";
         $username = "root";
-        $password = "";
+        $password = "root";
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
         $connection = $db->connection; // Obtenir la connexion PDO
+        $hashedPassword = password_hash($this->PASSWORD, PASSWORD_DEFAULT); // Hash the password
         $query = "INSERT INTO $tableName (USER_ID, NOM, PRENOM, EMAIL, PASSWORD, BIRTHDATE, ADRESSE, role) VALUES (?,?, ?, ?, ?, ?, ?, ?)";
         $statement = $connection->prepare($query);
-        $success = $statement->execute([$this->USER_ID,$this->NOM, $this->PRENOM, $this->EMAIL, $this->PASSWORD, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use execute with an array instead of bind_param
+        $success = $statement->execute([$this->USER_ID, $this->NOM, $this->PRENOM, $this->EMAIL, $hashedPassword, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use hashed password
         if ($success) {
             echo "La valeur est là khoya";
         } else {
             echo "Bah non frérot";
         }
     }
-
-    public function displayAttributes() {
+    public function displayAttributes(){
         echo "USER_ID: " . $this->USER_ID . "<br>";
         echo "NOM: " . $this->NOM . "<br>";
         echo "PRENOM: " . $this->PRENOM . "<br>";
