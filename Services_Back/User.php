@@ -41,6 +41,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
             echo "Bah non frérot";
         }
     }
+    
 
     
     public function displayAttributes(){
@@ -55,5 +56,24 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
     
 
 
+    }
+
+    public function checkUserExists($tableName, $email, $password){
+        $host = "localhost";
+        $username = "root";
+        $password = "root";
+        $database = "ASTA_ACF2L";
+        $db = new Database($host, $username, $password, $database);
+        $db->connect(); // Se connecter à la base de données
+        $connection = $db->connection; // Obtenir la connexion PDO
+        $query = "SELECT * FROM $tableName WHERE EMAIL = ?";
+        $statement = $connection->prepare($query);
+        $statement->execute([$email]);
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        if ($user && password_verify($password, $user['PASSWORD'])) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
