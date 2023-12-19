@@ -26,7 +26,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
     public function insertIntoTable($tableName){
         $host = "localhost";
         $username = "root";
-        $password = "";
+        $password = "root";
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -41,6 +41,8 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
             echo "Bah non frérot";
         }
     }
+
+    
     public function displayAttributes(){
         echo "USER_ID: " . $this->USER_ID . "<br>";
         echo "NOM: " . $this->NOM . "<br>";
