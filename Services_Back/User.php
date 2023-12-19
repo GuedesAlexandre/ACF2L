@@ -31,9 +31,9 @@ class User{
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Connect to the database
         $connection = $db->connection; // Get the PDO connection
-        $query = "INSERT INTO $tableName (NOM, PRENOM, EMAIL, PASSWORD, BIRTHDATE, ADRESSE, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO $tableName (USER_ID,NOM, PRENOM, EMAIL, PASSWORD, BIRTHDATE, ADRESSE, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $statement = $connection->prepare($query);
-        $statement->execute([$this->NOM, $this->PRENOM, $this->EMAIL, $this->PASSWORD, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use execute with an array instead of bind_param
+        $statement->execute([$this->USER_ID,$this->NOM, $this->PRENOM, $this->EMAIL, $this->PASSWORD, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use execute with an array instead of bind_param
     }
     
 
