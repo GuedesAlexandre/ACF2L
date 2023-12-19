@@ -41,6 +41,8 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
             echo "Bah non frérot";
         }
     }
+
+    
     public function displayAttributes(){
         echo "USER_ID: " . $this->USER_ID . "<br>";
         echo "NOM: " . $this->NOM . "<br>";
@@ -51,5 +53,4 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         echo "ADRESSE: " . $this->ADRESSE . "<br>";
         echo "role: " . $this->role . "<br>";
     }
-    
-}  
+}

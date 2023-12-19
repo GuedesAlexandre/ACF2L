@@ -19,9 +19,9 @@
             <header class="container-fluid mx-5">
                 <nav class="row navbar navbar-expand-lg navbar-light ">
                     <div class="container-fluid col-0 col-lg-11">
-                        <a class="nav-link logo px-0" href="../index.php"><img src="../ressources/logo.svg" alt /></a>
+                        <a class="nav-link logo px-0" href="../index.php"><img src="../../ressources/logo.svg" alt /></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span><img src="../ressources/menu.png" alt /></span>
+                            <span><img src="../../ressources/menu.png" alt /></span>
                         </button>
                         <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
                             <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
@@ -51,7 +51,7 @@
                             <h5 class="text-center titre-login-register" style="margin-bottom: 30px;">
                                 Bienvenue ! <br /> Crée un compte
                             </h5>
-                            <form class="d-flex justify-content-center flex-column" method="POST" action="../Services_Back/Crea_User.php">
+                            <form class="d-flex justify-content-center flex-column" method="POST" action="../../Services_Back/Crea_User.php">
                                 <div class="nom-prenom d-flex justify-content-between">
                                     <!-- Nom  -->
                                     <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
