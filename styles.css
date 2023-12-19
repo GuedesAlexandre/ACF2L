@@ -216,12 +216,7 @@ button:focus:not(:focus-visible) {
   border-radius: 30px;
 }
 
-#services .card-services {
-  border-radius: 34.753px;
-  border: 2.361px solid #d6d9cb;
-  background: #ecede7;
-  margin: 0 20px;
-}
+
 
 #services a {
   border-radius: 1511px;
@@ -240,7 +235,7 @@ button:focus:not(:focus-visible) {
   transform: translateY(-5px);
 }
 
-.titre-card {
+#services .titre-card {
   font-family: "Inter", sans-serif;
   font-size: 33px;
   font-style: normal;
@@ -249,7 +244,7 @@ button:focus:not(:focus-visible) {
   line-height: 48.38px;
 }
 
-.texte-card {
+#services .texte-card {
   font-family: "Inter", sans-serif;
   font-size: 17px;
   font-style: normal;
@@ -450,6 +445,78 @@ button:focus:not(:focus-visible) {
 
 
 
+#testi .card-services {
+  border-radius: 34.753px;
+  border: 2.361px solid #d6d9cb;
+  background: #ecede7;
+  margin: 0 20px;
+  max-width: 484px !important;
+  min-height: 528px;
+  padding: 69px 0 65px 0;
+  margin: 0px;
+}
+
+
+
+.titre-chapeau {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 948px !important;
+}
+
+#testi .titre-card {
+  font-family: Plus Jakarta Sans;
+  font-size: 31.568px;
+  font-style: normal;
+  font-weight: 700;
+  max-width: 414px;
+  min-height: 107px;
+}
+#testi .texte-card {
+  font-family: Plus Jakarta Sans;
+  font-size: 18.039px;
+  font-style: normal;
+  font-weight: 600;
+  min-height: 239px;
+}
+
+.testimonial-section .titre-titre {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 54px;
+  border-radius: 30px;
+}
+
+
+#testi .img-test {
+  width: 97px;
+  height: 97px;
+  border-radius: 97px;
+  margin-right: 18px;
+}
+#testi .text-name {
+  font-family: Plus Jakarta Sans;
+  font-size: 28.862px;
+  font-style: normal;
+  font-weight: 600;
+}
+#testi .text-job {
+  font-family: Plus Jakarta Sans;
+  font-size: 18.039px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+#testi .card-body {
+  padding: 0 33px 0 33px !important;
+}
+
+
+
 
 @media only screen and (max-width: 1500px) {
   .titre-home {
@@ -528,6 +595,10 @@ button:focus:not(:focus-visible) {
   }
   #services .card-services {
     padding: 52px 20px 52px 20px !important;
+    border-radius: 34.753px;
+    border: 2.361px solid #d6d9cb;
+    background: #ecede7;
+    margin: 0 20px;
   }
   .nos-services-section .text-left {
     font-family: "Plus Jakarta Sans", sans-serif;

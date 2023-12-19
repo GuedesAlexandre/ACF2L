@@ -33,9 +33,9 @@
                                         <div class="dropdown show">
                                             <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-user-line"></i></a>
                                             <div class="dropdown-menu menu-connect" aria-labelledby="dropdownMenuLink">
-                                                <a style="gap: 5px;" class="dropdown-item d-flex align-items-center" href="register/Register.php"><i style="font-size: 18px;" class="ri-user-add-line"></i> Créer un compte</a>
+                                                <a style="gap: 5px;" class="dropdown-item d-flex align-items-center" href="login-register/register/Register.php"><i style="font-size: 18px;" class="ri-user-add-line"></i> Créer un compte</a>
                                                 <hr class="drop-hr" />
-                                                <a style="gap: 4px;" class="dropdown-item d-flex align-items-center" href="#"><ion-icon style="font-size: 24px;" name="log-in-outline"></ion-icon>Se connecter</a>
+                                                <a style="gap: 4px;" class="dropdown-item d-flex align-items-center" href="login-register/login/login.php"><ion-icon style="font-size: 24px;" name="log-in-outline"></ion-icon>Se connecter</a>
                                             </div>
                                         </div>
                                     </div>
@@ -247,6 +247,78 @@
 </div>
 </section>
 
+
+<!-- ACTUALITE  -->
+
+
+
+<section id="testi" style="margin-top: 164px;">
+
+<div class="container-fluid services-div justify-content-between pb-5">
+  
+  <!-- Section "Nos Services" -->
+  <div class="testimonial-section ">
+  <div class="row justify-content-center">
+    <div class="col-md-12 my-4">
+      <h2 class="text-center titre-titre ml-4 mt-2">Testimonials</h2>
+      
+    </div>
+    <p class="card-text text-center titre-chapeau mb-5">Découvrez les témoignages captivants de notre communauté aérienne. Ces récits reflètent l'expérience unique vécue au sein de notre club, illustrant l'impact positif et la passion partagée pour l'aviation. Explorez ces témoignages inspirants et ressentez l'esprit vibrant de notre communauté</p>
+  </div>
+</div>
+
+
+    <div class="container-fluid section-div">
+      <section id="services">
+      <div class="row justify-content-lg-between justify-content-center">
+        <div class="col-12 col-lg-4  col-md-12  mb-4 card-services">         
+            <div class="card-body">
+              <h5 class="card-title titre-card mt-3 my-2">“Un Vol Inoubliable”</h5>
+              <p class="card-text texte-card">L’aéro-club assure la formation complète de pilotes et d’instructeurs qualifiés. Cela inclut des programmes de formation variés et des cours adaptés aux besoins individuels. De plus, des baptêmes de l’air sont proposés pour une première expérience aérienne.</p>
+           
+            <div class="name d-flex align-items-center">
+              <img class="img-test" src="./ressources/tesimonial1.jpg" alt="T1">
+              <div class="text-left">
+              <h5 class="text-name">Sophie R.</h5>
+              <h6 class="text-job">Enseignante</h6>
+            </div>
+            </div>
+            </div>         
+        </div>
+        <div class="col-12 col-lg-4 col-md-12 mb-4 card-services">         
+            <div class="card-body">
+              <h5 class="card-title titre-card mt-3 my-2">“Une Expérience Spectaculaire ”</h5>
+              <p class="card-text texte-card">Je recommande vivement cette association pour une expérience de vol en ULM. Les instructeurs sont professionnels et l'ULM offre une vue spectaculaire. </p> 
+              <div class="name d-flex align-items-center">
+                <img class="img-test" src="./ressources/tesimonial2.jpg" alt="T1">
+                <div class="text-left">
+                <h5 class="text-name">Marc D.</h5>
+                <h6 class="text-job">Ingénieur</h6>
+              </div>
+              </div>
+            </div>    
+        </div>   
+        <div class="col-12 col-lg-4 col-md-12 mb-4 card-services" >
+            <div class="card-body">
+              <h5 class="card-title titre-card mt-3 my-2">“Des Sensations Uniques”</h5>
+              <p class="card-text texte-card mx-2">Un vol mémorable en ULM avec une équipe formidable. Les paysages vus d'en haut étaient à couper le souffle. Une expérience enrichissante et des sensations uniques. </p>  
+              <div class="name d-flex align-items-center">
+                <img class="img-test" src="./ressources/tesimonial3.jpg" alt="T1">
+                <div class="text-left">
+                  <h5 class="text-name">Nathalie L.</h5>
+                  <h6 class="text-job">Architecte</h6>
+                </div>
+  
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </div>
+</div>
+
+</section>
         <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

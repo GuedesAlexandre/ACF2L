@@ -19,9 +19,9 @@
             <header class="container-fluid mx-5">
                 <nav class="row navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid col-0 col-lg-11">
-                        <a class="nav-link logo px-0" href="../index.php"><img src="../ressources/logo.svg" alt /></a>
+                        <a class="nav-link logo px-0" href="../index.php"><img src="../../ressources/logo.svg" alt /></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span><img src="../ressources/menu.png" alt /></span>
+                            <span><img src="../../ressources/menu.png" alt /></span>
                         </button>
                         <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
                             <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
