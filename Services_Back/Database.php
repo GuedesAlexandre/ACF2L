@@ -113,7 +113,7 @@ class Database {
             $query = "INSERT INTO {$tableName} ({$columns}) VALUES ({$placeholders})";
             $statement = $this->connection->prepare($query);
             $statement->execute($data);
-            echo "ça a marché khoya";
+            echo "ça a marché ";
         } catch (PDOException $e) {
             echo "ptn batard tu sais pas coder " . $e->getMessage();
         }
