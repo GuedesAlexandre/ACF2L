@@ -50,19 +50,6 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         echo "BIRTHDATE: " . $this->BIRTHDATE . "<br>";
         echo "ADRESSE: " . $this->ADRESSE . "<br>";
         echo "role: " . $this->role . "<br>";
-    
-    puclic function getNom() { return $this -> NOM; }
-
-    puclic function getPrenom() { return $this -> PRENOM; }
-
-    puclic function getEmail() { return $this -> EMAIL; }
-
-    puclic function getPassword() { return $this -> PASSWORD; }
-
-    puclic function getBirthdate() { return $this -> BIRTHDATE; }
-
-    puclic function getAdresse() { return $this -> ADRESSE; }
+    }
     
 }  
-
-}
