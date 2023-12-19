@@ -58,7 +58,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
 
     }
 
-    public function checkUserExists($tableName, $email, $password){
+    public function checkUserExists($tableName, $email, $password2){
         $host = "localhost";
         $username = "root";
         $password = "root";
@@ -70,10 +70,14 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         $statement = $connection->prepare($query);
         $statement->execute([$email]);
         $user = $statement->fetch(PDO::FETCH_ASSOC);
-        if ($user && password_verify($password, $user['PASSWORD'])) {
-            return true;
+        var_dump($user);
+        if ($user && password_verify($password2, $user['PASSWORD'])) {
+            ob_start(); // Mettre en mémoire tampon la sortie
+            header("Location: ../index.php"); // Redirection vers "../index.php"
+            ob_end_clean(); // Vider le tampon de sortie
+            exit; // Terminer le script après la redirection
         } else {
-            return false;
+            echo "Email ou mot de passe incorrect";
         }
     }
 }

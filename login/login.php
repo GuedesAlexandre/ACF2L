@@ -49,13 +49,13 @@
                     <div class="col-12 col-lg-5">
                         <div class="mx-auto mx-lg-0" style="max-width: 426px; margin-top: 59px;">
                             <h5 class="text-center titre-login-register">Salut ! <br> Bon retour</h5>
-                            <form class="d-flex justify-content-center flex-column">
+                            <form class="d-flex justify-content-center flex-column" action="../Services_Back/Verif_Login.php" method="post">
                                 <div class=" d-flex align-items-center input-control" style="margin-bottom: 21px">
-                                    <input type="email" class="form-control-mo" id="email" placeholder="Entrez votre adresse e-mail" required />
+                                    <input type="email" class="form-control-mo" name="email" id="email" placeholder="Entrez votre adresse e-mail" required />
                                     <i class="clear-email ri-close-circle-line" id="clear-email"></i>
                                 </div>
                                 <div class=" input-control password-container d-flex align-items-center " style="margin-bottom: 50px">
-                                    <input type="password" class="form-control-mo" id="password" placeholder="Entrez votre mot de passe" required />
+                                    <input type="password" name="password" class="form-control-mo" id="password" placeholder="Entrez votre mot de passe" required />
                                     <i class="toggle-password ri-eye-line" id="toggle-password"></i>
                                 </div>
 
