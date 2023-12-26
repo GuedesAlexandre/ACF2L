@@ -41,10 +41,6 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
             echo "Bah non frérot";
         }
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> parent of 6060e77 (ajout de la nouvelle branche et ajout du dashboard)
 
     
     public function displayAttributes(){
@@ -73,7 +69,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         $statement = $connection->prepare($query);
         $statement->execute([$email]);
         $user = $statement->fetch(PDO::FETCH_ASSOC);
-      
+        var_dump($user);
         if ($user && password_verify($password2, $user['PASSWORD'])) {
             ob_start(); // Mettre en mémoire tampon la sortie
             header("Location: ../index.php"); // Redirection vers "../index.php"
