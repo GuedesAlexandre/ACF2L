@@ -13,13 +13,13 @@ class ApiMeteo {
     private $api_key;
     private $city;
 
-    public function __construct($api_key, $city) {
-        $this->api_key = $api_key;
-        $this->city = $city;
-    }
+        public function __construct($api_key, $city) {
+            $this->api_key = $api_key;
+            $this->city = $city;
+        }
 
-    public function getMeteoData() {
-        $url = "http://api.openweathermap.org/data/2.5/forecast?q={$this->city}&appid={$this->api_key}&units=metric"; // Ajout de l'unité de mesure en Celsius
+        public function getMeteoData() {
+            $url = "http://api.openweathermap.org/data/2.5/forecast?q={$this->city}&appid={$this->api_key}&units=metric"; // Ajout de l'unité de mesure en Celsius
         $response = @file_get_contents($url);
         
 
