@@ -41,6 +41,10 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
             echo "Bah non frérot";
         }
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> parent of 6060e77 (ajout de la nouvelle branche et ajout du dashboard)
 
     
     public function displayAttributes(){
