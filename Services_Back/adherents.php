@@ -24,7 +24,6 @@ class Adherents extends User {
         $this -> ACTIVITES = $ACTIVITES;
     }
 
-    
 
     public function affiche() {
         echo "Votre nom est " . $this -> NOM;
