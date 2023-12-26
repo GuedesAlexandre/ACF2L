@@ -24,19 +24,7 @@ class Adherents extends User {
         $this -> ACTIVITES = $ACTIVITES;
     }
 
-    puclic function getCivilite() { return $this -> CIVILITE; }
-
-    puclic function getAdresse() { return $this -> ADRESSE; }
-
-    puclic function getSituation() { return $this -> SITUATION; }
-
-    puclic function getSituationDate() { return $this -> SITUATIONDATE; }
-
-    puclic function getTel() { return $this -> TEL; }
-
-    puclic function getNbPersonne() { return $this -> NB_PERSONNE; }
-
-    puclic function getActivite() { return $this -> ACTIVITES; }
+    
 
     public function affiche() {
         echo "Votre nom est " . $this -> NOM;
