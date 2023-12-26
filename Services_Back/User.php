@@ -41,10 +41,6 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
             echo "Bah non frérot";
         }
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> parent of 6060e77 (ajout de la nouvelle branche et ajout du dashboard)
 
     
     public function displayAttributes(){
@@ -56,8 +52,6 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         echo "BIRTHDATE: " . $this->BIRTHDATE . "<br>";
         echo "ADRESSE: " . $this->ADRESSE . "<br>";
         echo "role: " . $this->role . "<br>";
-<<<<<<< HEAD
-=======
     
 
 
@@ -84,6 +78,5 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         } else {
             echo "Email ou mot de passe incorrect";
         }
->>>>>>> parent of 6060e77 (ajout de la nouvelle branche et ajout du dashboard)
     }
 }
