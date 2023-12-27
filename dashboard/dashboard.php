@@ -245,7 +245,11 @@
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
                                             de reservation en cours</span>
-                                        <span class="txt-info-card h3 font-bold mb-0">ecrit le nombre en php fdp</span>
+                                        <span class="txt-info-card h3 font-bold mb-0"><?php
+                                        require_once '../Services_Back/reservation.php';
+                                       Reservation::countTableRows("ASTA_RESERVATION")
+
+                                        ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -263,8 +267,8 @@
                         <table class="table table-hover table-nowrap ">
                             <thead class="txt-info-ligne">
                                 <tr>
-                                    <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">EMAIL</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">ID de l'adhérant</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">ID du pilote</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">DATE/HORAIRE</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
@@ -273,36 +277,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="ligne-content-info">
-                                    <td>
-                                        <img style="width: 37px" alt="..."
-                                            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                            class="avatar avatar-sm rounded-circle me-2">
-                                        Ton grand pere
-                                    </td>
-                                    <td>
-                                        Tongrandpere@gmail.com
-                                    </td>
-                                    <td>
-                                        10/12/23:20h18
-                                    </td>
-                                    <td>
-                                        10/12/23
-                                    </td>
-                                    <td style="max-width: 150px;">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus,
-                                    </td>
-                                    <td>
-                                        Avions de comabat qui tire vite
-                                    </td>
-                                    <td class="text-end">
-                                        <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                            <img src="ressources/icons/trash-icons.svg" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
+                                <?php
+                                    require_once '../Services_Back/reservation.php';
+                                    Reservation::displayReservation("ASTA_RESERVATION");
+
+                                ?>
 
 
                             </tbody>
