@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset( $_SESSION["TESTUSER"]) OR isset( $_SESSION["USER"])){
+if(isset( $_SESSION["user"]) OR isset( $_SESSION["USER"])){
     echo ' <div class="nav">
     <header class="container-fluid">
         <nav class="row navbar navbar-expand-lg navbar-light">
