@@ -36,7 +36,7 @@
 
             <?php 
     require_once 'Services_Back/Api_Meteo.php';
-?>
+            ?>
         </section>
 
         <section id="section-services">
