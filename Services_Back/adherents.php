@@ -14,14 +14,14 @@ class Adherents extends User {
     protected $ACTIVITES;
 
     public function __construct($CIVI, $ADDR, $SITU, $SITUDATE, $TELEPHONE, $NB_PERS, $ACTI, $USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role) {
-        parents::__construct($USER_ID,$NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role);
+        parent::__construct($USER_ID,$NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role);
         $this -> CIVILITE = $CIVI;
         $this -> ADRESSE = $ADDR;
         $this -> SITUATION = $SITU;
         $this -> SITUATIONDATE = $SITUDATE;
         $this -> TEL = $TELEPHONE;
         $this -> NB_PERSONNE = $NB_PERS;
-        $this -> ACTIVITES = $ACTIVITES;
+        $this -> ACTIVITES = $ACTI;
     }
 
 
