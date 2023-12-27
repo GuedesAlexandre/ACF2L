@@ -12,6 +12,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
             "email" => $email,
             "password" => $password2
         );
+        $_SESSION["TESTUSER"] = $_SESSION["user"];
         header("Location: ../index.php");
     }else{
         header("Location: ../login-register/login/login.php");
