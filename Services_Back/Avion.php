@@ -56,42 +56,57 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
 
         $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
         foreach($rows as $row) {
-           echo' <tr class="ligne-content-info">';
-                                   echo' <td>';
-                                      echo'  <img style="width: 37px;" alt="..."
-                                            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                            class="avatar avatar-sm rounded-circle me-2">'.$row['MODELE'] .'
-                                        
-                                    </td>';
-                                   echo' <td>'.
-                                   $row['CAPACITE'].
-                                        '
-                                    </td>';
-                                    echo'<td>'.$row['POIDS_A_VIDE']
-                                        .'Kg'.
-                                    '</td>';
-                                    
-                                   echo' <td>'.$row['AUTONOMIE']
-                                       .
-                                    '</td>';
-                                   echo' <td>'.$row['CONSSOMATION']
-                                      .
-                                    '</td>';
-                                    
-                                  echo'  <td style="max-width: 150px;">'. $row['DESCRIPTION']
-                                        
-                                   .' </td>';
-                                    echo'<td class="text-end">
-                                        <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                            <img src="ressources/icons/trash-icons.svg" alt="">
-                                        </button>
-                                    </td>
-                                </tr>';
-            
+            echo '<tr class="ligne-content-info">';
+            echo '<td>';
+            echo '<img style="width: 37px;" alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">' . $row['MODELE'] . '</td>';
+            echo '<td>' . $row['CAPACITE'] . '</td>';
+            echo '<td>' . $row['POIDS_A_VIDE'] . 'Kg</td>';
+            echo '<td>' . $row['AUTONOMIE'] . '</td>';
+            echo '<td>' . $row['CONSSOMATION'] . '</td>';
+            echo '<td style="max-width: 150px;">' . $row['DESCRIPTION'] . '</td>';
+            echo '<td class="text-end">';
+            echo '<form action="EditRow.php" method="post">';
+            echo '<input type="hidden" name="avionId" value="' . $row['ID_AVIONS'] . '">';
+            echo '<button type="submit" class="btn btn-sm btn-neutral btn-modif">Modifier</button>';
+            echo '</form>';
+            echo '<form action="../Services_Back/DeleteRow.php" method="post">';
+            echo '<input type="hidden" name="avionId" value="' . $row['ID_AVIONS'] . '">';
+            echo '<button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">';
+            echo '<img src="ressources/icons/trash-icons.svg" alt=""></button>';
+            echo '</form>';
+            echo '</td>';
+            echo '</tr>';
         }
     }
+
+    public static function editRow($avionId){
+        // Code pour éditer une ligne dans la base de données
+        // Utilisez $avionId pour identifier la ligne à modifier
+    }
+
+    
+public static function deleteRow($avionId){
+    $host = "localhost";
+    $username = "root";
+    $password = "root";
+    $database = "ASTA_ACF2L";
+    $db = new Database($host, $username, $password, $database);
+    $db->connect(); // Se connecter à la base de données
+    $connection = $db->connection; // Obtenir la connexion PDO 
+
+    $query = "DELETE FROM ASTA_AVIONS WHERE ID_AVIONS = ?";
+    $statement = $connection->prepare($query);
+    $success = $statement->execute([$avionId]);
+
+    if ($success) {
+        echo "Ligne supprimée avec succès";
+       
+    } else {
+        echo "Erreur lors de la suppression de la ligne";
+    }
+}
+    
+
     
 
 public static function countTableRows($tableName){
@@ -114,4 +129,5 @@ public static function countTableRows($tableName){
     echo  '<span class="txt-info-card h3 font-bold mb-0">' . $totalRows . '</span>';
 
 }
+
 }
