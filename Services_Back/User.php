@@ -71,12 +71,9 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
         $user = $statement->fetch(PDO::FETCH_ASSOC);
       
         if ($user && password_verify($password2, $user['PASSWORD'])) {
-            ob_start(); // Mettre en mémoire tampon la sortie
-            header("Location: ../index.php"); // Redirection vers "../index.php"
-            ob_end_clean(); // Vider le tampon de sortie
-            exit; // Terminer le script après la redirection
+           return true; 
         } else {
-            echo "Email ou mot de passe incorrect";
+           return false;
         }
     }
 }
