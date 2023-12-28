@@ -113,6 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $avion = new Avion($avion_id, $pilote_id, $modele, $capacite, $poids_a_vide, $autonomie, $consommation, $description);
 
             $avion->insertIntoTable("ASTA_AVIONS");
+            
         } else {
             // Afficher un message d'erreur ou effectuer une autre action en cas de champs vides
         }
