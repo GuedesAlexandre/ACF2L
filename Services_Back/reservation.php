@@ -62,8 +62,8 @@ class Reservation{
             echo '<input type="hidden" name="avionId" value="' . $row['ADHERENT_ID'] . '">';
             echo '<button type="submit" class="btn btn-sm btn-neutral btn-modif">Modifier</button>';
             echo '</form>';
-            echo '<form action="../Services_Back/DeleteAdh.php" method="post">';
-            echo '<input type="hidden" name="adherentID" value="' . $row['ADHERENT_ID'] . '">';
+            echo '<form action="../Services_Back/DeleteRow.php" method="post">';
+            echo '<input type="hidden" name="avionId" value="' . $row['ADHERENT_ID'] . '">';
             echo '<button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">';
             echo '<img src="ressources/icons/trash-icons.svg" alt=""></button>';
             echo '</form>';
