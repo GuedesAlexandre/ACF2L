@@ -76,4 +76,50 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
            return false;
         }
     }
+    public function getUserId() {
+        return $this->USER_ID;
+    }
+
+public static function getUserByEmail($tableName, $email){
+    $host = "localhost";
+    $username = "root";
+    $password = "root";
+    $database = "ASTA_ACF2L";
+    $db = new Database($host, $username, $password, $database);
+    $db->connect(); // Se connecter à la base de données
+    $connection = $db->connection; // Obtenir la connexion PDO
+    $query = "SELECT * FROM $tableName WHERE EMAIL = ?";
+    $statement = $connection->prepare($query);
+    $statement->execute([$email]);
+    $users = $statement->fetchAll(PDO::FETCH_ASSOC);
+  
+    $userConnects = [];
+    foreach ($users as $user) {
+        $userConnect = new User($user['USER_ID'], $user['NOM'], $user['PRENOM'], $user['EMAIL'], $user['PASSWORD'], $user['BIRTHDATE'], $user['ADRESSE'], $user['ROLE']);
+        $userConnects[] = $userConnect;
+    }
+  
+    return $userConnects;
+}
+    
+
+public static function checkEmailExists($tableName, $email){
+     $host = "localhost";
+     $username = "root";
+     $password = "root";
+     $database = "ASTA_ACF2L";
+     $db = new Database($host, $username, $password, $database);
+     $db->connect(); // Se connecter à la base de données
+     $connection = $db->connection; // Obtenir la connexion PDO
+     $query = "SELECT * FROM $tableName WHERE EMAIL = ?";
+     $statement = $connection->prepare($query);
+     $statement->execute([$email]);
+     $user = $statement->fetch(PDO::FETCH_ASSOC);
+  
+     if ($user) {
+         return true; 
+     } else {
+         return false;
+     }
+}
 }
