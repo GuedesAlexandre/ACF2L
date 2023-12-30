@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="../styles.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <a href="devenir-adeherent.php">devenir adherent</a>
 </body>
 </html>
