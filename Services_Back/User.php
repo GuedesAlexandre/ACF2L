@@ -26,7 +26,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
     public function insertIntoTable($tableName){
         $host = "localhost";
         $username = "root";
-        $password = "root";
+        $password = ""; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -60,7 +60,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
     public function checkUserExists($tableName, $email, $password2){
         $host = "localhost";
         $username = "root";
-        $password = "root";
+        $password = ""; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -83,7 +83,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
 public static function getUserByEmail($tableName, $email){
     $host = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "root"; 
     $database = "ASTA_ACF2L";
     $db = new Database($host, $username, $password, $database);
     $db->connect(); // Se connecter à la base de données
@@ -106,7 +106,7 @@ public static function getUserByEmail($tableName, $email){
 public static function checkEmailExists($tableName, $email){
      $host = "localhost";
      $username = "root";
-     $password = "root";
+     $password = ""; 
      $database = "ASTA_ACF2L";
      $db = new Database($host, $username, $password, $database);
      $db->connect(); // Se connecter à la base de données

@@ -187,7 +187,7 @@ button:focus:not(:focus-visible) {
 }
 
 .toggle-password,
-.clear-email {
+.clear-email{
     font-size: 21px;
     color: #61676d;
     margin-right: 25px;
