@@ -1,31 +1,40 @@
-.gallery-item img {
-  border-radius: 30px;
+#footer .footer-bg {
+  background-color: #1c1c1c;
+  padding-top: 48px;
+  padding-bottom: 20px;
 }
-#eyes .gallery-item {
-  width: auto;
+#footer .comp-text {
+  font-family: Inter;
+  font-size: 18.667px;
+  font-style: normal;
+  font-weight: 400;
+  
 }
-#eyes .gallery-item2 {
-  width: 386px;
-}
-.gallery-item2 img {
-  border-radius: 30px;
-}
-
-#eyes .gallery-title {
-  font-family: Plus Jakarta Sans;
-  font-size: 65px;
-  font-weight: 600;
-}
-
-.image1 img {
-  max-width: 658px;
-  height: 671px;
+#footer h5 {
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  
 }
 
-.image2 img {
-  max-width: 386px;
-  height: 324px;
+#footer a{
+
+  color: #ddd;
+  font-family: Inter;
+  font-size: 18.667px;
+  font-style: normal;
+  font-weight: 400;
 }
-.gallery-container{
-    width: 100%;
+#footer p{
+    color: #ddd;
+    font-family: Inter;
+    font-size: 18.667px;
+    font-style: normal;
+    font-weight: 400; 
+}
+#footer .footer-container{
+    padding-left: 200px;
+    padding-right: 200px;
+
 }
