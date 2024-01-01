@@ -11,6 +11,7 @@ isset($_POST["date"]) && isset($_POST["email"]) && isset($_POST["Adresse"])&&iss
             $USER = new User($USER_ID,$_POST["nom"], $_POST["prenom"], $_POST["email"], $_POST["password"], $_POST["date"], $_POST["Adresse"], 0);
             $USER->insertIntoTable("ASTA_USER");
             $_SESSION["USER"] = $USER;
+            $_SESSION["USER_ID"] = $USER->getUserID();
             header("Location: ../index.php");
             exit();     
             }else {
