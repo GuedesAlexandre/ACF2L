@@ -1,132 +1,3 @@
-<<<<<<< HEAD
-body {
-  background-color: #ffffff;
-}
-
-#formulaire .infos {
-  background: url("./ressources/Image-Brightness.png") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  padding-left: 142px;
-  padding-top: 217px;
-  width: 960px;
-  height: 960px;
-}
-
-#formulaire .infos-titre {
-  color: #a59e20;
-  font-size: 38px;
-  font-weight: 600;
-  margin-bottom: 44px;
-}
-#formulaire .infos-follow {
-  color: #a59e20;
-  font-size: 38px;
-  font-weight: 600;
-}
-.adresse {
-  color: #ffffff;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  margin-bottom: 82px;
-}
-.email {
-  color: #ffffff;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  margin-bottom: 95px;
-}
-#formulaire h3 {
-  color: #ffffff;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-}
-
-#formulaire .input-form,
-#formulaire .input-sujet,
-#formulaire .input-message {
-  border-radius: 17px;
-  background: #f5f5ff;
-  border: none;
-}
-
-#formulaire .input-form {
-  width: 100%;
-  height: 68px;
-}
-
-#formulaire .input-sujet,
-.input-message {
-  width: 100%;
-  height: 68px;
-}
-
-#formulaire .input-message {
-  height: 194px !important;
-  padding-top: 15px ;
-}
-
-#formulaire .form-group {
-  margin-bottom: 15px;
-}
-
-#formulaire textarea {
-  resize: vertical;
-}
-
-#formulaire button {
-  color: #a59e20;
-  text-align: center;
-  font-size: 23px;
-  font-weight: 600;
-  border-radius: 19px;
-  border: none;
-  width: 100%;
-  height: 68px;
-  background: rgba(165, 158, 32, 0.1);
-}
-
-#formulaire button:hover {
-  background-color: #9ddf71;
-}
-#formulaire .present {
-  color: #2f2f2f;
-
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-}
-#formulaire .reseau {
-  color: #fff;
-
-  font-family: Plus Jakarta Sans;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 600;
-  text-decoration: none;
-}
-#formulaire .contact {
-  padding-top: 175px;
-  padding-bottom: 10px;
-}
-#formulaire ::placeholder {
-  padding-left: 21px;
-  color: #9f9f9f;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-}
-
-=======
->>>>>>> parent of 6060e77 (ajout de la nouvelle branche et ajout du dashboard)
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
@@ -329,9 +200,8 @@ button:focus:not(:focus-visible) {
   margin-top: 119px !important;
 }
 
-#ulm{
+#ulm {
   margin-top: 160px !important;
-
 }
 
 .services-div {
@@ -345,8 +215,6 @@ button:focus:not(:focus-visible) {
   border-radius: 30px;
 }
 
-
-
 #services a {
   border-radius: 1511px;
   background: rgba(255, 255, 255, 0);
@@ -358,7 +226,6 @@ button:focus:not(:focus-visible) {
   align-items: center;
   transition: transform 0.3s ease-in-out;
 }
-
 
 #services a:hover {
   transform: translateY(-5px);
@@ -402,7 +269,6 @@ button:focus:not(:focus-visible) {
 .services-div {
   padding: 126px 0px 132px 0px;
 }
-
 
 .ulm-card1 {
   background-image: url("ressources/card1.png");
@@ -500,7 +366,7 @@ button:focus:not(:focus-visible) {
   letter-spacing: 0.48px;
 }
 
-#ulm a{
+#ulm a {
   transition: all 0.4s ease-in-out;
 }
 #ulm a:hover {
@@ -508,11 +374,11 @@ button:focus:not(:focus-visible) {
 }
 
 /* TEAM  */
-#team{
+#team {
   margin-top: 161px;
 }
 
-#team  .card1,
+#team .card1,
 .card2,
 .card3,
 .card4 {
@@ -525,14 +391,14 @@ button:focus:not(:focus-visible) {
   background-position: center;
 }
 
-#team  .card-body {
+#team .card-body {
   background-color: #fff;
   border-radius: 22px;
   margin: 0 11px 11px 11px;
   padding: 19px 19px 29px 19px !important;
 }
 
-#team  .card-title {
+#team .card-title {
   color: #141722;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 20px;
@@ -542,7 +408,7 @@ button:focus:not(:focus-visible) {
   margin-bottom: 13px !important;
 }
 
-#team  .card-text {
+#team .card-text {
   color: #141722;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 20px;
@@ -559,44 +425,36 @@ button:focus:not(:focus-visible) {
   line-height: 180%; /* 117px */
 }
 
-#team  .para-text{
+#team .para-text {
   color: #141722;
-  font-family: Plus Jakarta Sans;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 180%; /* 43.2px */
   letter-spacing: 0.48px;
 }
-#team .text-title{
-    margin-bottom: 107px;
+#team .text-title {
+  margin-bottom: 107px;
 }
-
-
 
 #testi .card-services {
   border-radius: 34.753px;
   border: 2.361px solid #d6d9cb;
   background: #ecede7;
   margin: 0 20px;
-  max-width: 484px !important;
   min-height: 528px;
   padding: 69px 0 65px 0;
   margin: 0px;
 }
-
-
 
 .titre-chapeau {
   font-family: "Inter", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
-  max-width: 948px !important;
 }
 
 #testi .titre-card {
-  font-family: Plus Jakarta Sans;
   font-size: 31.568px;
   font-style: normal;
   font-weight: 700;
@@ -604,7 +462,6 @@ button:focus:not(:focus-visible) {
   min-height: 107px;
 }
 #testi .texte-card {
-  font-family: Plus Jakarta Sans;
   font-size: 18.039px;
   font-style: normal;
   font-weight: 600;
@@ -619,7 +476,6 @@ button:focus:not(:focus-visible) {
   margin-bottom: 54px;
   border-radius: 30px;
 }
-
 
 #testi .img-test {
   width: 97px;
@@ -644,7 +500,6 @@ button:focus:not(:focus-visible) {
   padding: 0 33px 0 33px !important;
 }
 
-<<<<<<< HEAD
 #formulaire .infos {
   background: url("./ressources/Image-Brightness.png") center/cover no-repeat;
   display: flex;
@@ -668,7 +523,6 @@ button:focus:not(:focus-visible) {
 }
 .adresse {
   color: #ffffff;
-  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -676,15 +530,17 @@ button:focus:not(:focus-visible) {
 }
 .email {
   color: #ffffff;
-  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   margin-bottom: 95px;
 }
+#formulaire {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
 #formulaire h3 {
   color: #ffffff;
-  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -711,7 +567,7 @@ button:focus:not(:focus-visible) {
 
 #formulaire .input-message {
   height: 194px !important;
-  padding-top: 15px ;
+  padding-top: 15px;
 }
 
 #formulaire .form-group {
@@ -740,7 +596,6 @@ button:focus:not(:focus-visible) {
 #formulaire .present {
   color: #2f2f2f;
 
-  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -748,7 +603,6 @@ button:focus:not(:focus-visible) {
 #formulaire .reseau {
   color: #fff;
 
-  font-family: Plus Jakarta Sans;
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
@@ -761,16 +615,32 @@ button:focus:not(:focus-visible) {
 #formulaire ::placeholder {
   padding-left: 21px;
   color: #9f9f9f;
-  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
 }
 
-=======
->>>>>>> parent of 6060e77 (ajout de la nouvelle branche et ajout du dashboard)
+#reservation-page {
+  background-image: url("./ressources/bg-login-register.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 120vh;
+  background-size: cover;
+  background-position: center;
+}
 
+#reservation-page input[type="time"]::-webkit-calendar-picker-indicator,
+#reservation-page input[type="date"]::-webkit-calendar-picker-indicator {
+  font-size: 21px;
+  margin-right: 25px;
+  cursor: pointer;
+}
 
+.custom-form {
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+}
 
 @media only screen and (max-width: 1500px) {
   .titre-home {
