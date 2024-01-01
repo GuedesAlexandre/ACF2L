@@ -1,8 +1,8 @@
 <?php
+session_start();
 
-error_reporting(E_ALL & ~E_DEPRECATED);
-
-require_once "Services_Back/User.php";
+require_once "../Services_Back/User.php";
+$_SESSION["USER_ID"] = $USER->getUserID();
 if(isset($_POST["nom"]) && isset($_POST["prenom"]) && 
 isset($_POST["date"]) && isset($_POST["email"]) && isset($_POST["Adresse"])&&isset($_POST["password"]) && isset($_POST["passwordverifie"])){
     if(strlen($_POST["password"]) > 8 && preg_match('/^(?=.*[A-Z])(?=.*\d)/', $_POST["password"])){
