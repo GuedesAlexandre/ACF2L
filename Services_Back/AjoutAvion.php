@@ -52,7 +52,7 @@
                             <?php
                             $servername = "localhost";
                             $username = "root";
-                            $password = ""; 
+                            $password = "root"; 
                             $dbname = "ASTA_ACF2L";
 
                             // Create connection
