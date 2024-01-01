@@ -1,18 +1,24 @@
 <?php
 require_once 'Services_Back/Database.php';
 class Reservation{
+    public $RESERVATION_ID;
     public $ADHERENT_ID;
     public $ID_PILOTES;
     protected $DATE_RESERVATION;
     protected $HEURE_RESERVATION;
     protected $DESCRIPTION;
 
-    public function __construct($ADHERENT_ID, $ID_PILOTES, $DATE_RESERVATION, $HEURE_RESERVATION, $DESCRIPTION){
+    public function __construct($RESERVATION_ID, $ADHERENT_ID, $ID_PILOTES, $DATE_RESERVATION, $HEURE_RESERVATION, $DESCRIPTION){
+        $this->RESERVATION_ID = $RESERVATION_ID;
         $this->ADHERENT_ID = $ADHERENT_ID;
         $this->ID_PILOTES = $ID_PILOTES;
         $this->DATE_RESERVATION = $DATE_RESERVATION;
         $this->HEURE_RESERVATION = $HEURE_RESERVATION;
         $this->DESCRIPTION = $DESCRIPTION;
+    }
+
+    public function getReservationID() {
+        return $this -> RESERVATION_ID;
     }
 
     public function insertReservation(){
@@ -23,9 +29,9 @@ class Reservation{
         $db = new Database($host, $username, $password, $database);
         $db->connect();
         $connection = $db->connection;
-        $query ="INSERT INTO ASTA_RESERVATION (ADHERENT_ID, ID_PILOTES, DATE_RESERVATION, HEURE_RESERVATION, DESCRIPTION) VALUES (?,?,?,?,?)";
+        $query ="INSERT INTO ASTA_RESERVATION (RESERVATION_ID, ADHERENT_ID, ID_PILOTES, DATE_RESERVATION, HEURE_RESERVATION, DESCRIPTION) VALUES (?,?,?,?,?,?)";
         $statement = $connection->prepare($query);
-        $success = $statement->execute([$this->ADHERENT_ID, $this->ID_PILOTES, $this->DATE_RESERVATION, $this->HEURE_RESERVATION, $this->DESCRIPTION]);
+        $success = $statement->execute([$this->RESERVATION_ID, $this->ADHERENT_ID, $this->ID_PILOTES, $this->DATE_RESERVATION, $this->HEURE_RESERVATION, $this->DESCRIPTION]);
         if($success){
             echo"Réservation validé";
         }else{
