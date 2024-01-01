@@ -500,13 +500,32 @@ button:focus:not(:focus-visible) {
   padding: 0 33px 0 33px !important;
 }
 
+.container-galery img {
+  width: 100%;
+}
+
+.big-images img {
+  height: 520px;
+}
+
+@media (max-width: 767px) {
+  .container-galery img {
+    max-width: 400px;
+  }
+
+  .big-images img {
+    max-width: 400px;
+  }
+
+ 
+}
+
 #formulaire .infos {
   background: url("./ressources/Image-Brightness.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   padding-left: 142px;
   padding-top: 217px;
-  width: 960px;
   height: 960px;
 }
 
@@ -523,6 +542,7 @@ button:focus:not(:focus-visible) {
 }
 .adresse {
   color: #ffffff;
+  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -530,17 +550,15 @@ button:focus:not(:focus-visible) {
 }
 .email {
   color: #ffffff;
+  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   margin-bottom: 95px;
 }
-#formulaire {
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-
 #formulaire h3 {
   color: #ffffff;
+  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -552,6 +570,7 @@ button:focus:not(:focus-visible) {
   border-radius: 17px;
   background: #f5f5ff;
   border: none;
+  padding-left: 15px;
 }
 
 #formulaire .input-form {
@@ -567,7 +586,7 @@ button:focus:not(:focus-visible) {
 
 #formulaire .input-message {
   height: 194px !important;
-  padding-top: 15px;
+  
 }
 
 #formulaire .form-group {
@@ -596,6 +615,7 @@ button:focus:not(:focus-visible) {
 #formulaire .present {
   color: #2f2f2f;
 
+  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -603,22 +623,25 @@ button:focus:not(:focus-visible) {
 #formulaire .reseau {
   color: #fff;
 
+  font-family: Plus Jakarta Sans;
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
   text-decoration: none;
 }
 #formulaire .contact {
-  padding-top: 175px;
-  padding-bottom: 10px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 #formulaire ::placeholder {
-  padding-left: 21px;
+  
   color: #9f9f9f;
+  font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
 }
+
 
 #reservation-page {
   background-image: url("./ressources/bg-login-register.png");
@@ -730,6 +753,42 @@ button:focus:not(:focus-visible) {
     text-align: center;
     margin: 0px;
   }
+}
+
+.footer-bg {
+  background-color: #1c1c1c;
+  padding-top: 48px;
+  padding-bottom: 20px;
+}
+#footer .comp-text {
+  font-family: Inter;
+  font-size: 18.667px;
+  font-style: normal;
+  font-weight: 400;
+  
+}
+#footer h5 {
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  
+}
+
+#footer a{
+
+  color: #ddd;
+  font-family: Inter;
+  font-size: 18.667px;
+  font-style: normal;
+  font-weight: 400;
+}
+#footer p{
+    color: #ddd;
+    font-family: Inter;
+    font-size: 18.667px;
+    font-style: normal;
+    font-weight: 400; 
 }
 
 @media screen and (max-width: 767px) {
