@@ -38,7 +38,7 @@ class Reservation{
     public static function displayReservation($tableName){
         $host = "localhost";
         $username = "root";
-        $password = ""; 
+        $password = "root"; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -75,7 +75,7 @@ class Reservation{
 public static function deleteRow($adherentID){
     $host = "localhost";
     $username = "root";
-    $password = ""; 
+    $password = "root"; 
     $database = "ASTA_ACF2L";
     $db = new Database($host, $username, $password, $database);
     $db->connect(); // Se connecter à la base de données
@@ -100,7 +100,7 @@ public static function deleteRow($adherentID){
 public static function countTableRows($tableName){
     $host = "localhost";
     $username = "root";
-    $password = ""; 
+    $password = "root"; 
     $database = "ASTA_ACF2L";
     $db = new Database($host, $username, $password, $database);
     $db->connect(); // Se connecter à la base de données

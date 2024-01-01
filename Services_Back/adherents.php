@@ -23,14 +23,51 @@ class Adherents extends User {
         $this -> NB_PERSONNE = $NB_PERS;
         $this -> ACTIVITES = $ACTI;
     }
+    
+    public static function getUserInfo($userID) {
+        $host = "localhost";
+        $username = "root";
+        $password = "root"; 
+        $database = "ASTA_ACF2L";
+        $db = new Database($host, $username, $password, $database);
 
+        $db->connect(); // Se connecter à la base de données
+        $connection = $db->connection; 
 
-    public function affiche() {
-        echo "Votre nom est " . $this -> NOM;
+        $query = "SELECT * FROM user WHERE USER_ID = :userID";
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':userID', $userID);
+        $stmt->execute();
+
+        $userInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $userInfo;
     }
+            public static function DevAdh($UserID){
+                
+            }
+
+            public function getCivility() { return $this->CIVILITE; }
+            public function getAddress() { return $this->ADRESSE; }
+
+            public function affiche() {
+                echo "Votre nom est " . $this -> NOM;
+            }
 
 
+            public function getUserInfoArray($userID) {
+                $userInfo = self::getUserInfo($userID);
+                $userInfoArray = array(
+                    'USER_ID' => $userInfo['USER_ID'],
+                    'NOM' => $userInfo['NOM'],
+                    'PRENOM' => $userInfo['PRENOM'],
+                    'EMAIL' => $userInfo['EMAIL'],
+                    'PASSWORD' => $userInfo['PASSWORD'],
+                    'BIRTHDATE' => $userInfo['BIRTHDATE'],
+                    'ADRESSE' => $userInfo['ADRESSE'],
+                    'role' => $userInfo['role']
+                );
 
-}
-
-?>
+                return $userInfoArray;
+            }
+        }
