@@ -11,22 +11,29 @@ protected $BIRTHDATE;
 protected $ADRESSE;
 protected $role;
 
-public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role){
-       $this->USER_ID = rand(1,70000);
+public function __construct($USER_ID = null, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role=null){
+    if($USER_ID == null){
+    $this->USER_ID = rand(1,70000); }else{
+        $this->USER_ID = $USER_ID;
+    }
        $this->NOM = $NOM;
         $this->PRENOM = $PRENOM;
         $this->EMAIL = $EMAIL;
         $this->PASSWORD = $PASSWORD;
         $this->BIRTHDATE = $BIRTHDATE;
         $this->ADRESSE = $ADRESSE;
-        $this->role = $role;
+        if($role == null){
+        $this->role = 0;
+        }else{
+            $this->role = $role;
+        }
 
     }
     
     public function insertIntoTable($tableName){
         $host = "localhost";
         $username = "root";
-        $password = ""; 
+        $password = "root"; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -57,10 +64,10 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
 
     }
 
-    public function checkUserExists($tableName, $email, $password2){
+    public static function checkUserExists($tableName, $email, $password2){
         $host = "localhost";
         $username = "root";
-        $password = ""; 
+        $password = "root"; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -93,20 +100,15 @@ public static function getUserByEmail($tableName, $email){
     $statement->execute([$email]);
     $users = $statement->fetchAll(PDO::FETCH_ASSOC);
   
-    $userConnects = [];
-    foreach ($users as $user) {
-        $userConnect = new User($user['USER_ID'], $user['NOM'], $user['PRENOM'], $user['EMAIL'], $user['PASSWORD'], $user['BIRTHDATE'], $user['ADRESSE'], $user['ROLE']);
-        $userConnects[] = $userConnect;
-    }
-  
-    return $userConnects;
+    
+    return $users;
 }
     
 
 public static function checkEmailExists($tableName, $email){
      $host = "localhost";
      $username = "root";
-     $password = ""; 
+     $password = "root"; 
      $database = "ASTA_ACF2L";
      $db = new Database($host, $username, $password, $database);
      $db->connect(); // Se connecter à la base de données

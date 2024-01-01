@@ -25,7 +25,7 @@
                 <div class="texte-center mt-5 p-5 rounded-4" style="background-color:  #121318;">
                 <h3 class="text-light mb-5">Devenir Adherent</h3>
                     <div class="">
-                        <form>
+                        <form action="devenir-adeherent.php" method="post">
                             <div class="mb-3">
                                 <label for="civilite" class="form-label custom-form">Civilité</label>
                                 <div class="form-check">
@@ -54,18 +54,10 @@
                                 <input type="date" class="form-control" id="date_naissance" name="date_naissance">
                             </div>
                             <div class="mb-3">
-                                <label for="adresse_numero" class="form-label custom-form">Numéro et rue</label>
+                                <label for="adresse_numero" class="form-label custom-form">Adresse complète</label>
                                 <input type="text" class="form-control" id="adresse_numero" name="adresse_numero">
                             </div>
-                            <div class="mb-3">
-                                <label for="adresse_code_postal" class="form-label custom-form">Code Postal</label>
-                                <select class="form-select" id="adresse_code_postal" name="adresse_code_postal">
-                                    <option value="75000">75000</option>
-                                    <option value="69000">69000</option>
-                                    <option value="31000">31000</option>
-                                    <!-- Ajoutez d'autres options ici -->
-                                </select>
-                            </div>
+                            
                             <div class="mb-3">
                                 <label for="adresse_ville" class="form-label custom-form">Ville</label>
                                 <input type="text" class="form-control" id="adresse_ville" name="adresse_ville">
@@ -80,10 +72,7 @@
                                     <option value="divorce">Divorcé</option>
                                 </select>
                             </div>
-                            <div class="mb-3">
-                                <label for="date_debut_fin" class="form-label custom-form">Date de début ou de fin de votre situation familiale </label>
-                                <input type="date" class="form-control" id="date_debut_fin" name="date_debut_fin">
-                            </div>
+                            
                             <div class="mb-3">
                                 <label for="email" class="form-label custom-form">Email</label>
                                 <input type="email" class="form-control" id="email" name="email">
@@ -92,46 +81,9 @@
                                 <label for="telephone" class="form-label custom-form">Téléphone portable</label>
                                 <input type="tel" class="form-control" id="telephone" name="telephone">
                             </div>
-                            <div class="mb-3">
-                                <label for="nb_enfants_mineurs" class="form-label custom-form">Nombre d'enfants mineurs</label>
-                                <input type="number" class="form-control" id="nb_enfants_mineurs" name="nb_enfants_mineurs">
-                            </div>
-                            <div class="mb-3">
-                                <label for="nb_enfants_majeurs" class="form-label custom-form">Nombre d'enfants majeurs</label>
-                                <input type="number" class="form-control" id="nb_enfants_majeurs" name="nb_enfants_majeurs">
-                            </div>
-                            <div class="mb-3">
-                                <label for="parents_a_charge" class="form-label custom-form ">Parents à charge</label>
-                                <input type="text" class="form-control" id="parents_a_charge" name="parents_a_charge">
-                            </div>
-                            <div class="mb-3">
-                                <label for="cause_handicap" class="form-label custom-form">Cause du handicap</label>
-                                <input type="text" class="form-control" id="cause_handicap" name="cause_handicap">
-                            </div>
-                            <div class="mb-3" id="activitiesForm">
-
-                                <label for="activites" class="form-label custom-form">Activités susceptibles d'être demandées</label><br>
-                                <label class="custom-form">
-                                    <input type="checkbox" name="pilotage" value="cours_pilotage">
-                                    Cours de pilotage
-                                </label><br>
-                                <label class="custom-form">
-                                    <input type="checkbox" name="bapteme_air" value="bapteme_air">
-                                    Baptême de l'air
-                                </label><br>
-                                <label class="custom-form">
-                                    <input type="checkbox" name="bapteme_air" value="bapteme_air">
-                                    Découverte de Paysages
-                                </label><br>
-                                <label class="custom-form">
-                                    <input type="checkbox" name="bapteme_air" value="bapteme_air">
-                                    Cadeau Mémorable
-                                </label><br>
-                                <label class="custom-form">
-                                    <input type="checkbox" name="bapteme_air" value="bapteme_air">
-                                    Opportunité de Photographie Aérienne 
-                                </label><br>
-                                <!-- Ajoutez d'autres activités avec des cases à cocher au besoin -->
+                            
+                            
+                              
 
                             </div>
                             <button type="submit" class="btn btn-primary">Envoyer</button>
@@ -174,6 +126,47 @@ function displaySelectedActivities(activities) {
   }
 }
 </script>
+<?php 
+
+require_once 'adherents.php';
+require_once 'User.php';
+
+
+$_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
+
+
+
+
+
+$USER_INFO = Adherents::getUserInfo($_USERTOADHID);
+
+$USERID = $USER_INFO[0]["USER_ID"];
+$NOM = $USER_INFO[0]["NOM"];
+$PRENOM = $USER_INFO[0]["PRENOM"];
+$EMAIL = $USER_INFO[0]["EMAIL"];
+$PASSWORD = $USER_INFO[0]["PASSWORD"];
+
+
+
+
+
+//récup info du user
+//ajout des nouvelles infos
+//new adh
+//insert adh
+
+
+// Stockage des informations de l'utilisateur dans des variables
+
+// Ajoutez d'autres variables selon les clés du tableau $USER_INFO
+
+
+
+
+// Ajoutez d'autres variables selon les clés du tableau $USER_INFO
+
+
+?>
 
 <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
