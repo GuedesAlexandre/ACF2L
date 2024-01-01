@@ -217,6 +217,7 @@ button:focus:not(:focus-visible) {
     margin-top: 30px;
 }
 
+
 @media only screen and (max-width: 1365px) {
     .logo {
         margin-right: 20px;

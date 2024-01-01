@@ -11,12 +11,12 @@ if(isset( $_SESSION["user"]) OR isset( $_SESSION["USER"])){
                 </button>
                 <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
                     <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
-                        <a class="nav-link" href="#">Nos services</a>
-                        <a class="nav-link" href="#">Types d’ULM</a>
-                        <a class="nav-link" href="#">Notre équipe</a>
-                        <a class="nav-link" href="#">Événement</a>
-                        <a class="nav-link" href="#">Galerie</a>
-                        <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#section-services">Nos services</a>
+                    <a class="nav-link" href="#ulm">Types d’ULM</a>
+                    <a class="nav-link" href="#team">Notre équipe</a>
+                    <a class="nav-link" href="#">Événement</a>
+                    <a class="nav-link" href="#galery">Galerie</a>
+                    <a class="nav-link" href="#formulaire">Contact</a>
                         <div class="dropdown show">
                             <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-user-line"></i></a>
                             <div class="dropdown-menu menu-connect" aria-labelledby="dropdownMenuLink">
@@ -48,12 +48,12 @@ if(isset( $_SESSION["user"]) OR isset( $_SESSION["USER"])){
                 </button>
                 <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
                     <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
-                        <a class="nav-link" href="#">Nos services</a>
-                        <a class="nav-link" href="#">Types d’ULM</a>
-                        <a class="nav-link" href="#">Notre équipe</a>
-                        <a class="nav-link" href="#">Événement</a>
-                        <a class="nav-link" href="#">Galerie</a>
-                        <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#section-services">Nos services</a>
+                    <a class="nav-link" href="#ulm">Types d’ULM</a>
+                    <a class="nav-link" href="#team">Notre équipe</a>
+                    <a class="nav-link" href="#">Événement</a>
+                    <a class="nav-link" href="#galery">Galerie</a>
+                    <a class="nav-link" href="#formulaire">Contact</a>
                         <div class="dropdown show">
                             <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-user-line"></i></a>
                             <div class="dropdown-menu menu-connect" aria-labelledby="dropdownMenuLink">
