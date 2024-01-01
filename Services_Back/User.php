@@ -83,7 +83,7 @@ public function __construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDA
 public static function getUserByEmail($tableName, $email){
     $host = "localhost";
     $username = "root";
-    $password = ""; 
+    $password = "root"; 
     $database = "ASTA_ACF2L";
     $db = new Database($host, $username, $password, $database);
     $db->connect(); // Se connecter à la base de données
