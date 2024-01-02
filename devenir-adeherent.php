@@ -87,10 +87,7 @@
                                 <input type="text" class="form-control" id="adresse_numero" name="adresse_numero">
                             </div>
                             
-                            <div class="mb-3">
-                                <label for="adresse_ville" class="form-label custom-form">Ville</label>
-                                <input type="text" class="form-control" id="adresse_ville" name="adresse_ville">
-                            </div>
+                            
                             <div class="mb-3">
                                 <label for="situation_familiale" class="form-label custom-form">Situation familiale</label>
                                 <select class="form-select" id="situation_familiale" name="situation_familiale">
@@ -111,7 +108,67 @@
                                 <input type="tel" class="form-control" id="telephone" name="telephone">
                             </div>
                             
-                            
+                            <?php 
+
+require_once 'Services_Back/adherents.php';
+require_once 'Services_Back/User.php';
+if(isset($_POST["civilite"]) && isset($_POST["adresse_numero"]) && isset($_POST["situation_familiale"]) && isset( $_POST["telephone"])){
+
+
+
+$_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
+
+
+
+
+
+$USER_INFO = Adherents::getUserInfo($_USERTOADHID);
+
+$USERID = $USER_INFO[0]["USER_ID"];
+$NOM = $USER_INFO[0]["NOM"];
+$PRENOM = $USER_INFO[0]["PRENOM"];
+$EMAIL = $USER_INFO[0]["EMAIL"];
+$PASSWORD = $USER_INFO[0]["PASSWORD"];
+$BIRTHDATE = $USER_INFO[0]["BIRTHDATE"];
+$ADRESSE = $USER_INFO[0]["ADRESSE"];
+$CIVILITE = $_POST["civilite"];
+$Adresse_complète = $_POST["adresse_numero"];
+$SITUATION = $_POST["situation_familiale"];
+$TEL = $_POST["telephone"];
+
+
+// Création de l'objet Adherents avec les données
+$adherent = new Adherents($CIVILITE, $Adresse_complète, $SITUATION, $TEL,$USERID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, 1);
+$adherent -> insertIntADH("ASTA_ADHERENTS");
+
+// ...
+
+
+
+
+}else{
+    echo '<div style="color: red;">Veuillez remplir les champs manquants</div>';
+}
+
+
+
+//récup info du user
+//ajout des nouvelles infos
+//new adh
+//insert adh
+
+
+// Stockage des informations de l'utilisateur dans des variables
+
+// Ajoutez d'autres variables selon les clés du tableau $USER_INFO
+
+
+
+
+// Ajoutez d'autres variables selon les clés du tableau $USER_INFO
+
+
+?>
                               
 
                             </div>
@@ -155,47 +212,7 @@ function displaySelectedActivities(activities) {
   }
 }
 </script>
-<?php 
 
-require_once 'Services_Back/adherents.php';
-require_once 'Services_Back/User.php';
-
-
-$_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
-
-
-
-
-
-$USER_INFO = Adherents::getUserInfo($_USERTOADHID);
-
-$USERID = $USER_INFO[0]["USER_ID"];
-$NOM = $USER_INFO[0]["NOM"];
-$PRENOM = $USER_INFO[0]["PRENOM"];
-$EMAIL = $USER_INFO[0]["EMAIL"];
-$PASSWORD = $USER_INFO[0]["PASSWORD"];
-
-
-
-
-
-//récup info du user
-//ajout des nouvelles infos
-//new adh
-//insert adh
-
-
-// Stockage des informations de l'utilisateur dans des variables
-
-// Ajoutez d'autres variables selon les clés du tableau $USER_INFO
-
-
-
-
-// Ajoutez d'autres variables selon les clés du tableau $USER_INFO
-
-
-?>
 
 <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
