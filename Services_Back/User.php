@@ -13,7 +13,7 @@ protected $role;
 
 public function __construct($USER_ID = null, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role=null){
     if($USER_ID == null){
-    $this->USER_ID = rand(1,70000); }else{
+        $this->USER_ID = rand(1,70000); }else{
         $this->USER_ID = $USER_ID;
     }
        $this->NOM = $NOM;
