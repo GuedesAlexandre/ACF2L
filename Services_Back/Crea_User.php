@@ -19,7 +19,7 @@ isset($_POST["date"]) && isset($_POST["email"]) && isset($_POST["Adresse"])&&iss
             exit();     
             }else {
                 
-                echo"l'email est déjà utilisé";
+                echo"<div style='color: red'>Cette email est déjà utilisé</div>";
             }
         }
         else{

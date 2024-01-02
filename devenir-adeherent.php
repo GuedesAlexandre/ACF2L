@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet" />
-    <link type="text/css" rel="stylesheet" href="../styles.css">
+   
     <title>Document</title>
 </head>
 
@@ -20,7 +23,7 @@
     <header class="container-fluid">
         <nav class="row navbar navbar-expand-lg navbar-light">
             <div class="container-fluid col-0 col-lg-11">
-                <a class="nav-link logo px-0" href="#"><img src="ressources/logo.svg" alt="" /></a>
+                <a class="nav-link logo px-0" href="index.php"><img src="ressources/logo.svg" alt="" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span><img src="ressources/menu.png" alt="" /></span>
                 </button>
@@ -33,7 +36,7 @@
                     <a class="nav-link" href="#galery">Galerie</a>
                     <a class="nav-link" href="#formulaire">Contact</a>
                       <?php 
-                      require_once '../Services_Back/GestionNav.php';
+                      require_once 'Services_Back/GestionNav.php';
                       
                       ?>
                     </div>
@@ -154,8 +157,8 @@ function displaySelectedActivities(activities) {
 </script>
 <?php 
 
-require_once 'adherents.php';
-require_once 'User.php';
+require_once 'Services_Back/adherents.php';
+require_once 'Services_Back/User.php';
 
 
 $_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
