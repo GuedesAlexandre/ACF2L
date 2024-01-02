@@ -33,7 +33,7 @@ a {
     border: none;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #ffffff;
     opacity: 1;
     margin: 0;
 }
@@ -95,10 +95,11 @@ button:focus:not(:focus-visible) {
 
 .menu-connect {
     right: -70px;
+    color:black;
 }
 
 .menu-connect a {
-    color: #ffffff;
+    color: #000000;
     font-family: "Rubik", sans-serif;
     font-size: 13px;
     font-style: normal;
@@ -107,8 +108,8 @@ button:focus:not(:focus-visible) {
 }
 
 .menu-connect a:hover {
-    background: none;
-    color: #fff;
+   
+    color: #990000;
 }
 
 .navbar-collapse {

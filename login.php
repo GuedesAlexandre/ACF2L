@@ -7,8 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 
    
     <title>Document</title>
@@ -54,7 +55,7 @@
                     <div class="col-12 col-lg-5">
                         <div class="mx-auto mx-lg-0" style="max-width: 426px; margin-top: 59px;">
                             <h5 class="text-center titre-login-register">Salut ! <br> Bon retour</h5>
-                            <form class="d-flex justify-content-center flex-column" action="../../Services_Back/Verif_Login.php" method="post">
+                            <form class="d-flex justify-content-center flex-column" action="Services_Back/Verif_Login.php" method="post">
                                 <div class=" d-flex align-items-center input-control" style="margin-bottom: 21px">
                                     <input type="email" class="form-control-mo" name="email" id="email" placeholder="Entrez votre adresse e-mail" required />
                                     <i class="clear-email ri-close-circle-line" id="clear-email"></i>
@@ -67,7 +68,7 @@
                                 <button type="submit" class="btn btn-primary text-center btn-submit">
                                     Se connecter
                                 </button>
-                                <a class="text-center a-switch " href="../register/Register.php">Vous n’avez pas de compte ? <span style=" font-weight: 700; ">Crée un compte ! </span> </a>
+                                <a class="text-center a-switch " href="Register.php">Vous n’avez pas de compte ? <span style=" font-weight: 700; ">Crée un compte ! </span> </a>
 
                             </form>
                         </div>
@@ -102,7 +103,11 @@
             emailInput.value = '';
         });
     </script>
-
+  <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 
