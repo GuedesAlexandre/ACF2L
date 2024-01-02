@@ -1,5 +1,5 @@
 <?php
-require_once '../Services_Back/Database.php';
+require_once 'Services_Back/Database.php';
 class Reservation{
     public $ADHERENT_ID;
     public $ID_PILOTES;

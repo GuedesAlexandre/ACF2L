@@ -9,12 +9,16 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
 
   
     <title>Document</title>
 </head>
 
 <body>
+<?php
+    require_once 'Services_Back/Crea_User.php';
+    ?>
     <section id="login">
     <header class="container-fluid">
         <nav class="row navbar navbar-expand-lg navbar-light">
@@ -54,7 +58,7 @@
                             <h5 class="text-center titre-login-register" style="margin-bottom: 30px;">
                                 Bienvenue ! <br /> Crée un compte
                             </h5>
-                            <form class="d-flex justify-content-center flex-column" method="POST" action="../../Services_Back/Crea_User.php">
+                            <form class="d-flex justify-content-center flex-column" method="POST" action="Register.php">
                                 <div class="nom-prenom d-flex justify-content-between">
                                     <!-- Nom  -->
                                     <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
@@ -102,6 +106,16 @@
             </div>
         </div>
     </section>
+    
+    <style >
+    .menu-connect a {
+    color:black!important;
+    font-family: "Rubik", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}</style>
 
     <script>
 
@@ -138,6 +152,11 @@
         clearEmail(emailInput2, icon2);
         
     </script>
+      <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>

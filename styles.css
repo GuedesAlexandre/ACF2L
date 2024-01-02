@@ -89,12 +89,8 @@ button:focus:not(:focus-visible) {
 }
 .dropdown-menu {
   border-radius: 7px;
-  background: linear-gradient(
-    108deg,
-    rgba(255, 255, 255, 0.26) 0%,
-    rgba(255, 255, 255, 0.07) 100%
-  );
-  backdrop-filter: blur(6.5px);
+ 
+ 
 }
 .nav-link:focus {
   color: #fff;
@@ -105,7 +101,7 @@ button:focus:not(:focus-visible) {
 }
 
 .menu-connect a {
-  color: #ffffff;
+  color: #000000;
   font-family: "Rubik", sans-serif;
   font-size: 13px;
   font-style: normal;
@@ -115,7 +111,7 @@ button:focus:not(:focus-visible) {
 
 .menu-connect a:hover {
   background: none;
-  color: #fff;
+  color: #000000;
 }
 
 .navbar-collapse {
