@@ -7,5 +7,6 @@
 </head>
 <body>
     <a href="devenir-adeherent.php">devenir adherent</a>
+    <a href="page-reservation.php">page reservation</a>
 </body>
 </html>

@@ -18,8 +18,6 @@
     <title>Document</title>
 </head>
 
-<?php
-
 
     <section id="reservation-page">
     <header class="container-fluid">
@@ -65,8 +63,9 @@
                             <div class="card-body">
                                 <form class="d-flex justify-content-center flex-column" action="page-reservation.php" method="POST">
                                     <select class="d-flex align-items-center input-control form-control-mo select" name="pilote" id="pilote" style="margin-bottom: 21px; padding: 20px">
+                                    <option value="select">-- SÉLÉCTIONNEZ UN PILOTE --</option>
     
-                                    '; 
+                                    <?php
                                         $servername = "localhost";
                                         $username = "root";
                                         $password = "root"; 
@@ -92,7 +91,7 @@
     
                                         $conn->close();
                                     
-                                    echo '
+                                    ?>
                                     </select>
     
     
@@ -110,6 +109,27 @@
                                     </div>
     
                                     <button class="btn btn-primary text-center btn-submit" type="submit" placeholder="Prenom">Réserver</button>
+                                    <?php
+        require_once "Services_Back/reservation.php";
+        require_once "Services_Back/Database.php";
+        require_once "Services_Back/User.php";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST["pilote"]) && isset($_POST["date"]) && isset($_POST["heure"]) && isset($_POST["commentaire"])) {
+                $reservationID = rand(1,70000);
+                $_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
+                $piloteID = $_POST["pilote"];
+                $date = $_POST["date"];
+                $heure = $_POST["heure"];
+                $comm = $_POST["commentaire"];
+
+                $reservation = new Reservation($reservationID, $_USERTOADHID, $piloteID, $date, $heure, $comm);
+                $reservation->insertReservation();
+            } else {
+                echo "<span style='color: red'>Il manque des trucs</span>";
+            }
+        }
+    ?>
                                 </form>
                             </div>
                         </div>
@@ -118,12 +138,13 @@
             </div>
         </div>
     </section>
+
     <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-?>
+
 
 </html>
