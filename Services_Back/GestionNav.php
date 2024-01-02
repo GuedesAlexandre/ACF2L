@@ -16,7 +16,7 @@ if(isset( $_SESSION["user"]) OR isset( $_SESSION["USER"])){
     <div class="dropdown-menu menu-connect" aria-labelledby="dropdownMenuLink">
         <a style="gap: 5px;" class="dropdown-item d-flex align-items-center" href="Register.php"><i style="font-size: 18px;" class="ri-user-add-line"></i> Créer un compte</a>
         <hr class="drop-hr" />
-        <a style="gap: 4px;" class="dropdown-item d-flex align-items-center" href="login.php"><ion-icon style="font-size: 24px;" name="log-in-outline"></ion-icon>Se connecter</a>
+        <a style="gap: 4px;" class="dropdown-item d-flex align-items-center" href="login.php"><ion-icon style="font-size: 24px; " name="log-in-outline"></ion-icon>Se connecter</a>
     </div>
 </div>';
 }

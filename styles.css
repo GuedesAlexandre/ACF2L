@@ -8,6 +8,7 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -49,9 +50,9 @@ a {
 }
 
 .nav-link {
-  color: #fff;
-  font-family: "Rubik", sans-serif;
-  font-size: 22px;
+  color: #fff !important;
+  font-family: "Rubik", sans-serif !important;
+  font-size: 22px !important;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -89,15 +90,13 @@ button:focus:not(:focus-visible) {
 }
 .dropdown-menu {
   border-radius: 7px;
- 
- 
+  left:-60px !important; 
 }
 .nav-link:focus {
   color: #fff;
 }
 
 .menu-connect {
-  right: -70px;
 }
 
 .menu-connect a {
