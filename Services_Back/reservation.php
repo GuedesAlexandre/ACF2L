@@ -17,10 +17,6 @@ class Reservation{
         $this->DESCRIPTION = $DESCRIPTION;
     }
 
-    public function getReservationID() {
-        return $this -> RESERVATION_ID;
-    }
-
     public function insertReservation(){
         $host="localhost";
         $username="root";
@@ -33,9 +29,9 @@ class Reservation{
         $statement = $connection->prepare($query);
         $success = $statement->execute([$this->RESERVATION_ID, $this->ADHERENT_ID, $this->ID_PILOTES, $this->DATE_RESERVATION, $this->HEURE_RESERVATION, $this->DESCRIPTION]);
         if($success){
-            echo"Réservation validé";
+            echo"<span style='color: green'>Réservation validé</span>";
         }else{
-            echo"Réservation invalide";
+            echo"<span style='color: red'>Réservation invalide</span>";
         }
     }
 
