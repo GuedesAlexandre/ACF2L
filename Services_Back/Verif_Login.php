@@ -22,7 +22,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
     
         
     }else{
-        header("Location: ../login-register/login/login.php");
+        header("Location: login.php");
     }
 }
 
