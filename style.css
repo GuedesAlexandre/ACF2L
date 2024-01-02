@@ -15,7 +15,7 @@ a {
 }
 
 #login {
-    background-image: url("../ressources/bg-login-register.png");
+    background-image: url("ressources/bg-login-register.png");
     background-repeat: no-repeat;
     width: 100%;
     height: 120vh;
@@ -198,7 +198,7 @@ button:focus:not(:focus-visible) {
     color: red;
     opacity: 1;
     display: block;
-    background: url("ressources/calendar-2-line.svg") no-repeat;
+    background: url("./ressources/calendar-2-line.svg") no-repeat;
     width: 17px;
     height: 17px;
     margin-right: 25px;

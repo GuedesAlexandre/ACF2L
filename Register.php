@@ -4,44 +4,47 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+  
     <title>Document</title>
 </head>
 
 <body>
     <section id="login">
-        <div class="nav" style="padding: 0;">
-            <header class="container-fluid mx-5">
-                <nav class="row navbar navbar-expand-lg navbar-light ">
-                    <div class="container-fluid col-0 col-lg-11">
-                        <a class="nav-link logo px-0" href="../index.php"><img src="../../ressources/logo.svg" alt /></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span><img src="../../ressources/menu.png" alt /></span>
-                        </button>
-                        <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
-                            <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
-                                <a class="nav-link" href="#">Nos services</a>
-                                <a class="nav-link" href="#">Types d’ULM</a>
-                                <a class="nav-link" href="#">Notre équipe</a>
-                                <a class="nav-link" href="#">Événement</a>
-                                <a class="nav-link" href="#">Galerie</a>
-                                <a class="nav-link" href="#">Contact</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="row justify-content-center">
-                    <div class="col-11 underline">
-                        <hr />
+    <header class="container-fluid">
+        <nav class="row navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid col-0 col-lg-11">
+                <a class="nav-link logo px-0" href="#"><img src="ressources/logo.svg" alt="" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><img src="ressources/menu.png" alt="" /></span>
+                </button>
+                <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
+                    <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
+                    <a class="nav-link" href="#section-services">Nos services</a>
+                    <a class="nav-link" href="#ulm">Types d’ULM</a>
+                    <a class="nav-link" href="#team">Notre équipe</a>
+                    <a class="nav-link" href="#">Événement</a>
+                    <a class="nav-link" href="#galery">Galerie</a>
+                    <a class="nav-link" href="#formulaire">Contact</a>
+                      <?php 
+                      require_once 'Services_Back/GestionNav.php';
+                      
+                      ?>
                     </div>
                 </div>
-            </header>
+            </div>
+        </nav>
+        <div class="row justify-content-center">
+            <div class="col-11 underline">
+                <hr />
+            </div>
         </div>
+    </header>
 
         <div class="login">
             <div class>
@@ -91,7 +94,7 @@
                                 <button type="submit " class="btn btn-primary text-center btn-submit ">
                                     Se connecter
                         </button>
-                                <a class="text-center a-switch " href="../login/login.php ">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
+                                <a class="text-center a-switch " href="login.php ">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
                             </form>
                         </div>
                     </div>
