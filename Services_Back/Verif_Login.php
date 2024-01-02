@@ -1,5 +1,5 @@
 <?php
-require_once '../Services_Back/User.php';
+require_once 'User.php';
 session_start();
 if(isset($_POST["email"]) && isset($_POST["password"])){
     $email = $_POST["email"];
@@ -22,7 +22,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
     
         
     }else{
-        header("Location: ../login-register/login/login.php");
+        header("Location: login.php");
     }
 }
 

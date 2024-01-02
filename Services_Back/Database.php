@@ -10,7 +10,7 @@ class Database {
         $this->host = $host;
         $this->username = $username;
         $this->password = $password;
-        $this->database = $database;
+        $this->database = $database;    
     }
 
     public  function connect() {

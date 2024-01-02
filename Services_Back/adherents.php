@@ -1,7 +1,8 @@
 <?php
 
-require_once '../Services_Back/Database.php';
-require_once '../Services_Back/User.php';
+error_reporting(E_ALL & ~E_DEPRECATED);
+require_once 'Services_Back/Database.php';
+require_once 'Services_Back/User.php';
 
 class Adherents extends User {
 
@@ -22,28 +23,27 @@ class Adherents extends User {
         $db->connect(); // Se connecter à la base de données
         $connection = $db->connection; // Obtenir la connexion PDO
         $hashedPassword = password_hash($this->PASSWORD, PASSWORD_DEFAULT); // Hash the password
-        $query = "INSERT INTO $tableName (USER_ID, NOM, PRENOM, EMAIL, PASSWORD, BIRTHDATE, ADRESSE, role, CIVILITE, ADRESSE, SITUATION, SITUATIONDATE, TEL, NB_PERSONNE, ACTIVITES) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        $query = "INSERT INTO $tableName (ADHERENT_ID, NOM, PRENOM, CIVILITE, SITUATION, TEL, EMAIL, PASSWORD, BIRTHDATE, ADRESSE, ROLE) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
         $statement = $connection->prepare($query);
         $success = $statement->execute([$this->USER_ID, $this->NOM, 
-        $this->PRENOM, $this->EMAIL, $hashedPassword, $this->BIRTHDATE, $this->ADRESSE, $this->role, 
-        $this->CIVILITE, $this->ADRESSE, $this->SITUATION, $this->SITUATIONDATE, $this->TEL]); // Use hashed password
+        $this->PRENOM, $this->CIVILITE, $this->SITUATION, $this->TEL, $this->EMAIL, $hashedPassword, $this->BIRTHDATE, $this->ADRESSE, $this->role]); // Use hashed password
         if ($success) {
-            echo "Adhérents créé";
+           
+            echo "<span style='color:green;'>Adhérent créé </span>";
+            echo "<a href='index.php'>Revenir à l'acceuil</a>";
+            
         } else {
-            echo "Erreur lors de la création de l'adhérent";
+            echo "<span style='color:red;'>Adhérent créé </span>";
         }
     }
-    public function __construct($CIVI, $ADDR, $SITU, $SITUDATE, $TELEPHONE,  $ACTI, $USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role) {
-        parent::__construct($USER_ID,$NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role);
-        $this -> CIVILITE = $CIVI;
-        $this -> ADRESSE = $ADDR;
-        $this -> SITUATION = $SITU;
-        $this -> SITUATIONDATE = $SITUDATE;
-        $this -> TEL = $TELEPHONE;
+    public function __construct($CIVI, $ADDR, $SITU, $TELEPHONE,  $USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role) {
+        parent::__construct($USER_ID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, $role);
+        $this->CIVILITE = $CIVI;
+        $this->ADRESSE = $ADDR;
+        $this->SITUATION = $SITU;
+        $this->TEL = $TELEPHONE;
        
-        $this -> ACTIVITES = $ACTI;
     }
-
 
     
     public static function getUserInfo($userID) {

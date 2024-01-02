@@ -1,5 +1,5 @@
 <?php
-require_once '../Services_Back/Database.php';
+require_once 'Services_Back/Database.php';
 
 function deleteRow($adherentID){
     $host = "localhost";

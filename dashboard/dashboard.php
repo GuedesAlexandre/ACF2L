@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
-    <script src="Services_Back/SupprimeEdit.js"></script>
+    <link rel="stylesheet" href="dashboard.css" />
+  
+   
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <aside class="" style="min-width: 270px;">
             <nav class="navbar bg-light h-100 justify-content-center align-items-start">
                 <div>
-                    <a href="" class="logo"><img src="ressources/logo-nav-dashboard.svg" alt="logo-nav" /></a>
+                    <a href="../index.php" class="logo"><img src="ressources/logo-nav-dashboard.svg" alt="logo-nav" /></a>
                     <ul class="navbar-nav nav-dashboard gap-4 mt-5" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
                         <li class="nav-item">
@@ -247,7 +248,7 @@
                                             de reservation en cours</span>
                                         <span class="txt-info-card h3 font-bold mb-0"><?php
                                         require_once '../Services_Back/reservation.php';
-                                       Reservation::countTableRows("ASTA_RESERVATION")
+                                        Reservation::countTableRows("ASTA_RESERVATION")
 
                                         ?></span>
                                     </div>
