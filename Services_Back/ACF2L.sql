@@ -68,3 +68,11 @@ CREATE TABLE ASTA_RESERVATION (
     FOREIGN KEY (ID_PILOTES) REFERENCES ASTA_PILOTES(ID_PILOTES)
 );
 
+  <div class="dropdown show">
+                            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ri-user-line"></i></a>
+                            <div class="dropdown-menu menu-connect" aria-labelledby="dropdownMenuLink">
+                                <a style="gap: 5px;" class="dropdown-item d-flex align-items-center" href="Services_Back/Compte.php"><i style="font-size: 18px;" class="ri-user-add-line"></i> Mon Compte</a>
+                                <hr class="drop-hr" />
+                                <a style="gap: 4px;" class="dropdown-item d-flex align-items-center" href="Services_Back/deconnexion.php"><ion-icon style="font-size: 24px;" name="log-in-outline"></ion-icon>Déconnexion</a>
+                            </div>
+                        </div>
