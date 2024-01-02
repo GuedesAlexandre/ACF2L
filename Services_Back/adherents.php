@@ -1,7 +1,8 @@
 <?php
 
-require_once '../Services_Back/Database.php';
-require_once '../Services_Back/User.php';
+
+require_once 'Services_Back/Database.php';
+require_once 'Services_Back/User.php';
 
 class Adherents extends User {
 

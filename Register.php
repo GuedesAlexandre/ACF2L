@@ -16,14 +16,12 @@
 </head>
 
 <body>
-<?php
-    require_once 'Services_Back/Crea_User.php';
-    ?>
+
     <section id="login">
     <header class="container-fluid">
         <nav class="row navbar navbar-expand-lg navbar-light">
             <div class="container-fluid col-0 col-lg-11">
-                <a class="nav-link logo px-0" href="#"><img src="ressources/logo.svg" alt="" /></a>
+                <a class="nav-link logo px-0" href="index.php"><img src="ressources/logo.svg" alt="" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span><img src="ressources/menu.png" alt="" /></span>
                 </button>
@@ -96,10 +94,14 @@
                                  
 
                                 <button type="submit " class="btn btn-primary text-center btn-submit ">
-                                    Se connecter
-                        </button>
+                                    Se connecter</button>
+                  
                                 <a class="text-center a-switch " href="login.php ">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
                             </form>
+                           
+                        <?php
+    require_once 'Services_Back/Crea_User.php';
+    ?>
                         </div>
                     </div>
                 </div>
