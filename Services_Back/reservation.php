@@ -17,10 +17,6 @@ class Reservation{
         $this->DESCRIPTION = $DESCRIPTION;
     }
 
-    public function getReservationID() {
-        return $this -> RESERVATION_ID;
-    }
-
     public function insertReservation(){
         $host="localhost";
         $username="root";
