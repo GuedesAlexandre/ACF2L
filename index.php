@@ -426,7 +426,7 @@
 
             <div class="container-fluid section-div">
                 <section id="services">
-                    <div class="row justify-content-lg-between justify-content-center">
+                    <div class="row justify-content-lg-between justify-content-center" style="padding:10px;">
                         <div class="col-12 col-lg-4  col-md-12  mb-4 card-services">
                             <div class="card-body">
                                 <h5 class="card-title titre-card mt-3 my-2">“Un Vol Inoubliable”</h5>
