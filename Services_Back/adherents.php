@@ -67,17 +67,27 @@ class Adherents extends User {
             
         return $userInfo;
     }
-            public static function DevAdh($UserID){
-                
-            }
+    
+          
 
-            public function getCivility() { return $this->CIVILITE; }
-            public function getAddress() { return $this->ADRESSE; }
-
-            public function affiche() {
-                echo "Votre nom est " . $this -> NOM;
-            }
-
-
-            
+    public static function checkADHExists($userID){
+        $host = "localhost";
+        $username = "root";
+        $password = "root";  
+        $database = "ASTA_ACF2L";
+        $db = new Database($host, $username, $password, $database);
+        $db->connect(); // Se connecter à la base de données
+        $connection = $db->connection; // Obtenir la connexion PDO
+        $query = "SELECT * FROM ASTA_ADHERENTS WHERE ADHERENT_ID = ?";
+        $statement = $connection->prepare($query);
+        $statement->execute([$userID]);
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+      
+        if ($user ) {
+           return true; 
+        } else {
+           return false;
         }
+    }
+
+    }
