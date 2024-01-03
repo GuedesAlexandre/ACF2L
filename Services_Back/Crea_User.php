@@ -1,7 +1,11 @@
 <?php
 session_start();
 
-require_once "../Services_Back/User.php";
+error_reporting(E_ALL & ~E_DEPRECATED);
+
+
+require_once "Services_Back/User.php";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if(isset($_POST["nom"]) && isset($_POST["prenom"]) && 
 isset($_POST["date"]) && isset($_POST["email"]) && isset($_POST["Adresse"])&&isset($_POST["password"]) && isset($_POST["passwordverifie"])){
     if(strlen($_POST["password"]) > 8 && preg_match('/^(?=.*[A-Z])(?=.*\d)/', $_POST["password"])){
@@ -15,26 +19,26 @@ isset($_POST["date"]) && isset($_POST["email"]) && isset($_POST["Adresse"])&&iss
             header("Location: ../index.php");
             exit();     
             }else {
-                header("location: ../login-register/register/Register.php");
-                echo"l'email est déjà utilisé";
+                
+                echo"<div style='color: red; margin-top: 20px;'>Erreur : Cette adresse email est déjà utilisée.</div>";
             }
         }
         else{
-            echo '<div style="color: red;">Passwords do not match</div>';
+            echo '<div style="color: red; margin-top: 20px;">Erreur : Les mots de passes ne correspondent pas.</div>';
             exit();
         }
     }
     else{
-        echo '<div style="color: red;">Un password doit faire minimium 8 caractères et contenir au moins une majuscule et un chiffre</div>';
-            exit();
+        echo '<div style="color: red; margin-top: 20px;">Erreur : Un mot de passe doit faire minimium 8 caractères et contenir au moins une majuscule et un chiffre.</div>';
+        exit();
     }
 }
 else{
     // Handle missing form fields
-    echo '<div style="color: red;">Veuillez remplir les champs manquants</div>';
+    echo '<div style="color: red; margin-top: 20px;">Erreur : Veuillez remplir tous les champs du formulaire.</div>';
     exit();
 }
-
+}
 
 //$USER->insertIntoTable("ASTA_USER");
 

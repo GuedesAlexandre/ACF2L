@@ -21,8 +21,9 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         
     
         
-    }else{
-        header("Location: login.php");
+    } else {
+        $_SESSION["login_error"] = "L'adresse e-mail ou mot de passe incorrect.";
+        header("Location: ../login.php");
     }
 }
 
