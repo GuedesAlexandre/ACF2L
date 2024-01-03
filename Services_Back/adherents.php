@@ -17,7 +17,7 @@ class Adherents extends User {
     public function insertIntADH($tableName){
         $host = "localhost";
         $username = "root";
-        $password = "root"; 
+        $password = ""; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -49,7 +49,7 @@ class Adherents extends User {
     public static function getUserInfo($userID) {
         $host = "localhost";
         $username = "root";
-        $password = "root"; 
+        $password = ""; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
 

@@ -27,7 +27,7 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
     public function insertIntoTable($tableName){
         $host = "localhost";
         $username = "root";
-        $password = "root"; 
+        $password = ""; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -44,7 +44,7 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
     public static function displayAvions($tableName){
         $host = "localhost";
         $username = "root";
-        $password = "root"; 
+        $password = ""; 
         $database = "ASTA_ACF2L";
         $db = new Database($host, $username, $password, $database);
         $db->connect(); // Se connecter à la base de données
@@ -88,7 +88,7 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
 public static function deleteRow($avionId){
     $host = "localhost";
     $username = "root";
-    $password = "root"; 
+    $password = ""; 
     $database = "ASTA_ACF2L";
     $db = new Database($host, $username, $password, $database);
     $db->connect(); // Se connecter à la base de données
@@ -112,7 +112,7 @@ public static function deleteRow($avionId){
 public static function countTableRows($tableName){
     $host = "localhost";
     $username = "root";
-    $password = "root"; 
+    $password = ""; 
     $database = "ASTA_ACF2L";
     $db = new Database($host, $username, $password, $database);
     $db->connect(); // Se connecter à la base de données
