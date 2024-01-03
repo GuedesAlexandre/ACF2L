@@ -119,7 +119,36 @@ public static function countTableRows($tableName){
     echo  '<span class="txt-info-card h3 font-bold mb-0">' . $totalRows . '</span>';
 
 }
-    
 
+public function verifier_disponibilite($piloteID, $date) {
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "ASTA_ACF2L";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Erreur de connexion : " . $conn->connect_error);
+    }
+
+    // Vérifier la disponibilité dans la base de données
+    $sql = "SELECT COUNT(*) AS count FROM ASTA_RESERVATION WHERE ID_PILOTES = $piloteID AND DATE_RESERVATION = '$date'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $count = $row['count'];
+
+        if ($count > 0) {
+            echo "<span style='color: red'>Erreur : Impossible de réserver à ce créneau. Un autre vol est déjà prévu pour le pilote à cette date.</span>";
+            return false; 
+        }
+    }
+
+    $conn->close();
+    return true;
+
+}
 }
 ?>
