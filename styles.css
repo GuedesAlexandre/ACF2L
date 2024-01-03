@@ -201,7 +201,7 @@ button:focus:not(:focus-visible) {
 
 .services-div {
   background-color: #ecede7;
-  border-radius: 105px;
+
 }
 
 .nos-services-section {
@@ -252,6 +252,8 @@ button:focus:not(:focus-visible) {
 }
 
 .card-services {
+  border: 1px solid black;
+  border-radius: 12px;
   max-width: 420px !important;
   min-height: 511px;
 }
@@ -431,7 +433,14 @@ button:focus:not(:focus-visible) {
 #team .text-title {
   margin-bottom: 107px;
 }
-
+.titre-chapeau {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  padding-left: 105px;
+  padding-right: 105px;
+  font-style: normal;
+  font-weight: 400;
+}
 #testi .card-services {
   border-radius: 34.753px;
   border: 2.361px solid #d6d9cb;
@@ -440,13 +449,6 @@ button:focus:not(:focus-visible) {
   min-height: 528px;
   padding: 69px 0 65px 0;
   margin: 0px;
-}
-
-.titre-chapeau {
-  font-family: "Inter", sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
 }
 
 #testi .titre-card {
