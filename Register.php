@@ -35,7 +35,6 @@
                     <a class="nav-link" href="#formulaire">Contact</a>
                       <?php 
                       require_once 'Services_Back/GestionNav.php';
-                      
                       ?>
                     </div>
                 </div>
@@ -60,16 +59,16 @@
                                 <div class="nom-prenom d-flex justify-content-between">
                                     <!-- Nom  -->
                                     <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
-                                        <input type="texte" class="form-control-mo" id="nom" name="nom" placeholder="Nom" required />
+                                        <input type="text" class="form-control-mo" id="nom" name="nom" placeholder="Nom" required />
                                     </div>
                                     <!-- Prenom  -->
                                     <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
-                                        <input type="texte" class="form-control-mo" id="prenom" name="prenom"placeholder="Prenom" required />
+                                        <input type="text" class="form-control-mo" id="prenom" name="prenom"placeholder="Prenom" required />
                                     </div>
                                 </div>
 
                                 <div class="d-flex align-items-center input-control" style="margin-bottom: 21px">
-                                    <input type="date" class="form-control-mo date" name="date" id="date" " required />
+                                    <input type="date" class="form-control-mo date" name="date" id="date" required />
                                 </div>
 
                                 <div class="d-flex align-items-center input-control " style="margin-bottom: 21px ">
@@ -97,11 +96,12 @@
                                     Se connecter</button>
                   
                                 <a class="text-center a-switch " href="login.php ">Vous avez déjà compte ? <span style=" font-weight: 700; ">Connecter vous !</span> </a>
+                                <?php
+                                require_once 'Services_Back/Crea_User.php';
+                                ?>
                             </form>
                            
-                        <?php
-    require_once 'Services_Back/Crea_User.php';
-    ?>
+                        
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
         </div>
     </section>
     
-    <style >
+    <style>
     .menu-connect a {
     color:black!important;
     font-family: "Rubik", sans-serif;
