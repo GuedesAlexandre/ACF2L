@@ -5,12 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <script type='text/javascript'src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
     <link rel="stylesheet" href="styles.css" />
+
     <title>ACF2L</title>
 </head>
 
@@ -30,7 +33,7 @@
                     <a class="nav-link" href="#section-services">Nos services</a>
                     <a class="nav-link" href="#ulm">Types d’ULM</a>
                     <a class="nav-link" href="#team">Notre équipe</a>
-                    <a class="nav-link" href="#">Événement</a>
+                    <a class="nav-link" href="#actualité">Événement</a>
                     <a class="nav-link" href="#galery">Galerie</a>
                     <a class="nav-link" href="#formulaire">Contact</a>
                       <?php 
@@ -206,7 +209,7 @@
                 <div class="col">
                     <div style="max-width: 1110px;">
                         <div>
-                            <h5 class="section-title">Notre équipe</h5>
+                            <h5 class="title-section">Notre équipe</h5>
                             <p class="para-text">Découvrez la force motrice derrière notre aéro-club. Rencontrez notre équipe passionnée et dévouée, composée d'experts de l'aviation prêts à vous accompagner dans votre voyage aérien. Apprenez-en davantage sur les membres qui rendent possible notre engagement envers l'excellence et la sécurité dans tous nos services aériens.</p>
                         </div>
                     </div>
@@ -253,7 +256,157 @@
 
     <!-- ACTUALITE  -->
 
+    <section id="actualité" oncontextmenu='return false' class="pt-5 pb-5 snippet-body " style="font-family: 'Inter', sans-serif; margin-top:  120px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="mb3">Actualités récentes</h3>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button " style="    background-color: #A59E20;
+                        border-color: #A59E20;"
+                            data-slide="prev">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                        <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next" style="    background-color: #A59E20;
+                        border-color: #A59E20;">
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+    
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+    
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280 " style="border-radius: 16px;"
+                                                    src="ressources/avions-card1.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+                                                    <h4 class="card-title">Journée Sécurité des vols - Grand Est </h4>
+                                                    <p class="card-text">Sensibilisation, prévention, sécurité aérienne, partage d'expertise, événement régional majeur.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card2.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
 
+                                                    <h4 class="card-title">1er rassemblement ULM des Femmes Pilotes</h4>
+                                                    <p class="card-text">Célébration féminine, passion volante, rassemblement historique, partage expérience unique</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card3.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+
+                                                    <h4 class="card-title">France air Expo 2023 </h4>
+                                                    <p class="card-text">Événement aéronautique majeur, innovations, présentations technologiques, aviation française réunie.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+    
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card5.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+
+                                                    <h4 class="card-title">Rasemblement speciale ULM Paris</h4>
+                                                    <p class="card-text">Volées rassemblées, partage passion, événement aérien exceptionnel, culture ULM.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card4.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+
+                                                    <h4 class="card-title">Expo Paris concord</h4>
+                                                    <p class="card-text">Légende volante, supersonique exposition, histoire aviation, célébration Concorde.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card6.png">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+
+                                                    <h4 class="card-title">bapteme de l'air</h4>
+                                                    <p class="card-text">Aventure ciel, émotion volée, découverte sensation, expérience inoubliable, altitude découverte.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+    
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card7.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+
+                                                    <h4 class="card-title">Salon International de l'Aviation Verte - Lyon 2024</h4>
+                                                    <p class="card-text">Rassemblement pionnier, technologies durables, avenir aérien écologique, conférences innovantes.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card8.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+
+                                                    <h4 class="card-title">Festival des Montgolfières - Vallée de la Loire</h4>
+                                                    <p class="card-text">Ciel coloré, vol majestueux, paysages vus d'en haut, festivités aériennes.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div>
+                                                <img class="img-fluid" alt="100%x280" style="border-radius: 16px;"
+                                                    src="ressources/avions-card9.jpg">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between"><p>Opinion</p><p>30 novembre 2023</p></div>
+
+                                                    <h4 class="card-title">Symposium Mondial de la Sécurité Aérienne - Marseille</h4>
+                                                    <p class="card-text">Partage meilleures pratiques, sécurité vol, experts mondiaux, innovations cruciales.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <section id="testi" style="margin-top: 164px;">
 
@@ -266,14 +419,14 @@
                         <h2 class="text-center titre-titre ml-4 mt-2">Testimonials</h2>
 
                     </div>
-                    <p class="card-text text-center titre-chapeau mb-5">Découvrez les témoignages captivants de notre communauté aérienne. Ces récits reflètent l'expérience unique vécue au sein de notre club, illustrant l'impact positif et la passion partagée pour l'aviation. Explorez ces témoignages inspirants et ressentez l'esprit vibrant de notre communauté</p>
+                    <p class="card-text text-center titre-chapeau mb-5" style="max-width: 1200px;">Découvrez les témoignages captivants de notre communauté aérienne. Ces récits reflètent l'expérience unique vécue au sein de notre club, illustrant l'impact positif et la passion partagée pour l'aviation. Explorez ces témoignages inspirants et ressentez l'esprit vibrant de notre communauté</p>
                 </div>
             </div>
 
 
             <div class="container-fluid section-div">
                 <section id="services">
-                    <div class="row justify-content-lg-between justify-content-center">
+                    <div class="row justify-content-lg-between justify-content-center" style="padding:10px;">
                         <div class="col-12 col-lg-4  col-md-12  mb-4 card-services">
                             <div class="card-body">
                                 <h5 class="card-title titre-card mt-3 my-2">“Un Vol Inoubliable”</h5>
@@ -325,7 +478,9 @@
 
 
     </section>
-    <section id="galery" class="my-5">
+    <section id="galery" style="margin: 160px 0px;">
+    <h1 class="title-section text-center mb-5">Prenez en plein les yeux </h1>
+
         <div class="container-galery d-flex justify-content-center align-items-center flex-column flex-md-row" style="gap: 24px;">
             <div class="big-images">
                 <img src="./ressources/ULM1.svg" alt="Image 2">
