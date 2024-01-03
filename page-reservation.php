@@ -114,21 +114,33 @@
         require_once "Services_Back/Database.php";
         require_once "Services_Back/User.php";
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST["pilote"]) && isset($_POST["date"]) && isset($_POST["heure"]) && isset($_POST["commentaire"])) {
-                $reservationID = rand(1,70000);
-                $_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
-                $piloteID = $_POST["pilote"];
-                $date = $_POST["date"];
-                $heure = $_POST["heure"];
-                $comm = $_POST["commentaire"];
 
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $reservationID = rand(1,70000);
+            $_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
+            $piloteID = $_POST["pilote"];
+            $date = $_POST["date"];
+            $heure = $_POST["heure"];
+            $comm = $_POST["commentaire"];
+            $reservation = new Reservation($reservationID, $_USERTOADHID, $piloteID, $date, $heure, $comm);
+
+
+            if ($piloteID !== "select" && !empty($date) && !empty($heure) && !empty($comm)) {
                 $reservation = new Reservation($reservationID, $_USERTOADHID, $piloteID, $date, $heure, $comm);
-                $reservation->insertReservation();
-            } else {
-                echo "<span style='color: red'>Il manque des trucs</span>";
+                
+                if ($reservation->verifier_disponibilite($piloteID, $date)) {
+                    $reservation->insertReservation();
+                }
+
+            } else  {
+                echo "<span style='color: red'>Erreur : Veuillez remplir tous les champs du formulaire.</span>";
             }
+
         }
+            
+            
+        
     ?>
                                 </form>
                             </div>
