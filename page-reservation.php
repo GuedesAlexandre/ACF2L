@@ -66,6 +66,7 @@
                                     <option value="select">-- SÉLÉCTIONNEZ UN PILOTE --</option>
     
                                     <?php
+                                       error_reporting(E_ALL & ~E_DEPRECATED);
                                         $servername = "localhost";
                                         $username = "root";
                                         $password = "root"; 
@@ -114,9 +115,9 @@
         require_once "Services_Back/Database.php";
         require_once "Services_Back/User.php";
 
-
+        error_reporting(E_ALL & ~E_DEPRECATED);
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+            error_reporting(E_ALL & ~E_DEPRECATED);
             $reservationID = rand(1,70000);
             $_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
             $piloteID = $_POST["pilote"];
@@ -125,13 +126,13 @@
             $comm = $_POST["commentaire"];
             $reservation = new Reservation($reservationID, $_USERTOADHID, $piloteID, $date, $heure, $comm);
 
-
+            error_reporting(E_ALL & ~E_DEPRECATED);
             if ($piloteID !== "select" && !empty($date) && !empty($heure) && !empty($comm)) {
                 $reservation = new Reservation($reservationID, $_USERTOADHID, $piloteID, $date, $heure, $comm);
                 
                 if ($reservation->verifier_disponibilite($piloteID, $date)) {
                     $reservation->insertReservation();
-                }
+                } error_reporting(E_ALL & ~E_DEPRECATED);
 
             } else  {
                 echo "<span style='color: red'>Erreur : Veuillez remplir tous les champs du formulaire.</span>";
