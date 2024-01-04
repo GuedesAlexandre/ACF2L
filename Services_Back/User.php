@@ -90,10 +90,10 @@ public function __construct($USER_ID = null, $NOM, $PRENOM, $EMAIL, $PASSWORD, $
         
                 <div class="my-5 text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-success mb-4">Vos information</h5>
+                        <h5 class="card-title text-success mb-4">Vos informations</h5>
                         <p class="card-text text-light">Identifiant: ' . $user['USER_ID'].'</p>
                         <p class="card-text text-light">Email: '.$user['EMAIL'].'</p>
-                        <p class="card-text text-light">ADRESSE: ' . $user['ADRESSE'] .' </p>
+                        <p class="card-text text-light">Adresse: ' . $user['ADRESSE'] .' </p>
                         <p class="card-text text-light">Date de naissance: ' . $user['BIRTHDATE'] .' </p>
                     </div>
                 </div>
