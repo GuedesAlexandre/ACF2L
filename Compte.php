@@ -51,7 +51,6 @@
                         <thead class="txt-info-ligne">
                             <tr>
 
-                                <!-- MET CE QUE TU VEUX DANS LES TH  -->
                                 <th class="txt-info-item-ligne py-3" scope="col">Nom pilote</th>
                                 <th class="txt-info-item-ligne py-3" scope="col">DATE/HORAIRE</th>
                                 <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
