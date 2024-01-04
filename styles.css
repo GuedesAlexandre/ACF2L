@@ -785,6 +785,38 @@ button:focus:not(:focus-visible) {
     font-weight: 400; 
 }
 
+
+#loader .container-fluid, .row, .col-12 {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#loader .gif {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center; /*possible de bouger mais moche*/
+  align-items: center; /*possible de bouger mais moche*/
+  text-align: center; /*possible de bouger mais moche*/
+  z-index: 9999;
+  background-color: #fff;
+}
+
+
+
+.gif img {
+  width: 100%;
+  height: auto;
+  display: block;
+ 
+}
+
+.loading {
+  display: flex !important;
+}
+
 @media screen and (max-width: 767px) {
   .card-glob {
     max-width: 305px !important;
