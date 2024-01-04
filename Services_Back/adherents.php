@@ -70,7 +70,7 @@ class Adherents extends User {
         
                 <div class="my-5 text-center">
                     <div class="card-body">
-                        <h5 class="card-title text-success mb-4">Vos information</h5>
+                        <h5 class="card-title text-success mb-4">Vos informations</h5>
                         <p class="card-text text-light">Identifiant: ' . $user['ADHERENT_ID'].'</p>
                         <p class="card-text text-light">Civilité: '.$user['CIVILITE'].'</p>
                         <p class="card-text text-light">Email: '.$user['EMAIL'].'</p>
