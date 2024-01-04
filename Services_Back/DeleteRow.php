@@ -4,7 +4,7 @@ require_once 'Services_Back/Database.php';
 function deleteRow($avionId){
     $host = "localhost";
     $username = "root";
-    $password = "root"; 
+    $password = "root";  
     $database = "ASTA_ACF2L";
     $db = new Database($host, $username, $password, $database);
     $db->connect(); // Se connecter à la base de données

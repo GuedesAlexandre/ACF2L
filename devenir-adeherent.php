@@ -37,6 +37,16 @@
                     <a class="nav-link" href="#formulaire">Contact</a>
                       <?php 
                       require_once 'Services_Back/GestionNav.php';
+                  
+require_once 'Services_Back/adherents.php';
+
+if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"])){
+    header('location: index.php');
+
+}else{
+    
+}
+
                       
                       ?>
                     </div>
@@ -112,7 +122,7 @@
 
 require_once 'Services_Back/adherents.php';
 require_once 'Services_Back/User.php';
-if(isset($_POST["civilite"]) && isset($_POST["adresse_numero"]) && isset($_POST["situation_familiale"]) && isset( $_POST["telephone"])){
+if(isset($_POST["civilite"]) && isset($_POST["adresse_numero"]) && isset($_POST["situation_familiale"]) && isset( $_POST["telephone"]) && isset($_POST["nom"]) && isset($_POST["date_naissance"])&& isset($_POST["prenom"])){
 
 
 
