@@ -150,5 +150,36 @@ public function verifier_disponibilite($piloteID, $date) {
     return true;
 
 }
+
+public static function getUserReservations($adherentId) {
+    $host = "localhost";
+    $username = "root";
+    $password = "root";
+    $database = "ASTA_ACF2L";
+
+    $db = new Database($host, $username, $password, $database);
+    $db->connect();
+    $connection = $db->connection;
+
+    $query = "SELECT r.*, p.NOM AS PILOTE_NOM, p.PRENOM AS PILOTE_PRENOM, p.BIRTHDATE AS PILOTE_BIRTHDATE, p.TYPE_AVION FROM ASTA_RESERVATION r LEFT JOIN ASTA_PILOTES p ON r.ID_PILOTES = p.ID_PILOTES WHERE r.ADHERENT_ID = ?";
+    $statement = $connection->prepare($query);
+    $statement->execute([$adherentId]);
+
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+public static function displayUserReservations($adherentId) {
+    $reservations = self::getUserReservations($adherentId);
+
+    foreach ($reservations as $reservation) {
+        echo '<tr class="ligne-content-info">';
+        echo '<td>' . $reservation['PILOTE_PRENOM'] . ' ' . $reservation['PILOTE_NOM'] . '</td>';
+        echo '<td>' . $reservation['DATE_RESERVATION'] . ' | ' . $reservation['HEURE_RESERVATION'] . '</td>';
+        echo '<td>' . $reservation['PILOTE_BIRTHDATE'] . '</td>';
+        echo '<td>' . $reservation['DESCRIPTION'] . '</td>';
+        echo '<td>' . $reservation['TYPE_AVION'] . '</td>';
+        echo '</tr>';
+    }
+}
 }
 ?>
