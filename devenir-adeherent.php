@@ -122,11 +122,13 @@ if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"])){
 
 require_once 'Services_Back/adherents.php';
 require_once 'Services_Back/User.php';
+var_dump($_SESSION["USER"]);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if(isset($_POST["civilite"]) && isset($_POST["adresse_numero"]) && isset($_POST["situation_familiale"]) && isset( $_POST["telephone"]) && isset($_POST["nom"]) && isset($_POST["date_naissance"])&& isset($_POST["prenom"])){
 
 
-
+if(isset($_SESSION["user"])){
 $_USERTOADHID = $_SESSION["user"][0]["USER_ID"];
 
 
@@ -154,6 +156,35 @@ $adherent -> insertIntADH("ASTA_ADHERENTS");
 
 // ...
 
+
+
+
+}else if(isset($_SESSION["USER"])){
+    $_USERTOADHID = $_SESSION["USER_ID"];
+    
+
+
+
+
+    $USER_INFO = Adherents::getUserInfo($_USERTOADHID);
+    
+    $USERID = $USER_INFO[0]["USER_ID"];
+    $NOM = $USER_INFO[0]["NOM"];
+    $PRENOM = $USER_INFO[0]["PRENOM"];
+    $EMAIL = $USER_INFO[0]["EMAIL"];
+    $PASSWORD = $USER_INFO[0]["PASSWORD"];
+    $BIRTHDATE = $USER_INFO[0]["BIRTHDATE"];
+    $ADRESSE = $USER_INFO[0]["ADRESSE"];
+    $CIVILITE = $_POST["civilite"];
+    $Adresse_complète = $_POST["adresse_numero"];
+    $SITUATION = $_POST["situation_familiale"];
+    $TEL = $_POST["telephone"];
+    
+    
+    // Création de l'objet Adherents avec les données
+    $adherent = new Adherents($CIVILITE, $Adresse_complète, $SITUATION, $TEL,$USERID, $NOM, $PRENOM, $EMAIL, $PASSWORD, $BIRTHDATE, $ADRESSE, 1);
+    $adherent -> insertIntADH("ASTA_ADHERENTS");
+}
 
 
 
