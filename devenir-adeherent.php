@@ -122,6 +122,7 @@ if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"])){
 
 require_once 'Services_Back/adherents.php';
 require_once 'Services_Back/User.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if(isset($_POST["civilite"]) && isset($_POST["adresse_numero"]) && isset($_POST["situation_familiale"]) && isset( $_POST["telephone"]) && isset($_POST["nom"]) && isset($_POST["date_naissance"])&& isset($_POST["prenom"])){
 
 
@@ -158,6 +159,7 @@ $adherent -> insertIntADH("ASTA_ADHERENTS");
 
 }else{
     echo '<div style="color: red;">Veuillez remplir les champs manquants</div>';
+}
 }
 
 

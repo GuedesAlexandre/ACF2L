@@ -78,11 +78,12 @@ if(Adherents::checkADHExists($_SESSION["USER_ID"]) ){
                         </thead>
                         <tbody>
                             <tr class="ligne-content-info">
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                            <?php
+                            require_once 'Services_Back/Reservation.php';
+
+                            $adherentId = $_SESSION["user"][0]["USER_ID"];
+                            $reservation = Reservation::displayUserReservations($adherentId);
+                            ?>
                         </tbody>
                     </table>
                 </div>
