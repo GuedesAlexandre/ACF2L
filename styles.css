@@ -96,9 +96,6 @@ button:focus:not(:focus-visible) {
   color: #fff;
 }
 
-.menu-connect {
-}
-
 .menu-connect a {
   color: #000000;
   font-family: "Rubik", sans-serif;
