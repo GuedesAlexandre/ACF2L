@@ -41,10 +41,12 @@ if(isset($_SESSION["user"])){
 
 if(Adherents::checkADHExists($_SESSION["USER_ID"]) ){
         Adherents::displayADHById( $_SESSION["USER_ID"]);
+       
                     
         
     }else{
         User::displayUserById( $_SESSION["USER_ID"]);
+        echo '<div class="text-center"><a href="devenir-adeherent.php" class="btn btn-primary">Devenir adherent</a></div>';
         
 
     }
@@ -80,9 +82,12 @@ if(Adherents::checkADHExists($_SESSION["USER_ID"]) ){
                             <tr class="ligne-content-info">
                             <?php
                             require_once 'Services_Back/Reservation.php';
-
+                            if(isset($_SESSION["user"])){
                             $adherentId = $_SESSION["user"][0]["USER_ID"];
-                            $reservation = Reservation::displayUserReservations($adherentId);
+                            $reservation = Reservation::displayUserReservations($adherentId);}else if (isset ($_SESSION["USER"])){
+                                $adherentId = $_SESSION["USER_ID"];
+                                $reservation = "devenez adhérant pour obtenir des réservations";
+                            }
                             ?>
                         </tbody>
                     </table>
