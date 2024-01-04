@@ -12,33 +12,51 @@
 
 <body style="background-color: #090a0c; font-family: 'Inter', sans-serif;">
 
-    <section id="compte">
-        <div class="text-center mt-5">
-            <img class="rounded-circle" src="ressources/user.jpg" alt="" style="width: 140px;">
-            <h3 class=" text-light mt-3">Username</h3>
-        </div>
+
+<?php 
+error_reporting(E_ALL & ~E_DEPRECATED);
+require_once 'Services_Back/User.php';
+require_once 'Services_Back/adherents.php';
+session_start();
+if(isset($_SESSION["user"])){
+    if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"]) ){
+        Adherents::displayADHById($_SESSION["user"][0]["USER_ID"]);
         
-        <div>
-        </div>
+        if(Adherents::getRoleById("ASTA_ADHERENTS",$_SESSION["user"][0]["USER_ID"]) == 'adh'){
+           echo' <div class="text-center"> <a href="./page-reservation.php" class="btn btn-success">Reserver un vol</a></div>';
 
-        <div class="my-5 text-center">
-            <div class="card-body">
-                <h5 class="card-title text-success mb-4">Vos information</h5>
-                <p class="card-text text-light">Nom: John Doe</p>
-                <p class="card-text text-light">Adresse: 123 Rue Principale</p>
-                <p class="card-text text-light">Date de naissance: 01/01/1990</p>
-            </div>
-        </div>
+        }else if(Adherents::getRoleById("ASTA_ADHERENTS",$_SESSION["user"][0]["USER_ID"]) == 'admin'){
+            echo' <div class="text-center"><a href="./page-reservation.php" class="btn btn-success">Reserver un vol</a>';
+            echo' <a href="./dashboard/dashboard.php" class="btn btn-light"> Dashboard</a></div>';
+        }
+                    
+        
+    }else{
+        User::displayUserById($_SESSION["user"][0]["USER_ID"]);
+        echo '<div class="text-center"><a href="devenir-adeherent.php" class="btn btn-primary">Devenir adherent</a></div>';
 
-      
+    }
 
-        </div>
+}else if(isset($_SESSION["USER"])){
 
-        <div class="text-center">
-            <a href="dashboard/dashboard.php" class="btn btn-light"> Dashboard</a>
-            <a href="devenir-adeherent.php" class="btn btn-primary">Devenir adherent</a>
-            <a href="./page-reservation.php" class="btn btn-success">Reserver un vol</a>
-        </div>
+if(Adherents::checkADHExists($_SESSION["USER_ID"]) ){
+        Adherents::displayADHById( $_SESSION["USER_ID"]);
+                    
+        
+    }else{
+        User::displayUserById( $_SESSION["USER_ID"]);
+        
+
+    }
+
+
+}
+
+
+
+?>
+
+
 
         <div class="container-fluid px-5">
             <div class="card tab-list border-0 mt-5">
@@ -71,6 +89,7 @@
             </div>
         </div>
     </section>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 

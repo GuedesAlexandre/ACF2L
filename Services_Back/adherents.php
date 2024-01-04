@@ -1,8 +1,8 @@
 <?php
 
 error_reporting(E_ALL & ~E_DEPRECATED);
-require_once 'Services_Back/Database.php';
-require_once 'Services_Back/User.php';
+require_once 'Database.php';
+require_once 'User.php';
 
 class Adherents extends User {
 
@@ -44,6 +44,49 @@ class Adherents extends User {
         $this->TEL = $TELEPHONE;
        
     }
+    public static function displayADHById($id){
+        $host = "localhost";
+        $username = "root";
+        $password = "root";  
+        $database = "ASTA_ACF2L";
+        $db = new Database($host, $username, $password, $database);
+        $db->connect(); // Se connecter à la base de données
+        $connection = $db->connection; // Obtenir la connexion PDO
+        $query = "SELECT * FROM ASTA_ADHERENTS WHERE ADHERENT_ID = ?";
+        $statement = $connection->prepare($query);
+        $statement->execute([$id]);
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+      
+        if ($user) {
+            echo '
+            <section id="compte">
+                <div class="text-center mt-5">
+                    <img class="rounded-circle" src="ressources/user.jpg" alt="" style="width: 140px;">
+                    <h3 class=" text-light mt-3">'.$user['NOM'].' '.$user['PRENOM'].'</h3>
+                </div>
+                
+                <div>
+                </div>
+        
+                <div class="my-5 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title text-success mb-4">Vos information</h5>
+                        <p class="card-text text-light">Identifiant: ' . $user['ADHERENT_ID'].'</p>
+                        <p class="card-text text-light">Civilité: '.$user['CIVILITE'].'</p>
+                        <p class="card-text text-light">Email: '.$user['EMAIL'].'</p>
+                        <p class="card-text text-light">Téléphone: '.$user['TEL'].'</p>
+                        <p class="card-text text-light">Adresse complète: ' . $user['ADRESSE'] .' </p>
+                        <p class="card-text text-light">Date de naissance: ' . $user['BIRTHDATE'] .' </p>
+                        <p class="card-text text-light">Situation familiale: ' . $user['SITUATION'] .' </p>
+                    </div>
+                </div>
+        ';
+            
+         
+        } else {
+            echo "Utilisateur non trouvé";
+        }
+    }
 
     
     public static function getUserInfo($userID) {
@@ -69,7 +112,31 @@ class Adherents extends User {
     }
     
           
+    public static function getRoleById($tableName, $userId) {
+        $host = "localhost";
+        $username = "root";
+        $password = "root";
+        $database = "ASTA_ACF2L";
+        
+        $db = new Database($host, $username, $password, $database);
+        $db->connect();
+        $connection = $db->connection;
 
+        $query = "SELECT role FROM $tableName WHERE ADHERENT_ID = ?";
+        $statement = $connection->prepare($query);
+        $statement->execute([$userId]);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if ($result) {
+            if($result['role']==1){
+                return 'adh';
+            }else if ($result['role']==2){
+                return 'admin';
+            }else{
+                return'user';
+            }
+        }
+    }
     public static function checkADHExists($userID){
         $host = "localhost";
         $username = "root";
@@ -90,6 +157,6 @@ class Adherents extends User {
         }
     }
 
-    
+
 
     }
