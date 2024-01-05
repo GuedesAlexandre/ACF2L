@@ -10,7 +10,7 @@ function deleteRow($avionId){
     $db->connect(); // Se connecter à la base de données
     $connection = $db->connection; // Obtenir la connexion PDO 
 
-    $query = "DELETE FROM ASTA_AVIONS WHERE ID_AVIONS = ?";
+    $query = "DELETE FROM ASTA_RESERVATION WHERE RESERVATION_ID = ?";
     $statement = $connection->prepare($query);
     $success = $statement->execute([$avionId]);
 
@@ -22,6 +22,6 @@ function deleteRow($avionId){
     }
 }
 
-$row = ['ID_AVIONS' => $_POST['avionId']]; 
-deleteRow($row['ID_AVIONS']);
+$row = ['RESERVATION_ID' => $_POST['avionId']]; 
+deleteRow($row['RESERVATION_ID']);
 ?>

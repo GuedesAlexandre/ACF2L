@@ -1,5 +1,5 @@
 <?php
-require_once 'Services_Back/Database.php';
+require_once 'Database.php';
 
 function deleteRow($adherentID){
     $host = "localhost";
@@ -10,7 +10,7 @@ function deleteRow($adherentID){
     $db->connect(); // Se connecter à la base de données
     $connection = $db->connection; // Obtenir la connexion PDO 
 
-    $query = "DELETE FROM ASTA_RESERVATION WHERE ADHERENT_ID = ?";
+    $query = "DELETE FROM ASTA_ADHERENTS WHERE ADHERENT_ID = ?";
     $statement = $connection->prepare($query);
     $success = $statement->execute([$adherentID]);
 
@@ -22,6 +22,6 @@ function deleteRow($adherentID){
     }
 }
 
-$row = ['ADHERENT_ID' => $_POST['adherentID']]; 
+$row = ['ADHERENT_ID' => $_POST['avionId']]; 
 deleteRow($row['ADHERENT_ID']);
 ?>

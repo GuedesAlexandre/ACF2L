@@ -55,16 +55,13 @@ class Reservation{
             echo '<td>';
             echo '<img style="width: 37px;" alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">' . $row['ADHERENT_ID'] . '</td>';
             echo '<td>' . $row['ID_PILOTES'] . '</td>';
-            echo '<td>' . $row['POIDS_A_VIDE'] . 'Kg</td>';
+           
             echo '<td>' . $row['DATE_RESERVATION'] . '</td>';
             echo '<td>' . $row['HEURE_RESERVATION'] . '</td>';
             echo '<td style="max-width: 150px;">' . $row['DESCRIPTION'] . '</td>';
             echo '<td class="text-end">';
-            echo '<form action="EditRow.php" method="post">';
-            echo '<input type="hidden" name="avionId" value="' . $row['RESERVATION_ID'] . '">';
-            echo '<button type="submit" class="btn btn-sm btn-neutral btn-modif">Modifier</button>';
-            echo '</form>';
-            echo '<form action="../Services_Back/DeleteRow.php" method="post">';
+            
+            echo '<form action="../Services_Back/DeleteRes.php" method="post">';
             echo '<input type="hidden" name="avionId" value="' . $row['RESERVATION_ID'] . '">';
             echo '<button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">';
             echo '<img src="ressources/icons/trash-icons.svg" alt=""></button>';
