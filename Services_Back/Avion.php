@@ -36,9 +36,9 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
         $statement = $connection->prepare($query);
         $success = $statement->execute([$this->AVION_ID, $this->PILOTE_ID, $this->MODELE, $this->CAPACITE,  $this->POIDS_A_VIDE, $this->AUTONOMIE,$this->CONSSOMATION, $this->DESCRIPTION]); // Use hashed password
         if ($success) {
-            echo "Avion ajouté";
+        return true;
         } else {
-            echo "Erreur votre avion n'a pas pu être ajouter";
+           return false;
         }}
     
     public static function displayAvions($tableName){

@@ -12,12 +12,43 @@
 
 <body style="background-color: #090a0c; font-family: 'Inter', sans-serif;">
 
+<div class="nav">
+                <header class="container-fluid">
+                    <nav class="row navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid col-0 col-lg-11">
+                            <a class="nav-link logo px-0" href="index.php"><img src="ressources/logo.svg" alt="" /></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                <span><img src="ressources/menu.png" alt="" /></span>
+                            </button>
+                            <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
+                                <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
+                                    <a class="nav-link" href="#section-services">Nos services</a>
+                                    <a class="nav-link" href="#ulm">Types d’ULM</a>
+                                    <a class="nav-link" href="#team">Notre équipe</a>
+                                    <a class="nav-link" href="#actualité">Événement</a>
+                                    <a class="nav-link" href="#galery">Galerie</a>
+                                    <a class="nav-link" href="#formulaire">Contact</a>
+                                    <?php
+                                    require_once 'Services_Back/GestionNav.php';
 
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="row justify-content-center">
+                        <div class="col-11 underline">
+                            <hr />
+                        </div>
+                    </div>
+                </header>
+            </div>
 <?php 
+
 error_reporting(E_ALL & ~E_DEPRECATED);
 require_once 'Services_Back/User.php';
 require_once 'Services_Back/adherents.php';
-session_start();
+
 if(isset($_SESSION["user"])){
     if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"]) ){
         Adherents::displayADHById($_SESSION["user"][0]["USER_ID"]);
