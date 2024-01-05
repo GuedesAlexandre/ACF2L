@@ -10,8 +10,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="dashboard.css" />
-  
+    <link rel="stylesheet" href="../styles.css" />
    
 </head>
 
@@ -20,7 +19,7 @@
         <aside class="" style="min-width: 270px;">
             <nav class="navbar bg-light h-100 justify-content-center align-items-start">
                 <div>
-                    <a href="../index.php" class="logo"><img src="ressources/logo-nav-dashboard.svg" alt="logo-nav" /></a>
+                    <a href="" class="logo"><img src="ressources/logo-nav-dashboard.svg" alt="logo-nav" /></a>
                     <ul class="navbar-nav nav-dashboard gap-4 mt-5" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
                         <li class="nav-item">
@@ -177,7 +176,7 @@
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
                                             d'adhérent</span>
-                                        <span class="txt-info-card h3 font-bold mb-0">Compteur</span>
+                                        <span class="txt-info-card h3 font-bold mb-0">ecrit le nombre en php fdp</span>
                                     </div>
                                 </div>
                             </div>
@@ -195,181 +194,334 @@
                     <div class="table-responsive">
                         <table class="table table-hover table-nowrap ">
                             <thead class="txt-info-ligne">
-                              
+                                <tr>
+                                    <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">EMAIL</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">MOT de pass</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
+                                    <th class="txt-info-item-ligne py-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ligne-content-info">
+                                    <td>
+                                        <img style="width: 37px" alt="..."
+                                            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                                            class="avatar avatar-sm rounded-circle me-2">
+                                        Ton grand pere
+                                    </td>
+                                    <td>
+                                        Tongrandpere@gmail.com
+                                    </td>
+                                    <td>
+                                        FDP1235415654132
+                                    </td>
+                                    <td>
+                                        10/12/23
+                                    </td>
+                                    <td class="text-end">
+                                        <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            <img src="ressources/icons/trash-icons.svg" alt="">
+                                        </button>
+                                    </td>
+                                </tr>
 
-                                
-                                    <div class="container-fluid">
-                                        <main class="mt-5">
-                                            <div class="tab-content" id="v-pills-tabContent">
-                                                <div class="tab-pane fade show active" id="v-pills-utilisateurs" role="tabpanel"
-                                                    aria-labelledby="v-pills-utilisateurs-tab">
-                                                    <div class="card tab-list border-0 mt-5">
-                                                        <div class="ligne-header d-flex justify-content-between align-items-center">
-                                                            <h5 class="mb-0">Liste des utilisateurs</h5>
-                                                        </div>
-                                                        <div class="table-responsive">
-                                                            <table class="table table-hover table-nowrap">
-                                                                <thead class="txt-info-ligne">
-                                                                    <tr>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">EMAIL</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">MOT de pass</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
-                                                                        <th class="txt-info-item-ligne py-3"></th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr class="ligne-content-info">
-                                                                        <td>
-                                                                            <img style="width: 37px" alt="..."
-                                                                                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                                                                class="avatar avatar-sm rounded-circle me-2">
-                                                                            Ton grand pere
-                                                                        </td>
-                                                                        <td>
-                                                                            Tongrandpere@gmail.com
-                                                                        </td>
-                                                                        <td>
-                                                                            FDP1235415654132
-                                                                        </td>
-                                                                        <td>
-                                                                            10/12/23
-                                                                        </td>
-                                                                        <td class="text-end">
-                                                                            <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
-                                                                            <button type="button"
-                                                                                class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                                                                <img src="ressources/icons/trash-icons.svg" alt="">
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <div class="tab-pane fade" id="v-pills-réservation" role="tabpanel"
-                                                    aria-labelledby="v-pills-réservation-tab">
-                                                    <div class="card tab-list border-0 mt-5">
-                                                        <div class="ligne-header d-flex justify-content-between align-items-center">
-                                                            <h5 class="mb-0">Liste de réservation</h5>
-                                                        </div>
-                                                        <div class="table-responsive">
-                                                            <table class="table table-hover table-nowrap">
-                                                                <thead class="txt-info-ligne">
-                                                                    <tr>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">ID de l'adhérant</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">ID du pilote</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">DATE/HORAIRE</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">TYPE D'AVION</th>
-                                                                        <th class="txt-info-item-ligne py-3"></th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <?php
-                                                                  require_once 'Services_Back/reservation.php';
-                                                                 Reservation::displayReserv();
-                                                                    ?>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-réservation" role="tabpanel"
+                aria-labelledby="v-pills-réservation-tab">
 
-                                                <div class="tab-pane fade" id="v-pills-avions" role="tabpanel" aria-labelledby="v-pills-avions-tab">
-                                                    <div class="card tab-list border-0 mt-5">
-                                                        <div class="ligne-header d-flex justify-content-between align-items-center">
-                                                            <h5 class="mb-0">Liste des avions</h5>
-                                                            <button id="addAvionsButton" href="#"
-                                                                class="d-flex align-items-center gap-1 btn btn-sm btn-neutral btn-modif"><img
-                                                                    width="18px" src="ressources/icons/add-icons.svg" alt="">Ajouter</button>
-                                                        </div>
-                                                        <div class="table-responsive">
-                                                            <table class="table table-hover table-nowrap">
-                                                                <thead class="txt-info-ligne">
-                                                                    <tr>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">Modèle</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">Capacité</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">Poids à vide</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">Autonomie</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">Consommation</th>
-                                                                        <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
-                                                                        <th class="txt-info-item-ligne py-3"></th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <?php
-                                                                require_once '../Services_Back/Avion.php';
-                                                                   Avion::displayAvions("ASTA_AVIONS");
-                                                                    ?>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <?php
-                                                require_once '../Services_Back/AjoutAvion.php';
-                                                ?>
-                                            </div>
-                                        </main>
+                <div class="row g-6 mb-6 mt-5 card-info-div">
+                    <div class="col-xl-3 col-sm-6 col-12 p-0">
+                        <div class="card card-info border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
+                                            de reservation en cours</span>
+                                        <span class="txt-info-card h3 font-bold mb-0">ecrit le nombre en php fdp</span>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                    <!-- INPUT IMAGE STYLYSER  -->
-                                    <script>
-                                        function handleImageUpload(event) {
-                                            const file = event.target.files[0];
-                                            const fileName = file.name;
-                                            const fileReader = new FileReader();
+                <!-- LISTE  -->
+                <div class="card tab-list border-0 mt-5">
+                    <div class="ligne-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Liste de reservation </h5>
 
-                                            fileReader.onload = function (e) {
-                                                const imageSrc = e.target.result;
-                                                const uploadBtn = document.querySelector(".upload-btn");
-                                                const fileNameElem = document.querySelector("#nom-file-name");
-                                                const deleteBtn = document.querySelector("#delete-btn");
-                                                const iconElem = document.querySelector(".upload-btn i");
-                                                const paragraphe = document.querySelector(".upload-btn p");
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-nowrap ">
+                            <thead class="txt-info-ligne">
+                                <tr>
+                                    <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">EMAIL</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">DATE/HORAIRE</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">TYPE D'AVION</th>
+                                    <th class="txt-info-item-ligne py-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ligne-content-info">
+                                    <td>
+                                        <img style="width: 37px" alt="..."
+                                            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                                            class="avatar avatar-sm rounded-circle me-2">
+                                        Ton grand pere
+                                    </td>
+                                    <td>
+                                        Tongrandpere@gmail.com
+                                    </td>
+                                    <td>
+                                        10/12/23:20h18
+                                    </td>
+                                    <td>
+                                        10/12/23
+                                    </td>
+                                    <td style="max-width: 150px;">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus,
+                                    </td>
+                                    <td>
+                                        Avions de comabat qui tire vite
+                                    </td>
+                                    <td class="text-end">
+                                        <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            <img src="ressources/icons/trash-icons.svg" alt="">
+                                        </button>
+                                    </td>
+                                </tr>
 
-                                                uploadBtn.style.backgroundImage = `url(${imageSrc})`;
-                                                fileNameElem.textContent = fileName;
-                                                deleteBtn.style.display = "block";
-                                                iconElem.style.display = "none";
-                                                paragraphe.style.display = "none";
-                                            };
 
-                                            fileReader.readAsDataURL(file);
-                                        }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-                                        function deleteImage() {
-                                            const uploadBtn = document.querySelector(".upload-btn");
-                                            const fileNameElem = document.querySelector("#nom-file-name");
-                                            const deleteBtn = document.querySelector("#delete-btn");
-                                            const fileInput = document.querySelector("#file-upload");
-                                            const iconElem = document.querySelector(".upload-btn i");
-                                            const paragraphe = document.querySelector(".upload-btn p");
+            <div class="tab-pane fade" id="v-pills-avions" role="tabpanel" aria-labelledby="v-pills-avions-tab">
+                <div class="row g-6 mb-6 mt-5 card-info-div">
+                    <div class="col-xl-3 col-sm-6 col-12 p-0">
+                        <div class="card card-info border-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
+                                            d'avions</span>
+                                        <span class="txt-info-card h3 font-bold mb-0">ecrit le nombre en php fdp et
+                                            vite</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                            // Réinitialiser l'état du bouton d'upload
-                                            uploadBtn.style.backgroundImage = "";
-                                            fileNameElem.textContent = "Pas de fichier sélectionné";
-                                            fileInput.value = "";
-                                            iconElem.style.display = "block"; // Afficher à nouveau l'icône
-                                            paragraphe.style.display = "block"; // Afficher à nouveau l'icône
-                                        }
-                                    </script>
+                <!-- LISTE  -->
+                <div class="card tab-list border-0 mt-5">
+                    <div class="ligne-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Liste des avions </h5>
+                        <button id="addAvionsButton" href="#"
+                            class="d-flex align-items-center gap-1 btn btn-sm btn-neutral btn-modif"><img width="18px"
+                                src="ressources/icons/add-icons.svg" alt="">Ajouter</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-nowrap ">
+                            <thead class="txt-info-ligne">
+                                <tr>
+                                    <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Capacité</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Poids à vide</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Envergure</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Autonomie</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Consommation</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">PRIX/H</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
+                                    <th class="txt-info-item-ligne py-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ligne-content-info">
+                                    <td>
+                                        <img style="width: 37px;" alt="..."
+                                            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                                            class="avatar avatar-sm rounded-circle me-2">
+                                        Avions de combat
+                                    </td>
+                                    <td>
+                                        4 Passager
+                                    </td>
+                                    <td>
+                                        41 413 kg
+                                    </td>
+                                    <td>
+                                        35,79m
+                                    </td>
+                                    <td>
+                                        5 436 km
+                                    </td>
+                                    <td>
+                                        2 900 litres
+                                    </td>
+                                    <td>
+                                        120€/h
+                                    </td>
+                                    <td style="max-width: 150px;">
+                                        Super avions trop cool qui voe bien vite en mode drift et tout dans ele ciel
+                                    </td>
+                                    <td class="text-end">
+                                        <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            <img src="ressources/icons/trash-icons.svg" alt="">
+                                        </button>
+                                    </td>
+                                </tr>
 
-                                    <!-- REDIRECTION VERS LA PAGE AJOUTER AVIONS  -->
-                                    <script>
-                                        document.getElementById('addAvionsButton').addEventListener('click', function () {
-                                            document.getElementById('v-pills-add-avions-tab').click();
-                                        });
-                                    </script>
 
-                                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                                        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                                        crossorigin="anonymous"></script>
-                                </body>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-                                </html>
+            <div class="tab-pane fade" id="v-pills-add-avions" role="tabpanel" aria-labelledby="v-pills-add-avions-tab">
+                <div class="container mx-0 my-5">
+                    <div class="row">
+
+                        <h5 style="margin-bottom: 17px;">Ajouter un produit</h5>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label for="nom">Nom:</label>
+                                <input type="text" class="form-control" id="nom">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label for="capacite">Capacité:</label>
+                                <input type="number" class="form-control" id="capacite">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label for="poids">Poids à vide:</label>
+                                <input type="number" class="form-control" id="poids">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label for="envergure">Envergure:</label>
+                                <input type="number" class="form-control" id="envergure">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label for="autonomie">Autonomie:</label>
+                                <input type="number" class="form-control" id="autonomie">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label for="consommation">Consommation:</label>
+                                <input type="number" class="form-control" id="consommation">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea class="form-control" name="zoneTexte" id="description " rows="4"
+                                    cols="50"></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="upload p-0 mx-3">
+                            <div class="upload-btn">
+                                <i class="bx bx-cloud-upload"></i>
+                                <p>Parcourir les fichiers</p>
+                                <input name="image" type="file" id="file-upload" accept=".jpg, .jpeg, .png"
+                                    onchange="handleImageUpload(event)" />
+                            </div>
+                            <p id="file-name"><i class="bx bxs-file-image img"></i><span id="nom-file-name">Pas de
+                                    fichier sélectionné</span> <i id="delete-btn" onclick="deleteImage()"
+                                    class="bx bxs-trash-alt trash"></i></p>
+                            <input type="submit" name="submit" value="Ajouter le couteau" class="input-submit-forms"
+                                style="border-radius:8px;
+          background: #7A5CFA; border:none; padding: 13px 16px; width: 140px; font-size: 13px; color: #FFF;" />
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- INPUT IMAGE STYLYSER  -->
+    <script>
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            const fileName = file.name;
+            const fileReader = new FileReader();
+
+            fileReader.onload = function (e) {
+                const imageSrc = e.target.result;
+                const uploadBtn = document.querySelector(".upload-btn");
+                const fileNameElem = document.querySelector("#nom-file-name");
+                const deleteBtn = document.querySelector("#delete-btn");
+                const iconElem = document.querySelector(".upload-btn i");
+                const paragraphe = document.querySelector(".upload-btn p");
+
+                uploadBtn.style.backgroundImage = `url(${imageSrc})`;
+                fileNameElem.textContent = fileName;
+                deleteBtn.style.display = "block";
+                iconElem.style.display = "none";
+                paragraphe.style.display = "none";
+            };
+
+            fileReader.readAsDataURL(file);
+        }
+
+        function deleteImage() {
+            const uploadBtn = document.querySelector(".upload-btn");
+            const fileNameElem = document.querySelector("#nom-file-name");
+            const deleteBtn = document.querySelector("#delete-btn");
+            const fileInput = document.querySelector("#file-upload");
+            const iconElem = document.querySelector(".upload-btn i");
+            const paragraphe = document.querySelector(".upload-btn p");
+
+            // Réinitialiser l'état du bouton d'upload
+            uploadBtn.style.backgroundImage = "";''
+            fileNameElem.textContent = "Pas de fichier sélectionné";
+            fileInput.value = "";
+            iconElem.style.display = "block"; // Afficher à nouveau l'icône
+            paragraphe.style.display = "block"; // Afficher à nouveau l'icône
+        }
+    </script>
+
+    <!-- REDIRECTION VERS LA PAGE AJOUTER AVIONS  -->
+    <script>
+        document.getElementById('addAvionsButton').addEventListener('click', function () {
+            document.getElementById('v-pills-add-avions-tab').click();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html> 
