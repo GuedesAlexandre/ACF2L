@@ -65,10 +65,7 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
             echo '<td>' . $row['CONSSOMATION'] . '</td>';
             echo '<td style="max-width: 150px;">' . $row['DESCRIPTION'] . '</td>';
             echo '<td class="text-end">';
-            echo '<form action="EditRow.php" method="post">';
-            echo '<input type="hidden" name="avionId" value="' . $row['ID_AVIONS'] . '">';
-            echo '<button type="submit" class="btn btn-sm btn-neutral btn-modif">Modifier</button>';
-            echo '</form>';
+           
             echo '<form action="../Services_Back/DeleteRow.php" method="post">';
             echo '<input type="hidden" name="avionId" value="' . $row['ID_AVIONS'] . '">';
             echo '<button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">';
