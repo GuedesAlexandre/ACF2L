@@ -177,7 +177,7 @@
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
                                             d'adhérent</span>
-                                        <span class="txt-info-card h3 font-bold mb-0">ecrit le nombre en php fdp</span>
+                                        <span class="txt-info-card h3 font-bold mb-0">Compteur</span>
                                     </div>
                                 </div>
                             </div>
@@ -195,217 +195,181 @@
                     <div class="table-responsive">
                         <table class="table table-hover table-nowrap ">
                             <thead class="txt-info-ligne">
-                                <tr>
-                                    <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">EMAIL</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">MOT de pass</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
-                                    <th class="txt-info-item-ligne py-3"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="ligne-content-info">
-                                    <td>
-                                        <img style="width: 37px" alt="..."
-                                            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                            class="avatar avatar-sm rounded-circle me-2">
-                                        Ton grand pere
-                                    </td>
-                                    <td>
-                                        Tongrandpere@gmail.com
-                                    </td>
-                                    <td>
-                                        FDP1235415654132
-                                    </td>
-                                    <td>
-                                        10/12/23
-                                    </td>
-                                    <td class="text-end">
-                                        <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                            <img src="ressources/icons/trash-icons.svg" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
+                              
 
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="v-pills-réservation" role="tabpanel"
-                aria-labelledby="v-pills-réservation-tab">
-
-                <div class="row g-6 mb-6 mt-5 card-info-div">
-                    <div class="col-xl-3 col-sm-6 col-12 p-0">
-                        <div class="card card-info border-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
-                                            de reservation en cours</span>
-                                        <span class="txt-info-card h3 font-bold mb-0"><?php
-                                        require_once '../Services_Back/reservation.php';
-                                        Reservation::countTableRows("ASTA_RESERVATION")
-
-                                        ?></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LISTE  -->
-                <div class="card tab-list border-0 mt-5">
-                    <div class="ligne-header d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Liste de reservation </h5>
-
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover table-nowrap ">
-                            <thead class="txt-info-ligne">
-                                <tr>
-                                    <th class="txt-info-item-ligne py-3" scope="col">ID de l'adhérant</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">ID du pilote</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">DATE/HORAIRE</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">TYPE D'AVION</th>
-                                    <th class="txt-info-item-ligne py-3"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                    require_once '../Services_Back/reservation.php';
-                                    Reservation::displayReservation("ASTA_RESERVATION");
-
-                                ?>
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="v-pills-avions" role="tabpanel" aria-labelledby="v-pills-avions-tab">
-                <div class="row g-6 mb-6 mt-5 card-info-div">
-                    <div class="col-xl-3 col-sm-6 col-12 p-0">
-                        <div class="card card-info border-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
-                                            d'avions</span>
-                                            
-                                        <span class="txt-info-card h3 font-bold mb-0"><?php
-                                        require_once '../Services_Back/Avion.php';
-                                        Avion::countTableRows("ASTA_AVIONS");
-
-                                        ?></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LISTE  -->
-                <div class="card tab-list border-0 mt-5">
-                    <div class="ligne-header d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Liste des avions </h5>
-                        <button id="addAvionsButton" href="#"
-                            class="d-flex align-items-center gap-1 btn btn-sm btn-neutral btn-modif"><img width="18px"
-                                src="ressources/icons/add-icons.svg" alt="">Ajouter</button>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover table-nowrap ">
-                            <thead class="txt-info-ligne">
-                                <tr>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Modèle</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Capacité</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Poids à vide</th>
                                 
-                                    <th class="txt-info-item-ligne py-3" scope="col">Autonomie</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Consommation</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
-                                    <th class="txt-info-item-ligne py-3"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               <?php
-                               require_once '../Services_Back/Avion.php';
-                                 Avion::displayAvions("ASTA_AVIONS");
-                               ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+                                    <div class="container-fluid">
+                                        <main class="mt-5">
+                                            <div class="tab-content" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show active" id="v-pills-utilisateurs" role="tabpanel"
+                                                    aria-labelledby="v-pills-utilisateurs-tab">
+                                                    <div class="card tab-list border-0 mt-5">
+                                                        <div class="ligne-header d-flex justify-content-between align-items-center">
+                                                            <h5 class="mb-0">Liste des utilisateurs</h5>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-nowrap">
+                                                                <thead class="txt-info-ligne">
+                                                                    <tr>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">EMAIL</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">MOT de pass</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
+                                                                        <th class="txt-info-item-ligne py-3"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="ligne-content-info">
+                                                                        <td>
+                                                                            <img style="width: 37px" alt="..."
+                                                                                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                                                                                class="avatar avatar-sm rounded-circle me-2">
+                                                                            Ton grand pere
+                                                                        </td>
+                                                                        <td>
+                                                                            Tongrandpere@gmail.com
+                                                                        </td>
+                                                                        <td>
+                                                                            FDP1235415654132
+                                                                        </td>
+                                                                        <td>
+                                                                            10/12/23
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                                                                <img src="ressources/icons/trash-icons.svg" alt="">
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-           <?php
-           require_once '../Services_Back/AjoutAvion.php';
-           
-           ?>
-        </main>
-    </div>
+                                                <div class="tab-pane fade" id="v-pills-réservation" role="tabpanel"
+                                                    aria-labelledby="v-pills-réservation-tab">
+                                                    <div class="card tab-list border-0 mt-5">
+                                                        <div class="ligne-header d-flex justify-content-between align-items-center">
+                                                            <h5 class="mb-0">Liste de réservation</h5>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-nowrap">
+                                                                <thead class="txt-info-ligne">
+                                                                    <tr>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">ID de l'adhérant</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">ID du pilote</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">DATE/HORAIRE</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">TYPE D'AVION</th>
+                                                                        <th class="txt-info-item-ligne py-3"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php
+                                                                  require_once 'Services_Back/reservation.php';
+                                                                 Reservation::displayReserv();
+                                                                    ?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
+                                                <div class="tab-pane fade" id="v-pills-avions" role="tabpanel" aria-labelledby="v-pills-avions-tab">
+                                                    <div class="card tab-list border-0 mt-5">
+                                                        <div class="ligne-header d-flex justify-content-between align-items-center">
+                                                            <h5 class="mb-0">Liste des avions</h5>
+                                                            <button id="addAvionsButton" href="#"
+                                                                class="d-flex align-items-center gap-1 btn btn-sm btn-neutral btn-modif"><img
+                                                                    width="18px" src="ressources/icons/add-icons.svg" alt="">Ajouter</button>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-nowrap">
+                                                                <thead class="txt-info-ligne">
+                                                                    <tr>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">Modèle</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">Capacité</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">Poids à vide</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">Autonomie</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">Consommation</th>
+                                                                        <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
+                                                                        <th class="txt-info-item-ligne py-3"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php
+                                                                require_once '../Services_Back/Avion.php';
+                                                                   Avion::displayAvions("ASTA_AVIONS");
+                                                                    ?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-    <!-- INPUT IMAGE STYLYSER  -->
-    <script>
-        function handleImageUpload(event) {
-            const file = event.target.files[0];
-            const fileName = file.name;
-            const fileReader = new FileReader();
+                                                <?php
+                                                require_once '../Services_Back/AjoutAvion.php';
+                                                ?>
+                                            </div>
+                                        </main>
+                                    </div>
 
-            fileReader.onload = function (e) {
-                const imageSrc = e.target.result;
-                const uploadBtn = document.querySelector(".upload-btn");
-                const fileNameElem = document.querySelector("#nom-file-name");
-                const deleteBtn = document.querySelector("#delete-btn");
-                const iconElem = document.querySelector(".upload-btn i");
-                const paragraphe = document.querySelector(".upload-btn p");
+                                    <!-- INPUT IMAGE STYLYSER  -->
+                                    <script>
+                                        function handleImageUpload(event) {
+                                            const file = event.target.files[0];
+                                            const fileName = file.name;
+                                            const fileReader = new FileReader();
 
-                uploadBtn.style.backgroundImage = `url(${imageSrc})`;
-                fileNameElem.textContent = fileName;
-                deleteBtn.style.display = "block";
-                iconElem.style.display = "none";
-                paragraphe.style.display = "none";
-            };
+                                            fileReader.onload = function (e) {
+                                                const imageSrc = e.target.result;
+                                                const uploadBtn = document.querySelector(".upload-btn");
+                                                const fileNameElem = document.querySelector("#nom-file-name");
+                                                const deleteBtn = document.querySelector("#delete-btn");
+                                                const iconElem = document.querySelector(".upload-btn i");
+                                                const paragraphe = document.querySelector(".upload-btn p");
 
-            fileReader.readAsDataURL(file);
-        }
+                                                uploadBtn.style.backgroundImage = `url(${imageSrc})`;
+                                                fileNameElem.textContent = fileName;
+                                                deleteBtn.style.display = "block";
+                                                iconElem.style.display = "none";
+                                                paragraphe.style.display = "none";
+                                            };
 
-        function deleteImage() {
-            const uploadBtn = document.querySelector(".upload-btn");
-            const fileNameElem = document.querySelector("#nom-file-name");
-            const deleteBtn = document.querySelector("#delete-btn");
-            const fileInput = document.querySelector("#file-upload");
-            const iconElem = document.querySelector(".upload-btn i");
-            const paragraphe = document.querySelector(".upload-btn p");
+                                            fileReader.readAsDataURL(file);
+                                        }
 
-            // Réinitialiser l'état du bouton d'upload
-            uploadBtn.style.backgroundImage = "";
-            fileNameElem.textContent = "Pas de fichier sélectionné";
-            fileInput.value = "";
-            iconElem.style.display = "block"; // Afficher à nouveau l'icône
-            paragraphe.style.display = "block"; // Afficher à nouveau l'icône
-        }
-    </script>
+                                        function deleteImage() {
+                                            const uploadBtn = document.querySelector(".upload-btn");
+                                            const fileNameElem = document.querySelector("#nom-file-name");
+                                            const deleteBtn = document.querySelector("#delete-btn");
+                                            const fileInput = document.querySelector("#file-upload");
+                                            const iconElem = document.querySelector(".upload-btn i");
+                                            const paragraphe = document.querySelector(".upload-btn p");
 
-    <!-- REDIRECTION VERS LA PAGE AJOUTER AVIONS  -->
-    <script>
-        document.getElementById('addAvionsButton').addEventListener('click', function () {
-            document.getElementById('v-pills-add-avions-tab').click();
-        });
-    </script>
+                                            // Réinitialiser l'état du bouton d'upload
+                                            uploadBtn.style.backgroundImage = "";
+                                            fileNameElem.textContent = "Pas de fichier sélectionné";
+                                            fileInput.value = "";
+                                            iconElem.style.display = "block"; // Afficher à nouveau l'icône
+                                            paragraphe.style.display = "block"; // Afficher à nouveau l'icône
+                                        }
+                                    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</body>
+                                    <!-- REDIRECTION VERS LA PAGE AJOUTER AVIONS  -->
+                                    <script>
+                                        document.getElementById('addAvionsButton').addEventListener('click', function () {
+                                            document.getElementById('v-pills-add-avions-tab').click();
+                                        });
+                                    </script>
 
-</html>
+                                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                                        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                                        crossorigin="anonymous"></script>
+                                </body>
+
+                                </html>
