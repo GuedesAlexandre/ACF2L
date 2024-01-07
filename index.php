@@ -113,8 +113,8 @@
                                     et Instructeurs
                                 </h5>
                                 <p class="card-text texte-card">
-                                    L’aéro-club assure la formation complète de pilotes et d’instructeurs qualifiés. Cela inclut des programmes de formation variés et des cours adaptés aux besoins individuels. De plus, des baptêmes de
-                                    l’air sont proposés pour une première expérience aérienne.
+                                L’aéro-club assure la formation complète de pilotes et d’instructeurs qualifiés. Cela inclut des programmes de formation variés et des cours adaptés aux besoins individuels. De plus, des baptêmes de
+                                    l’air est proposé pour une première expérience aérienne.
                                 </p>
                                 <a href="#" class="arrow-btn"><img src="./ressources/arrow.png" alt="arrow" /></a>
                             </div>
@@ -428,7 +428,7 @@
                                                 </div>
 
                                                 <h4 class="card-title">Symposium Mondial de la Sécurité Aérienne - Marseille</h4>
-                                                <p class="card-text">Partage meilleures pratiques, sécurité vol, experts mondiaux, innovations cruciales.</p>
+                                                <p class="card-text">Partages meilleurs pratiques, sécurité vol, experts mondiaux, innovations cruciales.</p>
                                             </div>
                                         </div>
                                     </div>
