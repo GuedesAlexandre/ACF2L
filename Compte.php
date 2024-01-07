@@ -84,6 +84,41 @@ if(Adherents::checkADHExists($_SESSION["USER_ID"]) ){
 
 
 }
+else if(isset($_SESSION["USER"])){
+    if(Adherents::checkADHExists($_SESSION["USER_ID"]) ){
+        Adherents::displayADHById($_SESSION["USER_ID"]);
+        
+        if(Adherents::getRoleById("ASTA_ADHERENTS",$_SESSION["USER_ID"]) == 'adh'){
+           echo' <div class="text-center"> <a href="./page-reservation.php" class="btn btn-success">Reserver un vol</a></div>';
+
+        }else if(Adherents::getRoleById("ASTA_ADHERENTS",$_SESSION["USER_ID"]) == 'admin'){
+            echo' <div class="text-center"><a href="./page-reservation.php" class="btn btn-success">Reserver un vol</a>';
+            echo' <a href="./dashboard/dashboard.php" class="btn btn-light"> Dashboard</a></div>';
+        }
+                    
+        
+    }else{
+        User::displayUserById($_SESSION["USER_ID"]);
+        echo '<div class="text-center"><a href="devenir-adeherent.php" class="btn btn-primary">Devenir adherent</a></div>';
+
+    }
+
+}else if(isset($_SESSION["USER"])){
+
+if(Adherents::checkADHExists($_SESSION["USER_ID"]) ){
+        Adherents::displayADHById( $_SESSION["USER_ID"]);
+       
+                    
+        
+    }else{
+        User::displayUserById( $_SESSION["USER_ID"]);
+        echo '<div class="text-center"><a href="devenir-adeherent.php" class="btn btn-primary">Devenir adherent</a></div>';
+        
+
+    }
+
+
+}
 
 
 

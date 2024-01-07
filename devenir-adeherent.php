@@ -39,12 +39,23 @@
                       require_once 'Services_Back/GestionNav.php';
                   
 require_once 'Services_Back/adherents.php';
-
+if(isset($_SESSION["user"][0]["USER_ID"])){
 if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"])){
     header('location: index.php');
 
 }else{
+
     
+}
+}else if (isset($_SESSION["USER"])){
+    if(Adherents::checkADHExists($_SESSION["USER_ID"])){
+        header('location: index.php');
+    
+    }else{
+    
+        
+    }
+
 }
 
                       
@@ -122,7 +133,7 @@ if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"])){
 
 require_once 'Services_Back/adherents.php';
 require_once 'Services_Back/User.php';
-var_dump($_SESSION["USER"]);
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if(isset($_POST["civilite"]) && isset($_POST["adresse_numero"]) && isset($_POST["situation_familiale"]) && isset( $_POST["telephone"]) && isset($_POST["nom"]) && isset($_POST["date_naissance"])&& isset($_POST["prenom"])){
