@@ -30,7 +30,7 @@
                     <a class="nav-link" href="index.php#section-services">Nos services</a>
                     <a class="nav-link" href="index.php#ulm">Types d’ULM</a>
                     <a class="nav-link" href="index.php#team">Notre équipe</a>
-                    <a class="nav-link" href="#">Événement</a>
+                    <a class="nav-link" href="index.php#actualité">Événement</a>
                     <a class="nav-link" href="index.php#galery">Galerie</a>
                     <a class="nav-link" href="index.php#formulaire">Contact</a>
                       <?php 
