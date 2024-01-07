@@ -73,7 +73,7 @@ if(Adherents::checkADHExists($_SESSION["user"][0]["USER_ID"])){
         <div class="container">
             <div class="row">
                 <div class="texte-center mt-5 p-5 rounded-4" style="background-color:  #121318;">
-                <h3 class="text-light mb-5">Devenir Adherent</h3>
+                <h3 class="text-light mb-5">Devenir Adhérent</h3>
                     <div class="">
                         <form action="devenir-adeherent.php" method="post">
                             <div class="mb-3">

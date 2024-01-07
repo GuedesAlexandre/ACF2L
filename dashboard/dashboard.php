@@ -19,7 +19,7 @@
         <aside class="" style="min-width: 270px;">
             <nav class="navbar bg-light h-100 justify-content-center align-items-start">
                 <div>
-                    <a href="" class="logo"><img src="ressources/logo-nav-dashboard.svg" alt="logo-nav" /></a>
+                    <a href="../index.php" class="logo"><img src="ressources/logo-nav-dashboard.svg" alt="logo-nav" /></a>
                     <ul class="navbar-nav nav-dashboard gap-4 mt-5" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
                         <li class="nav-item">
