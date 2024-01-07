@@ -569,8 +569,8 @@
                                     <div class="form-group">
                                         <textarea class="input-message" id="message" name="message" rows="4" placeholder="Allez, écrivez votre message"></textarea>
                                     </div>
-                                    <button type="submit" class="btn-block">Envoyer</button>
                                 </form>
+                                <button type="submit" class="btn-block" onclick="sendMail()">Envoyer</button>
                             </div>
                         </div>
                     </div>
