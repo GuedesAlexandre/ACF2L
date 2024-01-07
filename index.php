@@ -625,6 +625,7 @@
                     <p>+33 01 60 56 60 60</p>
                     <p><a href="mailto:acf2l@gmail.com">acf2l@gmail.com</a></p>
                     <p>62, Avenue de la République, 70200 Lure</p>
+                    <a href="Mentions.php"><p>Mentions Légales</p></a>
                 </div>
             </div>
         </div>
