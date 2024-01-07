@@ -22,12 +22,12 @@
                             </button>
                             <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
                                 <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
-                                    <a class="nav-link" href="#section-services">Nos services</a>
-                                    <a class="nav-link" href="#ulm">Types d’ULM</a>
-                                    <a class="nav-link" href="#team">Notre équipe</a>
-                                    <a class="nav-link" href="#actualité">Événement</a>
-                                    <a class="nav-link" href="#galery">Galerie</a>
-                                    <a class="nav-link" href="#formulaire">Contact</a>
+                                    <a class="nav-link" href="index.php#section-services">Nos services</a>
+                                    <a class="nav-link" href="index.php#ulm">Types d’ULM</a>
+                                    <a class="nav-link" href="index.php#team">Notre équipe</a>
+                                    <a class="nav-link" href="index.php#actualité">Événement</a>
+                                    <a class="nav-link" href="index.php#galery">Galerie</a>
+                                    <a class="nav-link" href="index.php#formulaire">Contact</a>
                                     <?php
                                     require_once 'Services_Back/GestionNav.php';
 
