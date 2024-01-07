@@ -236,7 +236,7 @@
                 <div class="card-glob col-lg-3 col-md-6 mb-md-4">
                     <div class="card1" style="min-height: 407px;">
                         <div class="card-body">
-                            <h5 class="card-title">Kevin SAITOUT</h5>
+                            <h5 class="card-title">Kevin Saitout</h5>
                             <p class="card-text">Chef pilote</p>
                         </div>
                     </div>
@@ -244,7 +244,7 @@
                 <div class="card-glob col-lg-3 col-md-6 mb-md-4">
                     <div class="card2" style="min-height: 407px;">
                         <div class="card-body">
-                            <h5 class="card-title">Kevin SAITOUT</h5>
+                            <h5 class="card-title">Céline Laplume</h5>
                             <p class="card-text">Chef pilote</p>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                 <div class="card-glob col-lg-3 col-md-6">
                     <div class="card3" style="min-height: 407px;">
                         <div class="card-body">
-                            <h5 class="card-title">Kevin SAITOUT</h5>
+                            <h5 class="card-title">Justine Volavu</h5>
                             <p class="card-text">Chef pilote</p>
                         </div>
                     </div>
@@ -260,7 +260,7 @@
                 <div class="card-glob col-lg-3 col-md-6">
                     <div class="card4" style="min-height: 407px;">
                         <div class="card-body">
-                            <h5 class="card-title">Kevin SAITOUT</h5>
+                            <h5 class="card-title">Alain Strument</h5>
                             <p class="card-text">Chef pilote</p>
                         </div>
                     </div>
