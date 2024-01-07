@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 
    
-    <title>Document</title>
+    <title>Se connecter | AFC2L</title>
 </head>
 
 <body>

@@ -15,7 +15,7 @@
 
   
 
-    <title>Document</title>
+    <title>Réservation | AFC2L</title>
 </head>
 
 

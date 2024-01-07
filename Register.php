@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css" />
 
   
-    <title>Document</title>
+    <title>Créer un compte | AFC2L</title>
 </head>
 
 <body>
