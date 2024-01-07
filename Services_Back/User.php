@@ -165,3 +165,4 @@ public static function checkEmailExists($tableName, $email){
      }
 }
 }
+?>

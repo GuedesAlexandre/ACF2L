@@ -1,5 +1,5 @@
 <?php
-require_once 'Services_Back/Database.php';
+require_once 'Database.php';
 
 class Avion{
 public $AVION_ID ;
@@ -36,9 +36,9 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
         $statement = $connection->prepare($query);
         $success = $statement->execute([$this->AVION_ID, $this->PILOTE_ID, $this->MODELE, $this->CAPACITE,  $this->POIDS_A_VIDE, $this->AUTONOMIE,$this->CONSSOMATION, $this->DESCRIPTION]); // Use hashed password
         if ($success) {
-            echo "Avion ajouté";
+        return true;
         } else {
-            echo "Erreur votre avion n'a pas pu être ajouter";
+           return false;
         }}
     
     public static function displayAvions($tableName){
@@ -65,10 +65,7 @@ public function __construct($AVION_ID, $PILOTE_ID, $MODELE, $CAPACITE, $POIDS_A_
             echo '<td>' . $row['CONSSOMATION'] . '</td>';
             echo '<td style="max-width: 150px;">' . $row['DESCRIPTION'] . '</td>';
             echo '<td class="text-end">';
-            echo '<form action="EditRow.php" method="post">';
-            echo '<input type="hidden" name="avionId" value="' . $row['ID_AVIONS'] . '">';
-            echo '<button type="submit" class="btn btn-sm btn-neutral btn-modif">Modifier</button>';
-            echo '</form>';
+           
             echo '<form action="../Services_Back/DeleteRow.php" method="post">';
             echo '<input type="hidden" name="avionId" value="' . $row['ID_AVIONS'] . '">';
             echo '<button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">';

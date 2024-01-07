@@ -11,7 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="dashboard.css" />
-  
    
 </head>
 
@@ -30,21 +29,9 @@
                                 <img src="ressources/icons/Dashboard.svg" alt="" />Dashboard
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" id="v-pills-Staff-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-Staff" type="button" role="tab" aria-controls="v-pills-Staff"
-                                aria-selected="false">
-                                <img src="ressources/icons/Liste-Staff-icons.svg" alt="" /> Liste Staff
-                            </a>
-                        </li>
+                        
 
-                        <li class="nav-item">
-                            <a class="nav-link d-flex gap-2" id="v-pills-add-Staff-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-add-Staff" type="button" role="tab"
-                                aria-controls="v-pills-add-Staff" aria-selected="false">
-                                <img src="ressources/icons/add-icons-nav.svg" alt="" /> Ajouter un Staff
-                            </a>
-                        </li>
+                        
 
                         <li class="nav-item">
                             <a class="nav-link d-flex gap-2" id="v-pills-adhérant-tab" data-bs-toggle="pill"
@@ -89,7 +76,10 @@
         <main class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-Dashboard" role="tabpanel"
                 aria-labelledby="v-pills-Dashboard-tab">
-                pas sur que on garde cette page 
+                <div class="text-center" style="margin-top:5%; font-size:3rem;">
+                <img src="ressources/IA analyse données.png" ><br>
+                
+                Bienvenue sur votre Dashboard Entreprise !</div>
             </div>
             <div class="tab-pane fade" id="v-pills-Staff" role="tabpanel" aria-labelledby="v-pills-Staff-tab">
 
@@ -161,10 +151,7 @@
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="v-pills-add-Staff" role="tabpanel" aria-labelledby="v-pills-add-Staff-tab">
-                ajouter un staf mais je ne sais pas comment il faut l'ajouter puisque il faut pouvoir selectioner une ligne de la bdd pour la modifier j'imaghine donc je ne sais pas si il faut le faire avec un select ou pas 
-            </div>
-
+           
             <div class="tab-pane fade" id="v-pills-adhérant" role="tabpanel" aria-labelledby="v-pills-adhérant-tab">
 
                 <!-- CARD  -->
@@ -177,7 +164,10 @@
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
                                             d'adhérent</span>
-                                        <span class="txt-info-card h3 font-bold mb-0">ecrit le nombre en php fdp</span>
+                                        <span class="txt-info-card h3 font-bold mb-0"><?php
+                                        require_once '../Services_Back/Avion.php';
+                                        Avion::countTableRows("ASTA_ADHERENTS");
+                                        ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -189,45 +179,30 @@
                 <div class="card tab-list border-0 mt-5">
                     <div class="ligne-header d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">Liste des adherent </h5>
-                        <button href="#" class="d-flex align-items-center gap-1 btn btn-sm btn-neutral btn-modif"><img
-                                width="18px" src="ressources/icons/add-icons.svg" alt="">Ajouter</button>
+                        
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover table-nowrap ">
                             <thead class="txt-info-ligne">
                                 <tr>
+                                <th class="txt-info-item-ligne py-3" scope="col">Adherent_ID</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">NOM</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">PRENOM</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">CIVILITE</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">SITUATION</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">TELEPHONE</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">EMAIL</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">MOT de pass</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">PASSWORD</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Adresse</th>
                                     <th class="txt-info-item-ligne py-3"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="ligne-content-info">
-                                    <td>
-                                        <img style="width: 37px" alt="..."
-                                            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                            class="avatar avatar-sm rounded-circle me-2">
-                                        Ton grand pere
-                                    </td>
-                                    <td>
-                                        Tongrandpere@gmail.com
-                                    </td>
-                                    <td>
-                                        FDP1235415654132
-                                    </td>
-                                    <td>
-                                        10/12/23
-                                    </td>
-                                    <td class="text-end">
-                                        <button href="#" class="btn btn-sm btn-neutral btn-modif">Modifier</button>
-                                        <button type="button"
-                                            class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                            <img src="ressources/icons/trash-icons.svg" alt="">
-                                        </button>
-                                    </td>
-                                </tr>
+                                <?php
+                                require_once '../Services_Back/adherents.php';
+                                Adherents::displayADH();
+                                ?>
 
 
                             </tbody>
@@ -248,8 +223,7 @@
                                             de reservation en cours</span>
                                         <span class="txt-info-card h3 font-bold mb-0"><?php
                                         require_once '../Services_Back/reservation.php';
-                                        Reservation::countTableRows("ASTA_RESERVATION")
-
+                                        Reservation::countTableRows("ASTA_RESERVATION");
                                         ?></span>
                                     </div>
                                 </div>
@@ -268,22 +242,21 @@
                         <table class="table table-hover table-nowrap ">
                             <thead class="txt-info-ligne">
                                 <tr>
-                                    <th class="txt-info-item-ligne py-3" scope="col">ID de l'adhérant</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">ID du pilote</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">DATE/HORAIRE</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Date de naissance</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Reservation_ID</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Adherent_ID</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Pilotes_ID</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">DATE</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Horaire</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">TYPE D'AVION</th>
+                                  
                                     <th class="txt-info-item-ligne py-3"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                    require_once '../Services_Back/reservation.php';
-                                    Reservation::displayReservation("ASTA_RESERVATION");
-
-                                ?>
-
+                               <?php
+                               require_once '../Services_Back/reservation.php';
+                                Reservation::displayReserv();
+                               ?>
 
                             </tbody>
                         </table>
@@ -300,11 +273,9 @@
                                     <div class="col">
                                         <span class="h6 font-semibold text-muted text-sm d-block mb-2">Nombre
                                             d'avions</span>
-                                            
                                         <span class="txt-info-card h3 font-bold mb-0"><?php
                                         require_once '../Services_Back/Avion.php';
                                         Avion::countTableRows("ASTA_AVIONS");
-
                                         ?></span>
                                     </div>
                                 </div>
@@ -317,20 +288,23 @@
                 <div class="card tab-list border-0 mt-5">
                     <div class="ligne-header d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">Liste des avions </h5>
-                        <button id="addAvionsButton" href="#"
-                            class="d-flex align-items-center gap-1 btn btn-sm btn-neutral btn-modif"><img width="18px"
-                                src="ressources/icons/add-icons.svg" alt="">Ajouter</button>
+                        <button href="dashboard.php #v-pills-add-avions" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-add-avions" type="button" role="tab"
+                                aria-controls="v-pills-add-avions" aria-selected="false" class="d-flex align-items-center gap-1 btn btn-sm btn-neutral btn-modif"><img
+                                width="18px" src="ressources/icons/add-icons.svg" alt="">Ajouter</button>
+                       
                     </div>
                     <div class="table-responsive">
                         <table class="table table-hover table-nowrap ">
                             <thead class="txt-info-ligne">
                                 <tr>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Modèle</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Capacité</th>
+                                   
+                                 
+                                    <th class="txt-info-item-ligne py-3" scope="col">MODELE</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">CAPACITE</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">Poids à vide</th>
-                                
                                     <th class="txt-info-item-ligne py-3" scope="col">Autonomie</th>
-                                    <th class="txt-info-item-ligne py-3" scope="col">Consommation</th>
+                                    <th class="txt-info-item-ligne py-3" scope="col">Conssomation</th>
                                     <th class="txt-info-item-ligne py-3" scope="col">DESCRIPTION</th>
                                     <th class="txt-info-item-ligne py-3"></th>
                                 </tr>
@@ -340,16 +314,18 @@
                                require_once '../Services_Back/Avion.php';
                                  Avion::displayAvions("ASTA_AVIONS");
                                ?>
+
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
 
-           <?php
-           require_once '../Services_Back/AjoutAvion.php';
-           
-           ?>
+            
+                <?php
+                require_once '../Services_Back/AjoutAvion.php'
+                ?>
+            
         </main>
     </div>
 
@@ -388,7 +364,7 @@
             const paragraphe = document.querySelector(".upload-btn p");
 
             // Réinitialiser l'état du bouton d'upload
-            uploadBtn.style.backgroundImage = "";
+            uploadBtn.style.backgroundImage = "";''
             fileNameElem.textContent = "Pas de fichier sélectionné";
             fileInput.value = "";
             iconElem.style.display = "block"; // Afficher à nouveau l'icône
@@ -408,4 +384,4 @@
         crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html> 

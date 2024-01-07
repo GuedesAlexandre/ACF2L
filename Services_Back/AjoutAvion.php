@@ -80,13 +80,9 @@
                 </div>
 
                 <div class="upload p-0 mx-3">
-                    <div class="upload-btn">
-                        <i class="bx bx-cloud-upload"></i>
-                        <p>Parcourir les fichiers</p>
-                        <input name="image" type="file" id="file-upload" accept=".jpg, .jpeg, .png" onchange="handleImageUpload(event)" />
-                    </div>
-                    <p id="file-name"><i class="bx bxs-file-image img"></i><span id="nom-file-name">Pas de fichier sélectionné</span> <i id="delete-btn" onclick="deleteImage()" class="bx bxs-trash-alt trash"></i></p>
-                    <input type="submit" name="submit" value="Ajouter le couteau" class="input-submit-forms" style="border-radius:8px; background: #7A5CFA; border:none; padding: 13px 16px; width: 140px; font-size: 13px; color: #FFF;" />
+                   
+                   <br>
+                    <input type="submit" name="submit" value="Ajouter l'avion" class="input-submit-forms" style="border-radius:8px; background: #7A5CFA; border:none; padding: 13px 16px; width: 140px; font-size: 13px; color: #FFF;" />
                 </div>
             </form>
         </div>
@@ -94,8 +90,8 @@
 </div>
 
 <?php
-require_once '../Services_Back/Avion.php';
-require_once '../Services_Back/Database.php';
+require_once 'Avion.php';
+require_once 'Database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['avion_id']) && isset($_POST['pilote_id']) && isset($_POST['nom']) && isset($_POST['capacite']) && isset($_POST['poids']) && isset($_POST['autonomie']) && isset($_POST['consommation']) && isset($_POST['description'])){
@@ -112,7 +108,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!empty($modele) && !empty($poids_a_vide)) {
             $avion = new Avion($avion_id, $pilote_id, $modele, $capacite, $poids_a_vide, $autonomie, $consommation, $description);
 
-            $avion->insertIntoTable("ASTA_AVIONS");
+            if($avion->insertIntoTable("ASTA_AVIONS")){
+                echo "Avion ajouté avec succès";
+            } else {
+                echo "Erreur lors de l'ajout de l'avion";
+            }
         } else {
             // Afficher un message d'erreur ou effectuer une autre action en cas de champs vides
         }

@@ -158,5 +158,44 @@ class Adherents extends User {
     }
 
 
+    public static function displayADH(){
+        $host = "localhost";
+        $username = "root";
+        $password = "root";  
+        $database = "ASTA_ACF2L";
+        $db = new Database($host, $username, $password, $database);
+        $db->connect(); // Se connecter à la base de données
+        $connection = $db->connection; // Obtenir la connexion PDO 
 
+        $query = "SELECT * FROM ASTA_ADHERENTS";
+        $statement = $connection->prepare($query);
+        $statement->execute();
+
+        $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+        foreach($rows as $row) {
+            echo '<tr class="ligne-content-info">';
+            echo '<td>';
+            echo '<img style="width: 37px;" alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">' . $row['ADHERENT_ID'] . '</td>';
+            echo '<td>' . $row['NOM'] . '</td>';
+           
+            echo '<td>' . $row['PRENOM'] . '</td>';
+            echo '<td>' . $row['CIVILITE'] . '</td>';
+            echo '<td>' . $row['SITUATION'] . '</td>';
+            echo '<td>' . $row['TEL'] . '</td>';
+            echo '<td>' . $row['EMAIL'] . '</td>';
+            echo '<td>' . $row['PASSWORD'] . '</td>';
+            echo '<td>' . $row['BIRTHDATE'] . '</td>';
+           
+            echo '<td style="max-width: 150px;">' . $row['ADRESSE'] . '</td>';
+            echo '<td class="text-end">';
+            
+            echo '<form action="../Services_Back/DeleteAdh.php" method="post">';
+            echo '<input type="hidden" name="avionId" value="' . $row['ADHERENT_ID'] . '">';
+            echo '<button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">';
+            echo '<img src="ressources/icons/trash-icons.svg" alt=""></button>';
+            echo '</form>';
+            echo '</td>';
+            echo '</tr>';
+        }
+    }
     }

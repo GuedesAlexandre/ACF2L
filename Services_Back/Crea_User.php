@@ -5,7 +5,6 @@
 
 error_reporting(E_ALL & ~E_DEPRECATED);
 
-
 require_once "Services_Back/User.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
