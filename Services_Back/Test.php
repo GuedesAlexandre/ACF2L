@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <button id="showIp">Afficher mon adresse IP</button>
 <p id="ip"></p>
 <script>
+
 const Cookie = {
     storeIp: function() {
         fetch('https://api.ipify.org?format=json')
@@ -53,7 +54,7 @@ const Cookie = {
     }
 };
 
-document.getElementById('storeIp').addEventListener('click', Cookie.storeIp);
+document.getElementById('acceptBtn').addEventListener('click', Cookie.storeIp);
 document.getElementById('showIp').addEventListener('click', Cookie.showIp);
 
 var cookieExists = Cookie.checkCookie("ip");

@@ -19,6 +19,8 @@
 
 <body>
 
+
+
 <section id="loader">
         <div class="container-fluid">
             <div class="row">
@@ -628,6 +630,71 @@
         </div>
     </footer>
 
+    <div class="coockies-pop-up" id="pop-up-cookies">
+      <header>
+        <i class="bx bx-cookie"></i>
+        <h2>Consentement aux cookies</h2> 
+      </header>
+
+      <div class="data">
+        <p>Ce site web utilise des cookies pour vous aider à bénéficier d'une expérience de navigation supérieure et plus pertinente sur le site <a href="#"></a></p>
+      </div>
+
+      <div class="buttons">
+        <button class="button" id="acceptBtn">Accepter</button>
+        <button class="button" id="declineBtn">Refuser</button>
+      </div>
+    </div>
+
+
+    <script>
+        const cookieBox = document.querySelector(".coockies-pop-up"),
+  buttons = document.querySelectorAll(".button");
+
+const executeCodes = () => {
+  //if cookie contains codinglab it will be returned and below of this code will not run
+  if (document.cookie.includes("codinglab")) return;
+  cookieBox.classList.add("show");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      cookieBox.classList.remove("show");
+
+      //if button has acceptBtn id
+      if (button.id == "acceptBtn") {
+        //set cookies for 1 month. 60 = 1 min, 60 = 1 hours, 24 = 1 day, 30 = 30 days
+        document.cookie = "cookieBy= codinglab; max-age=" + 60 * 60 * 24 * 30;
+      }
+    });
+  });
+};
+
+//executeCodes function will be called on webpage load
+window.addEventListener("load", executeCodes);
+
+const Cookie = {
+    storeIp: function() {
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.cookie = "ip=" + data.ip;
+            });
+    },
+    showIp: function() {
+        var ip = document.cookie.replace(/(?:(?:^|.*;\s*)ip\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        document.getElementById('ip').textContent = "Votre adresse IP est : " + ip;
+    },
+    checkCookie: function(name) {
+        return document.cookie.includes(name + "=");
+    }
+};
+
+document.getElementById('acceptBtn').addEventListener('click', Cookie.storeIp);
+
+
+    </script>
+
+    
     <script>
         function sendMail() {
             (function() {
