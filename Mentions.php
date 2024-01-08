@@ -6,111 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="Mentions.css" />
+    <!-- <link rel="stylesheet" href="Mentions.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
+
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 
-   
+
     <title>Mentions légales</title>
 </head>
 
 <body>
-<style>
+    <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Plus Jakarta Sans", sans-serif;
             line-height: 1.6;
             margin: 0px;
         }
-        p{
-            color:white;
+
+        p {
+            color: white;
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             color: white;
         }
 
         address {
             font-style: normal;
         }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            color: #888;
-        }
     </style>
-    <section id="login">
+    <section style="background-color: #222222;">
         <div class="nav" style="padding: 0;">
-        <header class="container-fluid">
-        <nav class="row navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid col-0 col-lg-11">
-                <a class="nav-link logo px-0" href="index.php"><img src="ressources/logo.svg" alt="" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><img src="ressources/menu.png" alt="" /></span>
-                </button>
-                <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
-                    <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
-                    <a class="nav-link" href="index.php#section-services">Nos services</a>
-                    <a class="nav-link" href="index.php#ulm">Types d’ULM</a>
-                    <a class="nav-link" href="index.php#team">Notre équipe</a>
-                    <a class="nav-link" href="index.php#actualité">Événement</a>
-                    <a class="nav-link" href="index.php#galery">Galerie</a>
-                    <a class="nav-link" href="index.php#formulaire">Contact</a>
-                      <?php 
-                      require_once 'Services_Back/GestionNav.php';
-                      
-                      ?>
+            <header class="container-fluid">
+                <nav class="row navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid col-0 col-lg-11">
+                        <a class="nav-link logo px-0" href="index.php"><img src="ressources/logo.svg" alt="" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><img src="ressources/menu.png" alt="" /></span>
+                        </button>
+                        <div class="collapse navbar-collapse glass" id="navbarNavAltMarkup">
+                            <div class="container-fluid navbar-nav example07 d-flex justify-content-between">
+                                <a class="nav-link" href="index.php#section-services">Nos services</a>
+                                <a class="nav-link" href="index.php#ulm">Types d’ULM</a>
+                                <a class="nav-link" href="index.php#team">Notre équipe</a>
+                                <a class="nav-link" href="index.php#actualité">Événement</a>
+                                <a class="nav-link" href="index.php#galery">Galerie</a>
+                                <a class="nav-link" href="index.php#formulaire">Contact</a>
+                                <?php
+                                require_once 'Services_Back/GestionNav.php';
+
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row justify-content-center">
+                    <div class="col-11 underline">
+                        <hr />
                     </div>
                 </div>
-            </div>
-        </nav>
-        <div class="row justify-content-center">
-            <div class="col-11 underline">
-                <hr />
-            </div>
-        </div>
-    </header>
+            </header>
         </div>
         <main>
-        <div class="container">
-        <h1 class="mt-5">Mentions Légales</h1>
+            <div class="container">
+                <h1 class="mt-5">Mentions Légales</h1>
 
-        <section>
-            <h2 class="mt-4">Informations légales</h2>
-            <address>
-                <p>Le présent site web est édité par <strong>ACF2L, association ACF2L</strong>.</p>
-                <p>Siège social : 62 avenue de la République, 70200 Lure</p>
-                <p>Téléphone : 01 60 56 60 60</p>
-                <p>Email : <a href="mailto:acf2l@gmail.com">acf2l@gmail.com</a></p>
-            </address>
-        </section>
+                <section>
+                    <h2 class="mt-4">Informations légales</h2>
+                    <address>
+                        <p>Le présent site web est édité par <strong>ACF2L, association ACF2L</strong>.</p>
+                        <p>Siège social : 62 avenue de la République, 70200 Lure</p>
+                        <p>Téléphone : 01 60 56 60 60</p>
+                        <p>Email : <a href="mailto:acf2l@gmail.com">acf2l@gmail.com</a></p>
+                    </address>
+                </section>
 
-        <section>
-            <h2 class="mt-4">Hébergeur</h2>
-            <p>Le site est hébergé par <strong>[Nom de l'hébergeur]</strong>, dont le siège social est situé à <strong>[...]</strong>.</p>
-        </section>
+                <section>
+                    <h2 class="mt-4">Hébergeur</h2>
+                    <p>Le site est hébergé par <strong>[Nom de l'hébergeur]</strong>, dont le siège social est situé à <strong>[...]</strong>.</p>
+                </section>
 
-        <section>
-            <h2 class="mt-4">Propriété intellectuelle</h2>
-            <p>L'ensemble des contenus (textes, images, vidéos, etc.) diffusé sur le site ACF2L est protégé par la législation en vigueur en France en matière de propriété intellectuelle et est la propriété exclusive de ACF2L ou de ses partenaires. Toute reproduction, représentation, diffusion ou rediffusion, totale ou partielle, du contenu de ce site par quelque procédé que ce soit sans l'autorisation expresse de ACF2L est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
-        </section>
+                <section>
+                    <h2 class="mt-4">Propriété intellectuelle</h2>
+                    <p>L'ensemble des contenus (textes, images, vidéos, etc.) diffusé sur le site ACF2L est protégé par la législation en vigueur en France en matière de propriété intellectuelle et est la propriété exclusive de ACF2L ou de ses partenaires. Toute reproduction, représentation, diffusion ou rediffusion, totale ou partielle, du contenu de ce site par quelque procédé que ce soit sans l'autorisation expresse de ACF2L est interdite et constituerait une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+                </section>
 
-        <section>
-            <h2 class="mt-4">Données personnelles</h2>
-            <p>Les données personnelles collectées sur ce site sont destinées à ACF2L et sont utilisées uniquement dans le cadre légal prévu en France pour le respect de la vie privée. Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, veuillez vous adresser à <a href="mailto:acf2l@gmail.com">acf2l@gmail.com</a>.</p>
-        </section>
-    </div>
+                <section>
+                    <h2 class="mt-4">Données personnelles</h2>
+                    <p>Les données personnelles collectées sur ce site sont destinées à ACF2L et sont utilisées uniquement dans le cadre légal prévu en France pour le respect de la vie privée. Conformément à la loi Informatique et Libertés du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, veuillez vous adresser à <a href="mailto:acf2l@gmail.com">acf2l@gmail.com</a>.</p>
+                </section>
+            </div>
 
         </main>
 
-        <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-</body>
-<footer id="footer" class="footer-bg text-white ">
+    <footer id="footer" class="footer-bg text-white mt-5">
         <div class="container footer-container ">
             <div class="row ">
                 <!-- Logo and Text Section -->
@@ -143,7 +136,6 @@
                                 <li class="mb-3"><a href="#">Événements</a></li>
                                 <li class="mb-3"><a href="#">Galerie</a></li>
                                 <li class="mb-3"><a href="#">Contact</a></li>
-                                
                             </div>
                         </div>
                     </ul>
@@ -155,10 +147,22 @@
                     <p>+33 01 60 56 60 60</p>
                     <p><a href="mailto:acf2l@gmail.com">acf2l@gmail.com</a></p>
                     <p>62, Avenue de la République, 70200 Lure</p>
-                    <a href="Mentions.php"><p>Mentions Légales</p></a>
+                    <a href="Mentions.php">
+                        <p>Mentions Légales</p>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
+    </section>
+
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
 
 </html>
